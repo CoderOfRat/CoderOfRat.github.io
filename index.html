@@ -1,735 +1,802 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
 
-  
-  <title>Coder Rat</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="������һ�ַ�ʽ��For U or Me?">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Coder Rat">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;index.html">
-<meta property="og:site_name" content="Coder Rat">
-<meta property="og:description" content="������һ�ַ�ʽ��For U or Me?">
-<meta property="og:locale" content="zh-CN">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Coder Rat" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
+<!DOCTYPE html>
+<html lang="zh-CN" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Coder Rat - -------------------</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="TriDiamond Obsidian,"> 
+    <meta name="description" content="������һ�ַ�ʽ��For U or Me?,"> 
+    <meta name="author" content="Mr Guo"> 
+    <link rel="alternative" href="atom.xml" title="Coder Rat" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    <link href="https://fonts.loli.net/css?family=Roboto+Mono|Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1429596_nzgqgvnmkjb.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/codemirror.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/theme/dracula.css">
+    <link rel="stylesheet" href="/css/obsidian.css">
+    <link rel="stylesheet" href="/css/ball-atom.min.css">
 </head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Coder Rat</a>
-      </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">-------------------</a>
-        </h2>
-      
+
+<body class="loading">
+    <div class="loader">
+        <div class="la-ball-atom la-2x">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
+    <span id="config-title" style="display:none">Coder Rat</span>
+    <div id="loader"></div>
+    <div class="nav">
+    <ul id="menu-menu" class="menu">
         
-          <a class="main-nav-link" href="/">Home</a>
+        <li class="animated fadeInDown menu-item menu-item-type-post_type menu-item-object-page">
+            <a href="/whoami/" title="ABOUT" external="false">ABOUT</a>
+        </li>
         
-          <a class="main-nav-link" href="/archives">Archives</a>
+        <li class="animated fadeInDown menu-item menu-item-type-post_type menu-item-object-page">
+            <a href="/categories/" title="CATEGORIES" external="false">CATEGORIES</a>
+        </li>
         
-      </nav>
-      <nav id="sub-nav">
+        <li class="animated fadeInDown menu-item menu-item-type-post_type menu-item-object-page">
+            <a href="/tags/" title="TAGS" external="false">TAGS</a>
+        </li>
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        <li class="animated fadeInDown menu-item menu-item-type-post_type menu-item-object-page">
+            <a href="/archives/" title="ARCHIVES" external="false">ARCHIVES</a>
+        </li>
         
-        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
+    </ul>
+    <p class="copyright" id="copyright">
+        &copy; 2019 Mr Guo.
+        Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
+        Theme <a href="https://github.com/TriDiamond/hexo-theme-obsidian" title="Obsidian" target="_blank" rel="noopener">Obsidian</a>
+    </p>
+</div>
+
+<div id="container">
+    
+<div class="search-box">
+    <form class="site-search-form">
+        <span class="iconfont icon-search"></span>
+        <input type="text" id="local-search-input" class="st-search-input" />
+        <div class="iconfont icon-cross search-box-close"></div>
+    </form>
+    <div class="search-scrollable">
+        <div id="local-search-result" class="local-search-result-cls" data-initialise="首次搜索，正在载入索引文件，请稍后……"
+            data-start="输入关键词搜索。" data-empty="没有找到内容，请尝试更换检索词。">
+            <span>输入关键词搜索。</span>
+        </div>
     </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-注1：格式化代码自定义初始化样式" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/24/%E6%B3%A81%EF%BC%9A%E6%A0%BC%E5%BC%8F%E5%8C%96%E4%BB%A3%E7%A0%81%E8%87%AA%E5%AE%9A%E4%B9%89%E5%88%9D%E5%A7%8B%E5%8C%96%E6%A0%B7%E5%BC%8F/" class="article-date">
-  <time datetime="2019-11-24T07:59:06.667Z" itemprop="datePublished">2019-11-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/24/%E6%B3%A81%EF%BC%9A%E6%A0%BC%E5%BC%8F%E5%8C%96%E4%BB%A3%E7%A0%81%E8%87%AA%E5%AE%9A%E4%B9%89%E5%88%9D%E5%A7%8B%E5%8C%96%E6%A0%B7%E5%BC%8F/">注1：格式化代码自定义初始化样式</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="格式化代码-自定义初始化样式整合-format-css"><a href="#格式化代码-自定义初始化样式整合-format-css" class="headerlink" title="格式化代码/自定义初始化样式整合 format.css"></a>格式化代码/自定义初始化样式整合 format.css</h1><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">    <span class="attribute">margin</span>:<span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding</span>:<span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*清除内外边距,有很多元素(ul,body)是有默认内外边距样式的，但是在实际开发中，很少使用原始内外边距样式，因为会引起很多布局上面的麻烦*/</span></span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="comment">/*maxwidth:540px;</span></span><br><span class="line"><span class="comment">    minwidth:360px;</span></span><br><span class="line"><span class="comment">    margin: 0 auto;*/</span>     </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*此格式化代码多用于移动端开发使用，控制最大的视口宽度和最小的视口宽度，同时使之整体水平居中*/</span></span><br><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*所有接受 &lt;'width'&gt; 和 &lt;'height'&gt; 的元素，box-sizing默认属性都是content-box（标准模式下的盒模型），而CSS3标准下的布局，一般配合boder-box(怪异模式下的盒模型)使用，可以避免padding撑大盒子、boder占用盒子外的宽度，从而优化布局*/</span></span><br><span class="line"><span class="selector-tag">a</span> &#123;</span><br><span class="line">    <span class="attribute">text-decoration</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*清除文字链接的下划线*/</span></span><br><span class="line"><span class="selector-tag">li</span> &#123;</span><br><span class="line">    <span class="attribute">list-style</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*清除无序列表项li标签前面的符号·*/</span></span><br><span class="line"><span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">vertical-aline</span>: top/middle/bottom;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*改变img标签的垂直对齐方式，默认为baseline（基线对齐），这样会导致图片默认和行内元素内容的基线对齐（即使没有内容），和盒子底边有一点白色间隙，一般情况下，我们更希望图片的中线和行内元素的中线对齐，所以一般设置为middle属性*/</span></span><br><span class="line"><span class="selector-tag">input</span> &#123;</span><br><span class="line">    <span class="attribute">outline</span>:none;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">textarea</span> &#123;</span><br><span class="line">    <span class="attribute">outline</span>:none;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*有表单的页面样式，在格式化的时候通常设置以上两个样式清除轮廓线和防止文本域被拖拽*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*为了有个人风格的统一样式，一般会自定义一些布局样式和外观样式的修改进行初始化*/</span></span><br><span class="line"><span class="comment">/*初始化样式 个别样例*/</span></span><br><span class="line"><span class="selector-class">.center-container</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">980</span>/<span class="number">1040px</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*自定义版心样式*/</span></span><br><span class="line"><span class="selector-class">.fl</span> &#123;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.fr</span> &#123;</span><br><span class="line">    <span class="attribute">float</span>: right;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*左右浮动引用样式*/</span></span><br><span class="line"><span class="selector-class">.content-center</span> &#123;</span><br><span class="line">    <span class="attribute">text-aline</span>: center;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*使我里面的内容水平居中不仅仅是文字，块内有块，也可以用此实现里面的块水平居中效果，注：有继承性，注意是不是它所有的子元素都需要设置居中，如不是，注意使用位置，这也就是为什么版心的设置是给盒子一个宽度，使用margin:auto;而不是直接给body一个text-aline:center;的原因*/</span></span><br><span class="line"><span class="comment">/*更多补充*/</span></span><br><span class="line"><span class="selector-class">.b-shadow</span> &#123;</span><br><span class="line">    <span class="attribute">box-shadow</span>: -<span class="number">2px</span>,<span class="number">0</span>,<span class="number">3px</span>,<span class="built_in">rgba</span>(0 ,0 ,0 ,.3);<span class="comment">/*左边阴影*/</span></span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="number">2px</span>,<span class="number">0</span>,<span class="number">3px</span>,<span class="built_in">rgba</span>(0 ,0 ,0 ,.3);<span class="comment">/*右边阴影*/</span></span><br><span class="line">    <span class="attribute">box-shadow</span>: -<span class="number">2px</span>,<span class="number">0</span>,<span class="number">3px</span>,<span class="built_in">rgba</span>(0 ,0 ,0 ,.3),<span class="number">2px</span>,<span class="number">0</span>,<span class="number">3px</span>,<span class="built_in">rgba</span>(0 ,0 ,0 ,.3);<span class="comment">/*左右阴影*/</span></span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="number">0</span>,-<span class="number">2px</span>,<span class="number">3px</span>,<span class="built_in">rgba</span>(0 ,0 ,0 ,.3);<span class="comment">/*上方阴影*/</span></span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="number">0</span>,<span class="number">2px</span>,<span class="number">3px</span>,<span class="built_in">rgba</span>(0 ,0 ,0 ,.3);<span class="comment">/*下方阴影*/</span></span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="number">0</span>,-<span class="number">2px</span>,<span class="number">3px</span>,<span class="built_in">rgba</span>(0 ,0 ,0 ,.3),<span class="number">0</span>,<span class="number">2px</span>,<span class="number">3px</span>,<span class="built_in">rgba</span>(0 ,0 ,0 ,.3);<span class="comment">/*上下阴影*/</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*盒子阴影*/</span></span><br><span class="line"><span class="selector-class">.t-shadow</span> &#123;</span><br><span class="line">    <span class="attribute">text-shadow</span>: -<span class="number">1px</span>,<span class="number">0</span>,<span class="built_in">rgba</span>(0,0,0,0.2);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*文字阴影，也可以设置多重，实现各种特效字*/</span></span><br></pre></td></tr></table></figure>
-
-<p>其他说明</p>
-<p>以下为鼠标悬停的多种样式（鼠标放上面看一下效果）</p>
-<ul>
-  <li style="cursor:default">我是小白</li>
-  <li style="cursor:pointer">我是小手</li>
-  <li style="cursor:move">我是移动</li>
-  <li style="cursor:text">我是文本</li>
-  <li style="cursor:not-allowed">我是禁止</li>
-</ul>
-
-<h2 id="box-sizing语法："><a href="#box-sizing语法：" class="headerlink" title="box-sizing语法："></a><strong>box-sizing</strong>语法：</h2><p><strong>box-sizing</strong>：content-box | border-box</p>
-<p><strong>默认值</strong>：content-box</p>
-<p><strong>适用于</strong>：所有接受 &lt;’ width’&gt; 和 &lt;’height’&gt; 的元素</p>
-<p><strong>继承性</strong>：无</p>
-<p><strong>动画性</strong>：否</p>
-<p><strong>计算值</strong>：指定值</p>
-<h2 id="取值："><a href="#取值：" class="headerlink" title="取值："></a>取值：</h2><ul>
-<li><p>content-box：  </p>
-<p>padding和border不被包含在定义的width和height之内。对象的实际宽度等于设置的width值和border、padding之和，即 (  Element width = width + border + padding )  </p>
-<p>此属性表现为标准模式下的盒模型。 </p>
-</li>
-<li><p>border-box：  </p>
-<p>padding和border被包含在定义的width和height之内。对象的实际宽度就等于设置的width值，即使定义有border和padding也不会改变对象的实际宽度，即  ( Element width = width )  </p>
-<p>此属性表现为怪异模式下的盒模型。 </p>
-</li>
-</ul>
-<p><strong>设置或检索对象的盒模型组成模式。</strong></p>
-<ul>
-<li><p><strong>标准盒模型代码与图示例:</strong></p>
-<blockquote>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.test1</span>&#123;</span><br><span class="line">	<span class="attribute">box-sizing</span>:content-box;</span><br><span class="line">	<span class="attribute">width</span>:<span class="number">200px</span>;</span><br><span class="line">	<span class="attribute">padding</span>:<span class="number">30px</span>;</span><br><span class="line">	<span class="attribute">border</span>:<span class="number">15px</span> solid <span class="number">#eee</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="C:%5CUsers%5C14046%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20191115190351346.png" alt="image-20191115190351346"></p>
-<div style="box-sizing:content-box;width:200px;height:200px;padding:30px;border:15px solid blue;margin:auto;background-color: yellow;">我是内容</div>
-</blockquote>
-</li>
-<li><p><strong>怪异盒模型代码与图示例:</strong></p>
-<blockquote>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.test1</span>&#123;</span><br><span class="line">	<span class="attribute">box-sizing</span>:border-box;</span><br><span class="line">	<span class="attribute">width</span>:<span class="number">200px</span>;</span><br><span class="line">	<span class="attribute">padding</span>:<span class="number">10px</span>;</span><br><span class="line">	<span class="attribute">border</span>:<span class="number">15px</span> solid <span class="number">#eee</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="C:%5CUsers%5C14046%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20191115190414692.png" alt="image-20191115190414692"></p>
-<div style="box-sizing:border-box;width:200px;height:200px;padding:30px;border:15px solid blue;margin:auto;background-color: yellow;">我是内容</div>
-
-
-</blockquote>
-</li>
-<li><p>对应的脚本特性为<strong>boxSizing</strong>。 </p>
-</li>
-</ul>
-
-      
+</div>
+<div id="header">
+    <div>
+        <div class="logo animated fadeInDown">
+            <img src="/img/favicon.png" alt="">
+            <a class="image-logo" href="/"></a>
+        </div>
+        <ul id="menu-menu" class="menu text-menu">
+            
+            <li class="animated fadeInDown menu-item menu-item-type-post_type menu-item-object-page">
+                <a href="/whoami/" title="ABOUT" external="false" class="menu-link">ABOUT</a>
+            </li>
+            
+            <li class="animated fadeInDown menu-item menu-item-type-post_type menu-item-object-page">
+                <a href="/categories/" title="CATEGORIES" external="false" class="menu-link">CATEGORIES</a>
+            </li>
+            
+            <li class="animated fadeInDown menu-item menu-item-type-post_type menu-item-object-page">
+                <a href="/tags/" title="TAGS" external="false" class="menu-link">TAGS</a>
+            </li>
+            
+            <li class="animated fadeInDown menu-item menu-item-type-post_type menu-item-object-page">
+                <a href="/archives/" title="ARCHIVES" external="false" class="menu-link">ARCHIVES</a>
+            </li>
+            
+            
+        </ul>
+        <div class="iconfont icon-menu switchmenu gradient-text animated fadeInDown"></div>
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/24/%E6%B3%A81%EF%BC%9A%E6%A0%BC%E5%BC%8F%E5%8C%96%E4%BB%A3%E7%A0%81%E8%87%AA%E5%AE%9A%E4%B9%89%E5%88%9D%E5%A7%8B%E5%8C%96%E6%A0%B7%E5%BC%8F/" data-id="ck3ehduul000groho8ia759dn" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-移动web第一天" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/24/%E7%A7%BB%E5%8A%A8web%E7%AC%AC%E4%B8%80%E5%A4%A9/" class="article-date">
-  <time datetime="2019-11-24T07:59:06.651Z" itemprop="datePublished">2019-11-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/24/%E7%A7%BB%E5%8A%A8web%E7%AC%AC%E4%B8%80%E5%A4%A9/">移动web第一天</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="移动web第一天"><a href="#移动web第一天" class="headerlink" title="移动web第一天"></a>移动web第一天</h2><h3 id="什么是HTML5？"><a href="#什么是HTML5？" class="headerlink" title="什么是HTML5？"></a>什么是HTML5？</h3><pre><code>不是一门新的语言，而是html第五次重大修改</code></pre><h3 id="html5修改了什么内容？"><a href="#html5修改了什么内容？" class="headerlink" title="html5修改了什么内容？"></a>html5修改了什么内容？</h3><pre><code>1.新增了语义化标签 
-2.新增了音频  视频  canvas画图
-3.新增input标签  新增标签表单的属性
-4.新增本地存储  地理定位 
-5.新增对类名操作 
-6.新增自定义属性的设置</code></pre><h4 id="语义化标签：（适用于移动端）"><a href="#语义化标签：（适用于移动端）" class="headerlink" title="语义化标签：（适用于移动端）"></a>语义化标签：（适用于移动端）</h4><pre><code>1.header 头部标签
-2.nav  导航标签
-3.article 内容标签
-4.section 相当于一块区域
-5.aside 侧边栏
-6.footer 尾部 
-7.main 主体标签</code></pre><h4 id="音频"><a href="#音频" class="headerlink" title="音频"></a>音频</h4><pre><code>标签： audio
-属性：
-    src： 路径
-    controls：控制器
-    autoplay:自动播放  
-    loop:循环播放</code></pre><h3 id="视频："><a href="#视频：" class="headerlink" title="视频："></a>视频：</h3><p>​    标签  video<br>​    属性：<br>​        src： 路径<br>​        controls：控制器<br>​        autoplay:自动播放<br>​        loop:循环播放<br>​        poster：默认播放前的第一帧。<br>​        muted：静音播放<br>​        width与height  视频的宽高<br>​        等比例放大缩小（只需要设置一个即可）</p>
-<h3 id="新增input-type属性"><a href="#新增input-type属性" class="headerlink" title="新增input  type属性"></a>新增input  type属性</h3><p>​    1.email验证邮箱<br>​    2.url：网址<br>​    3.date日期<br>​    4.month：月<br>​    5.week：周<br>​    6.number：数字<br>​    7.tel电话： 在移动端弹出数字键盘<br>​    8.search： 人性化体验<br>​    9.time：时间</p>
-<h3 id="新增标签："><a href="#新增标签：" class="headerlink" title="新增标签："></a>新增标签：</h3><p>​    分组表单：<br>​    <fieldset align="center"><br>​         <strong>当前组的标题</strong><br>​        <legend>用户信息</legend><br>​    </fieldset><br>​    下拉列表：<br>​    input：list绑定对应的id<br>​     <input type="text" list="a"><br>​    起id名：<br>​    <datalist id="a"><br>​        <option value="张三" label="好人"></option><br>​        <option value="隔壁张三" label="大好人"></option><br>​    </datalist></p>
-<h3 id="新增属性"><a href="#新增属性" class="headerlink" title="新增属性"></a>新增属性</h3><p>​    required： 当前项为必填、<br>​    placeholder：默认提示信息<br>​    disabled：禁用<br>​    readonly：只读（只允许读取  不允许修改）<br>​    autofocus：自动获取焦点。<br>​    autocomplete：自动提示信息    注意：  当前文本框必须拥有name属性    必须真正提交过    off（不提示）|on（提示）<br>​    multiple：多选（文件上传）   上传之后的图片存储在 files[0]</p>
-<h3 id="Css3新增："><a href="#Css3新增：" class="headerlink" title="Css3新增："></a>Css3新增：</h3><p>​    1.选择器<br>​    2.旋转  移动  缩放 动画<br>​    3.旋转  移动  缩放（3d）更加立体</p>
-<h3 id="选择器："><a href="#选择器：" class="headerlink" title="选择器："></a>选择器：</h3><p>   <strong>属性选择器</strong><br>        1.div[class] {<br>            color: red;<br>        }<br>        2.[class] {<br>            color: pink;<br>        }<br>        3.[class=”box”] {<br>            color: red;<br>        }<br>        4. 以b开头选中<br>                  [class^=”b”] {<br>            color: red;<br>                }<br>                5.以b结尾的选中<br>                [class$=”b”] {<br>            color: red;<br>                }<br>                6.只要包含b就会选中<br>                [class<em>=”b”] {<br>            color: red;<br>                }<br>*</em>结构伪类选择器**<br>        1).选择当前元素的父级元素的第一个li元素<br>                1.元素:first-child<br>                2.元素:last-child<br>                3.元素:nth-child(n)      -2+n 前两个孩子<br>        2).选择当前元素的父级元素的同类型第一个li元素<br>                1.元素：first-of-type<br>                2.元素：last-of-type<br>                3.元素：nth-of-type(n)<br><strong>兄弟选择器</strong><br>        1).选择当前元素的后一个兄弟元素<br>                元素+元素<br>        2).选择当前元素的后面的所有兄弟元素<br>                元素~元素<br><strong>伪元素</strong><br>        元素::before  在元素里面的最前面添加内容<br>        元素::after   在元素里面的最后面添加内容<br>                注意：<br>            1.表单元素无法添加伪元素<br>            2.用伪元素添加之后是行内元素<br>            3.必须有content;</p>
-<p>扩展：<br>    1.选中当前元素的第一行：<br>        div::first-line {<br>            color: red;<br>        }<br>    2.选中当前元素的第一个字：<br>        div::first-letter {<br>            color: red;<br>        }<br>    3.鼠标选中的状态：<br>        div::selection {<br>            color: red;<br>            background: blue;<br>        } </p>
-<p>​    </p>
-
-      
+</div>
+<div id="screen">
+    <div id="mark">
+        <div class="cover animated fadeIn" style="
+            animation-delay: 900ms;
+            animation-duration: 2.8s;
+            background-image:
+                radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.56), #100e17),
+                url(/img/cover.jpg);">
+        </div>
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/24/%E7%A7%BB%E5%8A%A8web%E7%AC%AC%E4%B8%80%E5%A4%A9/" data-id="ck3ehduuo000hroho8bqy2a3t" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-小特效-背景渐变色" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/24/%E5%B0%8F%E7%89%B9%E6%95%88-%E8%83%8C%E6%99%AF%E6%B8%90%E5%8F%98%E8%89%B2/" class="article-date">
-  <time datetime="2019-11-24T07:59:06.635Z" itemprop="datePublished">2019-11-24</time>
-</a>
     
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+    <div id="post0" class="else">
+        <p class="animated fadeInDown">
+            
+            <a href="javascript:;" target="_blank" rel="noopener"><b>「 </b>文章<b> 」</b></a>
+            
+            十一月 24, 2019
+        </p>
+        <h3 class="post-title animated fadeInDown">
+            <a href="/2019/11/24/7.%E5%8A%A8%E7%94%BB%20animation%E4%B9%8B%E6%89%93%E5%8D%B0%E6%95%88%E6%9E%9C/" title="7.动画 animation之打印效果" class="posttitle">7.动画 animation之打印效果</a></h3>
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/24/%E5%B0%8F%E7%89%B9%E6%95%88-%E8%83%8C%E6%99%AF%E6%B8%90%E5%8F%98%E8%89%B2/">小特效-背景渐变色</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="渐变色设置"><a href="#渐变色设置" class="headerlink" title="渐变色设置"></a>渐变色设置</h1><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">直接设置背景颜色为红色</span><br><span class="line"><span class="selector-tag">background</span>: <span class="selector-tag">red</span>; </span><br><span class="line">设置背景为线性渐变颜色  上到下（注意：如果加了特定的浏览器支持，就不能用<span class="selector-tag">to</span> <span class="selector-tag">bottom</span>了，<span class="selector-tag">to</span>要省略掉）</span><br><span class="line"><span class="selector-tag">background</span>: <span class="selector-tag">-webkit-linear-gradient</span>(<span class="selector-tag">bottom</span>, <span class="selector-tag">red</span>, <span class="selector-tag">blue</span>);</span><br><span class="line">设置背景为线性渐变颜色  左到右</span><br><span class="line"><span class="selector-tag">background</span>: <span class="selector-tag">linear-gradient</span>(<span class="selector-tag">to</span> <span class="selector-tag">right</span>, <span class="selector-tag">red</span>, <span class="selector-tag">blue</span>) ;</span><br><span class="line">设置背景为线性渐变颜色  左上到右下</span><br><span class="line"><span class="selector-tag">background</span>: <span class="selector-tag">linear-gradient</span>(<span class="selector-tag">to</span> <span class="selector-tag">right</span> <span class="selector-tag">bottom</span>, <span class="selector-tag">red</span>, <span class="selector-tag">blue</span>) ;</span><br><span class="line">设置背景为线性渐变颜色  正对角线，由左下到右上</span><br><span class="line"><span class="selector-tag">background</span>: <span class="selector-tag">linear-gradient</span>(45<span class="selector-tag">deg</span>, <span class="selector-tag">red</span>, <span class="selector-tag">blue</span>);</span><br><span class="line">设置背景为线性渐变颜色  默认上到下，0<span class="selector-tag">-10</span>%粉色，10%<span class="selector-tag">-20</span>%粉<span class="selector-tag">-</span>蓝渐变，20%<span class="selector-tag">-50</span>%蓝到橘色渐变</span><br><span class="line"><span class="selector-tag">background</span>: <span class="selector-tag">linear-gradient</span>(<span class="selector-tag">pink</span> 10%, <span class="selector-tag">blue</span> 20%, <span class="selector-tag">orange</span> 50%, <span class="selector-id">#000</span> 100%); </span><br><span class="line">设置背景为中心扩散渐变颜色 默认为中心像外层扩散渐变</span><br><span class="line"><span class="selector-tag">background</span>: <span class="selector-tag">radial-gradient</span>(<span class="selector-tag">red</span>, <span class="selector-tag">blue</span>);</span><br><span class="line">同上，百分比设置起始渐变区间 50%<span class="selector-tag">-100</span>%参与渐变，可以实现红日效果</span><br><span class="line"><span class="selector-tag">background</span>: <span class="selector-tag">radial-gradient</span>(<span class="selector-tag">red</span> 50%, <span class="selector-tag">dodgerblue</span>);</span><br><span class="line">每20%一个扩撒渐变区间 由内向外重复渐变</span><br><span class="line"><span class="selector-tag">background</span>: <span class="selector-tag">repeating-radial-gradient</span>(<span class="selector-id">#fff</span> 0%, <span class="selector-id">#000</span> 20%);</span><br><span class="line">每20%一个线性渐变区间 由上到下重复渐变</span><br><span class="line"><span class="selector-tag">background</span>: <span class="selector-tag">repeating-linear-gradient</span>(<span class="selector-id">#fff</span> 0%, <span class="selector-id">#000</span> 20%);</span><br><span class="line">/*渐变生成工具网址*/         http://www.internetke.com/jsEffects/2014120803/</span><br></pre></td></tr></table></figure>
-
-<h2 id="多彩进度条的写法，美美哒"><a href="#多彩进度条的写法，美美哒" class="headerlink" title="多彩进度条的写法，美美哒"></a>多彩进度条的写法，美美哒</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>进度条书写<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">        @<span class="keyword">keyframes</span> jdt &#123;</span></span><br><span class="line">            0% &#123;</span><br><span class="line">                width: 0;</span><br><span class="line">            &#125;</span><br><span class="line">            100% &#123;</span><br><span class="line">                width: 56%;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"><span class="css">        <span class="selector-class">.jdt-container</span> &#123;</span></span><br><span class="line">            text-align: center;</span><br><span class="line">            width: 500px;</span><br><span class="line">            height: 20px;</span><br><span class="line">            margin: 100px auto;</span><br><span class="line">            overflow: hidden;</span><br><span class="line">            border-radius: 10px;</span><br><span class="line"><span class="css">            <span class="selector-tag">border</span>: 1<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-id">#eee</span>;</span></span><br><span class="line">        &#125;</span><br><span class="line"><span class="css">        <span class="selector-class">.jdt</span> &#123;</span></span><br><span class="line">            height: 20px;</span><br><span class="line"><span class="css">            <span class="comment">/*百分比会有不好的体验，建议使用固定宽度*/</span></span></span><br><span class="line"><span class="css">            <span class="comment">/*单组颜色也很好看*/</span></span></span><br><span class="line"><span class="css">            <span class="comment">/*background: repeating-linear-gradient(135deg,deepskyblue,white);*/</span></span></span><br><span class="line">            background: repeating-linear-gradient(135deg,deepskyblue 5%,deepskyblue 10%,white 10%,white 15%,gold 15%,gold 20%,white 20%,white 25%);</span><br><span class="line">            animation: jdt 2s infinite;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"jdt-container"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"jdt"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="C:%5CUsers%5C14046%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20191112213057719.png" alt="image-20191112213057719"></p>
-<p><img src="C:%5CUsers%5C14046%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20191112213430013.png" alt="image-20191112213430013"></p>
-
-      
+        <p class="post-count animated fadeInDown">
+            
+            <span>
+                <b class="iconfont icon-text2"></b> <i>文章字数</i>
+                3.5k
+            </span>
+            
+            
+            <span>
+                <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
+                3 mins.
+            </span>
+            
+            
+        </p>
+        
+        
+        <div class="md-content animated fadeIn">
+            
+            <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"zh-CN"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head...</span></span></span></pre></td></tr></table></figure>
+            
+            <span class="read-more"><a href="/2019/11/24/7.%E5%8A%A8%E7%94%BB%20animation%E4%B9%8B%E6%89%93%E5%8D%B0%E6%95%88%E6%9E%9C/" title="查看全文" class="posttitle">查看全文</a>
+                <b class="iconfont icon-arrow-right- gradient-text"></b></span>
+        </div>
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/24/%E5%B0%8F%E7%89%B9%E6%95%88-%E8%83%8C%E6%99%AF%E6%B8%90%E5%8F%98%E8%89%B2/" data-id="ck3ehduuf000droho4fo18q0d" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-实现一左一右的对齐" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/24/%E5%AE%9E%E7%8E%B0%E4%B8%80%E5%B7%A6%E4%B8%80%E5%8F%B3%E7%9A%84%E5%AF%B9%E9%BD%90/" class="article-date">
-  <time datetime="2019-11-24T07:59:06.604Z" itemprop="datePublished">2019-11-24</time>
-</a>
     
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/24/%E5%AE%9E%E7%8E%B0%E4%B8%80%E5%B7%A6%E4%B8%80%E5%8F%B3%E7%9A%84%E5%AF%B9%E9%BD%90/">实现一左一右的对齐</a>
-    </h1>
-  
+</div>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="一左一右对齐"><a href="#一左一右对齐" class="headerlink" title="一左一右对齐"></a>一左一右对齐</h1><p>让元素在一行显示，并且向一侧对齐，可以使用float实现</p>
-<p>让元素以不同布局在一行或一列排列 可以使用flex弹性布局实现</p>
-<p>让元素在一行且左右对齐的方法</p>
-<p><strong>如果使用float</strong></p>
-<p>可以一个<code>float:left;</code>一个<code>float:right;</code>来实现，行内元素设置float,也会同时改变其布局属性为<code>inline-block</code>,就可以设置宽高了，行高是行内元素本来具备的属性。</p>
-<p><strong>如果使用flex</strong></p>
-<p>可以对需要在一行显示的元素使用<code>display:flex;</code></p>
-<p>此种情况需要有三个以上的盒子，两个盒子固定宽度，剩下中间的盒子分配剩余宽度</p>
-<p><strong>如果使用position</strong></p>
-<p>父盒子<code>position:relative;</code>两个子盒子<code>position:absolute;</code>,分别定位到两侧</p>
-
-      
+<div class="screen-gradient-after">
+    <div class="screen-gradient-content">
+        <div class="screen-gradient-content-inside">
+            <div class="bold-underline-links screen-gradient-sponsor">
+                <p>
+                    <span class="typed-text"></span>
+                </p>
+            </div>
+        </div>
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/24/%E5%AE%9E%E7%8E%B0%E4%B8%80%E5%B7%A6%E4%B8%80%E5%8F%B3%E7%9A%84%E5%AF%B9%E9%BD%90/" data-id="ck3ehduuc000croho9pypgjek" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
+</div>
 
-
-  
-    <article id="post-三种主流布局" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/24/%E4%B8%89%E7%A7%8D%E4%B8%BB%E6%B5%81%E5%B8%83%E5%B1%80/" class="article-date">
-  <time datetime="2019-11-24T07:59:06.589Z" itemprop="datePublished">2019-11-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+    <div id="primary">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/24/%E4%B8%89%E7%A7%8D%E4%B8%BB%E6%B5%81%E5%B8%83%E5%B1%80/">三种主流布局</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
+<div class="post" id="post">
+    <div class="post-cover animated fadeIn" style="
+            background-image:
+            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+            url(/img/welcome-cover.jpg);">
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/24/%E4%B8%89%E7%A7%8D%E4%B8%BB%E6%B5%81%E5%B8%83%E5%B1%80/" data-id="ck3ehdusd0000roho6lhnda6w" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-递增递减规律" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/24/%E9%80%92%E5%A2%9E%E9%80%92%E5%87%8F%E8%A7%84%E5%BE%8B/" class="article-date">
-  <time datetime="2019-11-24T07:59:06.589Z" itemprop="datePublished">2019-11-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+    <div class="else">
+        <p class="animated fadeInDown">
+            
+                <a href="javascript:;" target="_blank" rel="noopener"><b>「 </b>文章<b> 」</b></a>
+            
+            十一月 24, 2019
+        </p>
+        <h3 class="post-title animated fadeInDown"><a href="/2019/11/24/6.2D3D%E8%BD%AC%E6%8D%A2/" title="6.2D3D转换" class="posttitle">6.2D3D转换</a></h3>
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/24/%E9%80%92%E5%A2%9E%E9%80%92%E5%87%8F%E8%A7%84%E5%BE%8B/">递增递减规律</a>
-    </h1>
-  
+            <p class="post-count animated fadeInDown">
+                
+                    <span>
+                        <b class="iconfont icon-text2"></b> <i>文章字数</i>
+                        715
+                    </span>
+                
+                
+                    <span>
+                        <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
+                        1 mins.
+                    </span>
+                
+                
+            </p>
+            
+        
+        <div class="md-content animated fadeIn">
+            
+                <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*2d转换连写 位移 旋转 缩放 倾斜*/</span></span><br><span class="line"><span class="selector-tag">transform</span><span class="selector-pseudo">:translate()</span> <span class="selector-tag">rotate</span>() <span class="selector-tag">scale</span>() <span class="selector-tag">skew</span>();</span><br></pre></td></tr></table></figure>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>递增递减规律</p>
-<p>a++ = a    a=a+1</p>
-<p>++a =a+1  a = a+1</p>
-<p>a = 1</p>
-<p>​             a++ + ++a  + a++ + ++a + a++</p>
-<p>结果      1           3         3         5        5    </p>
-<p>a=         2           3         4         5        6</p>
 
-      
+            
+            <span class="read-more"><a href="/2019/11/24/6.2D3D%E8%BD%AC%E6%8D%A2/" title="查看全文" class="posttitle">查看全文</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
+        </div>
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/24/%E9%80%92%E5%A2%9E%E9%80%92%E5%87%8F%E8%A7%84%E5%BE%8B/" data-id="ck3ehduuy000lroho4b0gb7gk" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
+</div>
 
 
-  
-    <article id="post-笔记" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/24/%E7%AC%94%E8%AE%B0/" class="article-date">
-  <time datetime="2019-11-24T07:59:06.573Z" itemprop="datePublished">2019-11-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+<div class="post" id="post">
+    <div class="post-cover animated fadeIn" style="
+            background-image:
+            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+            url(/img/welcome-cover.jpg);">
+    </div>
+    <div class="else">
+        <p class="animated fadeInDown">
+            
+                <a href="javascript:;" target="_blank" rel="noopener"><b>「 </b>文章<b> 」</b></a>
+            
+            十一月 24, 2019
+        </p>
+        <h3 class="post-title animated fadeInDown"><a href="/2019/11/24/6.%E8%BE%B9%E6%A1%86%E7%AA%81%E5%87%BA%E4%B9%8B%E7%BE%8E/" title="6.边框突出之美" class="posttitle">6.边框突出之美</a></h3>
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/24/%E7%AC%94%E8%AE%B0/">笔记</a>
-    </h1>
-  
+            <p class="post-count animated fadeInDown">
+                
+                    <span>
+                        <b class="iconfont icon-text2"></b> <i>文章字数</i>
+                        83
+                    </span>
+                
+                
+                    <span>
+                        <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
+                        1 mins.
+                    </span>
+                
+                
+            </p>
+            
+        
+        <div class="md-content animated fadeIn">
+            
+                <p>利用<code>margin</code>负值之美和悬停改变显示模式为<code>position:relative;</code>,提升其显示层次。</p>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="导航-列表-小竖线的写法"><a href="#导航-列表-小竖线的写法" class="headerlink" title="导航 列表 小竖线的写法"></a>导航 列表 小竖线的写法</h3><ol>
-<li><p>边框法</p>
+            
+            <span class="read-more"><a href="/2019/11/24/6.%E8%BE%B9%E6%A1%86%E7%AA%81%E5%87%BA%E4%B9%8B%E7%BE%8E/" title="查看全文" class="posttitle">查看全文</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
+        </div>
+    </div>
+</div>
+
+
+<div class="post" id="post">
+    <div class="post-cover animated fadeIn" style="
+            background-image:
+            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+            url(/img/welcome-cover.jpg);">
+    </div>
+    <div class="else">
+        <p class="animated fadeInDown">
+            
+                <a href="javascript:;" target="_blank" rel="noopener"><b>「 </b>文章<b> 」</b></a>
+            
+            十一月 24, 2019
+        </p>
+        <h3 class="post-title animated fadeInDown"><a href="/2019/11/24/5.CSS%E5%AE%9E%E7%8E%B0%E5%B0%8F%E4%B8%89%E8%A7%92%E5%BD%A2/" title="5.CSS实现小三角形" class="posttitle">5.CSS实现小三角形</a></h3>
+        
+            <p class="post-count animated fadeInDown">
+                
+                    <span>
+                        <b class="iconfont icon-text2"></b> <i>文章字数</i>
+                        1.8k
+                    </span>
+                
+                
+                    <span>
+                        <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
+                        2 mins.
+                    </span>
+                
+                
+            </p>
+            
+        
+        <div class="md-content animated fadeIn">
+            
+                <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line"></span><br><span class="line">	<span class="attribute">width</span>: <span class="number">0</span>; </span><br><span class="line">   <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">   <span class="attribute">line-height</span>:<span class="number">0</span>；</span><br><span class="line">   font-size: <span class="number">0</span>;</span><br><span class="line"><span class="attribute">border-top</span>: <span class="number">10px</span> solid red;</span><br><span class="line"><span class="attribute">border-right</span>: <span class="number">10px</span> solid green;</span><br><span class="line"><span class="attribute">border-bottom</span>: <span class="number">10px</span> solid blue;</span><br><span class="line"><span class="attribute">border-left</span>: <span class="number">10px</span> solid <span class="number">#000</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>一张图， 你就知道 css 三角是怎么来的了, 做法如下：</p>
 <ol>
-<li><p>包裹在</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<li>我们用css 边框可以模拟三角效果</li>
+<li>宽...</li></ol>
+            
+            <span class="read-more"><a href="/2019/11/24/5.CSS%E5%AE%9E%E7%8E%B0%E5%B0%8F%E4%B8%89%E8%A7%92%E5%BD%A2/" title="查看全文" class="posttitle">查看全文</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
+        </div>
+    </div>
+</div>
 
-<p>里面，对<li>设置一个左或者右边框，这样做有些不好的显示效果，因为很难控制竖线的高度和文字高度相同，不太推荐使用。如下图，作为新闻列表模块的title内容前面的修饰，更佳。</p>
-<p><img src="C:%5CUsers%5C14046%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20191030105517214.png" alt=""></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">border-left</span>: 1<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-tag">rgba</span>(200,200,200,<span class="selector-class">.4</span>);<span class="comment">/*半透明灰白色边框写法*/</span></span><br></pre></td></tr></table></figure>
+
+<div class="post" id="post">
+    <div class="post-cover animated fadeIn" style="
+            background-image:
+            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+            url(/img/welcome-cover.jpg);">
+    </div>
+    <div class="else">
+        <p class="animated fadeInDown">
+            
+                <a href="javascript:;" target="_blank" rel="noopener"><b>「 </b>文章<b> 」</b></a>
+            
+            十一月 24, 2019
+        </p>
+        <h3 class="post-title animated fadeInDown"><a href="/2019/11/24/4.%E5%9B%BE%E7%89%87%E6%96%87%E5%AD%97%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD/" title="4.图片文字垂直居中" class="posttitle">4.图片文字垂直居中</a></h3>
+        
+            <p class="post-count animated fadeInDown">
+                
+                    <span>
+                        <b class="iconfont icon-text2"></b> <i>文章字数</i>
+                        1.3k
+                    </span>
+                
+                
+                    <span>
+                        <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
+                        1 mins.
+                    </span>
+                
+                
+            </p>
+            
+        
+        <div class="md-content animated fadeIn">
+            
+                <ul>
+<li>有宽度的块级元素水平居中对齐，是margin: 0 auto;</li>
+<li>让内容水平居中对齐，是 text-align: center;</li>
+</ul>
+<p>但是我们从来没有讲过有垂直居中的属性。</p>
+<p>vertical-align 垂直对齐，它只针对于<strong>行内元素</strong>或者<strong>行内块元素</strong>，</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vertical-align : baseline |top |middle |bottom</span><br></pre></td></tr></table></figure>
+
+<p>设置或检索对象内容的垂直对其方式。</p>
+<ul>
+<li><p>注意：</p>
+<p>vertical-align 不影响块级元素中的内容对齐，它只针对于<strong>行内元素</strong>或者<strong>行内块元素</strong>，</p>
+<p>特别是行内块元素...</p></li></ul>
+            
+            <span class="read-more"><a href="/2019/11/24/4.%E5%9B%BE%E7%89%87%E6%96%87%E5%AD%97%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD/" title="查看全文" class="posttitle">查看全文</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
+        </div>
+    </div>
+</div>
 
 
+<div class="post" id="post">
+    <div class="post-cover animated fadeIn" style="
+            background-image:
+            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+            url(/img/welcome-cover.jpg);">
+    </div>
+    <div class="else">
+        <p class="animated fadeInDown">
+            
+                <a href="javascript:;" target="_blank" rel="noopener"><b>「 </b>文章<b> 」</b></a>
+            
+            十一月 24, 2019
+        </p>
+        <h3 class="post-title animated fadeInDown"><a href="/2019/11/24/3.CSS%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E4%BD%93%E9%AA%8C/" title="3.CSS用户界面体验" class="posttitle">3.CSS用户界面体验</a></h3>
+        
+            <p class="post-count animated fadeInDown">
+                
+                    <span>
+                        <b class="iconfont icon-text2"></b> <i>文章字数</i>
+                        4.4k
+                    </span>
+                
+                
+                    <span>
+                        <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
+                        4 mins.
+                    </span>
+                
+                
+            </p>
+            
+        
+        <div class="md-content animated fadeIn">
+            
+                <h3 id="1-1-鼠标样式设置cursor"><a href="#1-1-鼠标样式设置cursor" class="headerlink" title="1.1 鼠标样式设置cursor"></a>1.1 鼠标样式设置cursor</h3><p> 设置或检索在对象上移动的鼠标指针采用何种系统预定义的光标形状。</p>
+<table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>default</strong></td>
+<td>小白  默认</td>
+</tr>
+<tr>
+<td><strong>pointer</strong></td>
+<td>小手</td>
+</tr>
+<tr>
+<td><strong>move</strong></td>
+<td>移动</td>
+</tr>
+<tr>
+<td><strong>text</strong></td>
+<td>文本</td>
+</tr>
+<tr>
+<td><strong>not-allowed</strong></td>
+<td>禁止</td>
+</tr>
+</tbody></table>
+<p> 鼠标放我身上查看效果哦：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">style</span>=<span class="string">"cursor:default"</span>&gt;</span>我是小白<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">style</span>=<span class="string">"cursor:pointer"</span>&gt;</span>我是小手<span class="tag">&lt;...</span></span></pre></td></tr></table></figure>
+            
+            <span class="read-more"><a href="/2019/11/24/3.CSS%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E4%BD%93%E9%AA%8C/" title="查看全文" class="posttitle">查看全文</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
+        </div>
+    </div>
+</div>
 
-</li>
+
+<div class="post" id="post">
+    <div class="post-cover animated fadeIn" style="
+            background-image:
+            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+            url(/img/welcome-cover.jpg);">
+    </div>
+    <div class="else">
+        <p class="animated fadeInDown">
+            
+                <a href="javascript:;" target="_blank" rel="noopener"><b>「 </b>文章<b> 」</b></a>
+            
+            十一月 24, 2019
+        </p>
+        <h3 class="post-title animated fadeInDown"><a href="/2019/11/24/2.%E5%85%83%E7%B4%A0%E9%9A%90%E8%97%8F%E5%8F%AF%E8%A7%81%E7%9A%84%E5%87%A0%E7%A7%8D%E8%AE%BE%E7%BD%AE%E6%96%B9%E5%BC%8F/" title="2.元素隐藏可见的几种设置方式" class="posttitle">2.元素隐藏可见的几种设置方式</a></h3>
+        
+            <p class="post-count animated fadeInDown">
+                
+                    <span>
+                        <b class="iconfont icon-text2"></b> <i>文章字数</i>
+                        1.6k
+                    </span>
+                
+                
+                    <span>
+                        <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
+                        1 mins.
+                    </span>
+                
+                
+            </p>
+            
+        
+        <div class="md-content animated fadeIn">
+            
+                <h3 id="1-1-display的显示隐藏特性"><a href="#1-1-display的显示隐藏特性" class="headerlink" title="1.1 display的显示隐藏特性"></a>1.1 display的显示隐藏特性</h3><ol>
+<li><code>display:none;</code> 元素隐藏，且不保留原来位置，常用于置顶广告的删除等。</li>
+<li><code>display:block;</code> 可以实现元素由隐藏到显示的效果，并恢复原有位置。</li>
 </ol>
-</li>
+<h3 id="1-2-visibility的显示隐藏特性"><a href="#1-2-visibility的显示隐藏特性" class="headerlink" title="1.2 visibility的显示隐藏特性"></a>1.2 visibility的显示隐藏特性</h3><ol>
+<li><code>visibility:hidden;</code> 元素隐藏，但是保留原来的位置，常用于某些特效的实现。如配合绝对定位的元素使用，实现划入显示，划出隐藏。</li>
+<li><code>visibility:visible;</code> 元素显示。</li>
 </ol>
-<ol start="2">
-<li><p>文字法</p>
-<ol>
-<li>“|”</li>
-<li>图形字体</li>
-</ol>
+<h3 id="1-3-overflow的溢出显示与隐藏"><a href="#1-3-overflow的溢出显示与隐藏" class="headerlink" title="1.3 overflow的溢出显示与隐藏"></a>1.3 overflow的溢出显示与隐藏</h3><ul>
+<li><p>visible：...</p></li></ul>
+            
+            <span class="read-more"><a href="/2019/11/24/2.%E5%85%83%E7%B4%A0%E9%9A%90%E8%97%8F%E5%8F%AF%E8%A7%81%E7%9A%84%E5%87%A0%E7%A7%8D%E8%AE%BE%E7%BD%AE%E6%96%B9%E5%BC%8F/" title="查看全文" class="posttitle">查看全文</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
+        </div>
+    </div>
+</div>
+
+
+<div class="post" id="post">
+    <div class="post-cover animated fadeIn" style="
+            background-image:
+            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+            url(/img/welcome-cover.jpg);">
+    </div>
+    <div class="else">
+        <p class="animated fadeInDown">
+            
+                <a href="javascript:;" target="_blank" rel="noopener"><b>「 </b>文章<b> 」</b></a>
+            
+            十一月 24, 2019
+        </p>
+        <h3 class="post-title animated fadeInDown"><a href="/2019/11/24/1.%E5%AE%9A%E4%BD%8D/" title="1.定位" class="posttitle">1.定位</a></h3>
+        
+            <p class="post-count animated fadeInDown">
+                
+                    <span>
+                        <b class="iconfont icon-text2"></b> <i>文章字数</i>
+                        4.3k
+                    </span>
+                
+                
+                    <span>
+                        <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
+                        4 mins.
+                    </span>
+                
+                
+            </p>
+            
+        
+        <div class="md-content animated fadeIn">
+            
+                <p>一个完整的定位，是<strong>定位模式+边偏移</strong></p>
+<p><code>position:属性值</code></p>
+<p><code>top:100px</code></p>
+<p><code>left:100px</code></p>
+<ul>
+<li><p>static：  </p>
+<p>对象遵循常规流。此时4个定位偏移属性不会被应用。 </p>
 </li>
-<li><p>块背景法（一般用作导航的</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span> <span class="tag">&lt;<span class="name">span</span>&gt;</span> <span class="tag">&lt;<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>如果单独作为承载内容的最外层，都会设置float属性）</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">width</span><span class="selector-pseudo">:1px</span>;<span class="selector-tag">height</span>:合适的高度;<span class="selector-tag">background-color</span>:<span class="selector-id">#666</span>;<span class="selector-tag">margin</span>:设置合适的上方外边距，使之垂直方向对齐文字，设置合适的左右外边距，使之撑开与左右文字链接的距离，底部外边距设为0;</span><br></pre></td></tr></table></figure>
-
-<p>或者可以写一个任意元素，如span,设置以下属性</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">display</span><span class="selector-pseudo">:block</span>;<span class="comment">/*或者直接float:left;*/</span></span><br><span class="line"><span class="selector-tag">width</span><span class="selector-pseudo">:6px</span>;</span><br><span class="line"><span class="selector-tag">height</span><span class="selector-pseudo">:14px</span>;</span><br><span class="line"><span class="selector-tag">background-color</span>:<span class="selector-id">#134532</span>;</span><br><span class="line"><span class="selector-tag">border-radius</span><span class="selector-pseudo">:3px</span>;</span><br></pre></td></tr></table></figure>
-
-<p>以实现有圆角、带颜色的粗竖线效果</p>
-<p><img src="C:%5CUsers%5C14046%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20191031203228858.png" alt="image-20191031203228858"></p>
+<li><p>relative：  </p>
+<p>对象遵循常规流，并且参照自身在常规流中的位置通过top，right，bottom，left这4个定位偏移属性进行偏移时不会影响常规流中的任何元素。 </p>
 </li>
-</ol>
-<h3 id="logo的统一写法"><a href="#logo的统一写法" class="headerlink" title="logo的统一写法"></a>logo的统一写法</h3><p>logo图片一般放在</p>
-<h3 id="鼠标经过-里面的变颜色"><a href="#鼠标经过-里面的变颜色" class="headerlink" title="鼠标经过 里面的变颜色"></a>鼠标经过<li> 里面的<a>变颜色</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">li</span><span class="selector-pseudo">:hover</span> <span class="selector-tag">a</span> &#123;</span><br><span class="line">	<span class="attribute">color</span>:white;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="当盒子有宽高的时候，设置padding的样式时，是向外撑开盒子，所以需要减去padding的总合，但是可以通过以下代码解决，使之向内收缩"><a href="#当盒子有宽高的时候，设置padding的样式时，是向外撑开盒子，所以需要减去padding的总合，但是可以通过以下代码解决，使之向内收缩" class="headerlink" title="当盒子有宽高的时候，设置padding的样式时，是向外撑开盒子，所以需要减去padding的总合，但是可以通过以下代码解决，使之向内收缩"></a>当盒子有宽高的时候，设置padding的样式时，是向外撑开盒子，所以需要减去padding的总合，但是可以通过以下代码解决，使之向内收缩</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">padding</span>:<span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">box-sizing</span>: border-box;<span class="comment">/*向内收缩*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h5 id="在“子绝父相”的情况下，如果有其他子标签属于标准流，由于其他子标签的宽高可以大于父标签，所以，其可以溢出占位，将下面标准流上的标签挤下来，在子标签的宽高没有超出父标签的默认宽高的情况下，则以父元素的实际宽高为整体宽高，处于绝对定位的子标签，漂浮于标准流和浮动层之上，且不占位置，不会影响下面标准流的位置"><a href="#在“子绝父相”的情况下，如果有其他子标签属于标准流，由于其他子标签的宽高可以大于父标签，所以，其可以溢出占位，将下面标准流上的标签挤下来，在子标签的宽高没有超出父标签的默认宽高的情况下，则以父元素的实际宽高为整体宽高，处于绝对定位的子标签，漂浮于标准流和浮动层之上，且不占位置，不会影响下面标准流的位置" class="headerlink" title="在“子绝父相”的情况下，如果有其他子标签属于标准流，由于其他子标签的宽高可以大于父标签，所以，其可以溢出占位，将下面标准流上的标签挤下来，在子标签的宽高没有超出父标签的默认宽高的情况下，则以父元素的实际宽高为整体宽高，处于绝对定位的子标签，漂浮于标准流和浮动层之上，且不占位置，不会影响下面标准流的位置"></a>在“子绝父相”的情况下，如果有其他子标签属于标准流，由于其他子标签的宽高可以大于父标签，所以，其可以溢出占位，将下面标准流上的标签挤下来，在子标签的宽高没有超出父标签的默认宽高的情况下，则以父元素的实际宽高为整体宽高，处于绝对定位的子标签，漂浮于标准流和浮动层之上，且不占位置，不会影响下面标准流的位置</h5><p><img src="C:%5CUsers%5C14046%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20191030191738132.png" alt="image-20191030191738132"></p>
-<p>此图中oppo产品系列那一块是绝对定位过去的，它和上面的那一块标准流标签同属于一个父标签，父标签没有给高度，是由标准流子标签撑开，虽然绝对定位的那一块超出了标准流标签的位置，但是并没影响到下面标准流标签的布局，是紧贴上面最外层标准流的父标签的下边界的。</p>
-<h3 id="长句…省略号显示"><a href="#长句…省略号显示" class="headerlink" title="长句…省略号显示"></a>长句…省略号显示</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">white-space</span>: <span class="selector-tag">nowrap</span>;<span class="selector-tag">text-overflow</span>: <span class="selector-tag">ellipsis</span>;<span class="selector-tag">overflow</span>: <span class="selector-tag">hidden</span>;</span><br></pre></td></tr></table></figure>
-
-<p>以上代码是让一行显示的较长的句子在有限空间范围内，超出范围的省略号显示的代码</p>
-<h5 id="如果发现padding-top或者margin-top-不起作用，检查一下上面的同级块元素是否没有设置高度，若设置了，是否小于实际高度，或者其子元素有浮动，没有清除浮动，或者可以直接给上面的同级元素加上-overflow-hidden；属性。"><a href="#如果发现padding-top或者margin-top-不起作用，检查一下上面的同级块元素是否没有设置高度，若设置了，是否小于实际高度，或者其子元素有浮动，没有清除浮动，或者可以直接给上面的同级元素加上-overflow-hidden；属性。" class="headerlink" title="如果发现padding - top或者margin - top 不起作用，检查一下上面的同级块元素是否没有设置高度，若设置了，是否小于实际高度，或者其子元素有浮动，没有清除浮动，或者可以直接给上面的同级元素加上 overflow:hidden；属性。"></a>如果发现padding - top或者margin - top 不起作用，检查一下上面的同级块元素是否没有设置高度，若设置了，是否小于实际高度，或者其子元素有浮动，没有清除浮动，或者可以直接给上面的同级元素加上 overflow:hidden；属性。</h5><h2 id="谷歌浏览器把audio的自动播放禁用了autoplay"><a href="#谷歌浏览器把audio的自动播放禁用了autoplay" class="headerlink" title="谷歌浏览器把audio的自动播放禁用了autoplay"></a>谷歌浏览器把audio的自动播放禁用了autoplay</h2><h2 id="移动web第一天"><a href="#移动web第一天" class="headerlink" title="移动web第一天"></a>移动web第一天</h2><h3 id="什么是HTML5？"><a href="#什么是HTML5？" class="headerlink" title="什么是HTML5？"></a>什么是HTML5？</h3><p>​    不是一门新的语言，而是html第五次重大修改</p>
-<h3 id="html5修改了什么内容？"><a href="#html5修改了什么内容？" class="headerlink" title="html5修改了什么内容？"></a>html5修改了什么内容？</h3><p>​    1.新增了语义化标签<br>​    2.新增了音频  视频  canvas画图<br>​    3.新增input标签  新增标签表单的属性<br>​    4.新增本地存储  地理定位<br>​    5.新增对类名操作<br>​    6.新增自定义属性的设置</p>
-<h4 id="语义化标签：（适用于移动端）"><a href="#语义化标签：（适用于移动端）" class="headerlink" title="语义化标签：（适用于移动端）"></a>语义化标签：（适用于移动端）</h4><p>​    1.header 头部标签<br>​    2.nav  导航标签<br>​    3.article 内容标签<br>​    4.section 相当于一块区域<br>​    5.aside 侧边栏<br>​    6.footer 尾部<br>​    7.main 主体标签</p>
-<h4 id="音频"><a href="#音频" class="headerlink" title="音频"></a>音频</h4><p>​    标签： audio<br>​    属性：<br>​        src： 路径<br>​        controls：控制器<br>​        autoplay:自动播放<br>​        loop:循环播放</p>
-<h4 id="视频："><a href="#视频：" class="headerlink" title="视频："></a>视频：</h4><p>​    标签  video<br>​    属性：<br>​        src： 路径<br>​        controls：控制器<br>​        autoplay:自动播放<br>​        loop:循环播放<br>​        poster：默认播放前的第一帧。<br>​        muted：静音播放<br>​        width与height  视频的宽高<br>​        等比例放大缩小（只需要设置一个即可）</p>
-<h4 id="新增input-type属性"><a href="#新增input-type属性" class="headerlink" title="新增input  type属性"></a>新增input  type属性</h4><pre><code>1. email验证邮箱
-    2. url：网址
-    3. date日期
-    4. month：月
-    5. week：周
-    6. number：数字
-    7. tel电话： 在移动端弹出数字键盘
-    8. search： 人性化体验
-    9. time：时间</code></pre><h4 id="新增标签："><a href="#新增标签：" class="headerlink" title="新增标签："></a>新增标签：</h4><p>​    分组表单：<br>​    <fieldset align="center"><br>​         <strong>当前组的标题</strong><br>​        <legend>用户信息</legend><br>​    </fieldset><br>​    下拉列表：<br>​    input:list绑定对应的id<br>​     <input type="text" list="a"><br>​    起id名：</p>
-<pre><code>&lt;datalist id=&quot;a&quot;&gt;
-    &lt;option value=&quot;张三&quot; label=&quot;好人&quot;&gt;&lt;/option&gt;
-    &lt;option value=&quot;隔壁张三&quot; label=&quot;大好人&quot;&gt;&lt;/option&gt;
-&lt;/datalist&gt;</code></pre><p>双标签的button和input type=”button”的区别</p>
-<p>button 有默认提交功能 而input type=”button”没有</p>
-<p>多个autofocus 只会生效第一个</p>
-
-      
+<li><p>absolute：  </p>
+<p>对象脱离常规流，此时偏移属性参照的是离自身最近的定位祖先元素，如果没有定位的祖先元素，则一直回溯到<code>body</code>元素。盒子的偏移位置...</p></li></ul>
+            
+            <span class="read-more"><a href="/2019/11/24/1.%E5%AE%9A%E4%BD%8D/" title="查看全文" class="posttitle">查看全文</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
+        </div>
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/24/%E7%AC%94%E8%AE%B0/" data-id="ck3ehduuq000irohoa1f18ysb" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
+</div>
 
 
-  
-    <article id="post-补充知识点" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/24/%E8%A1%A5%E5%85%85%E7%9F%A5%E8%AF%86%E7%82%B9/" class="article-date">
-  <time datetime="2019-11-24T07:59:06.573Z" itemprop="datePublished">2019-11-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/24/%E8%A1%A5%E5%85%85%E7%9F%A5%E8%AF%86%E7%82%B9/">补充知识点</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="补充知识"><a href="#补充知识" class="headerlink" title="补充知识"></a>补充知识</h1><ol>
-<li><p>广义的HTML5，是HTML5本身+CSS3新特性+javascript的更新</p>
-</li>
-<li><p>html5 新增了语义化标签</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">header</span>&gt;</span>头部标签<span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">nav</span>&gt;</span>导航标签<span class="tag">&lt;/<span class="name">nav</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">article</span>&gt;</span>内容标签<span class="tag">&lt;/<span class="name">article</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">section</span>&gt;</span>块级标签<span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">aside</span>&gt;</span>侧边栏标签<span class="tag">&lt;/<span class="name">aside</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">footer</span>&gt;</span>底部标签<span class="tag">&lt;/<span class="name">footer</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>由于语义化标签</p>
-</li>
-</ol>
-
-      
+<div class="post" id="post">
+    <div class="post-cover animated fadeIn" style="
+            background-image:
+            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+            url(/img/welcome-cover.jpg);">
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/24/%E8%A1%A5%E5%85%85%E7%9F%A5%E8%AF%86%E7%82%B9/" data-id="ck3ehduuu000kroho5wgk2vlv" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-背景图片插入图片多种设置方式" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/24/%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E5%A4%9A%E7%A7%8D%E8%AE%BE%E7%BD%AE%E6%96%B9%E5%BC%8F/" class="article-date">
-  <time datetime="2019-11-24T07:59:06.557Z" itemprop="datePublished">2019-11-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+    <div class="else">
+        <p class="animated fadeInDown">
+            
+                <a href="javascript:;" target="_blank" rel="noopener"><b>「 </b>文章<b> 」</b></a>
+            
+            十一月 23, 2019
+        </p>
+        <h3 class="post-title animated fadeInDown"><a href="/2019/11/23/hello-world/" title="Hello World" class="posttitle">Hello World</a></h3>
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/24/%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E5%A4%9A%E7%A7%8D%E8%AE%BE%E7%BD%AE%E6%96%B9%E5%BC%8F/">背景图片插入图片多种设置方式</a>
-    </h1>
-  
+            <p class="post-count animated fadeInDown">
+                
+                    <span>
+                        <b class="iconfont icon-text2"></b> <i>文章字数</i>
+                        2.4k
+                    </span>
+                
+                
+                    <span>
+                        <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
+                        2 mins.
+                    </span>
+                
+                
+            </p>
+            
+        
+        <div class="md-content animated fadeIn">
+            
+                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="背景图片-图片设置技巧"><a href="#背景图片-图片设置技巧" class="headerlink" title="背景图片/图片设置技巧"></a>背景图片/图片设置技巧</h1><ol>
-<li><p>精灵图二倍图</p>
-<p>精灵图如果想要缩小，然后再定位到指定位置，可以先将精灵图缩小到和图标需要缩小的倍数一致，然后再测量需要定位的数值，然后设置的时候 同比例设置 background-size: X%；即可实现。放大同理</p>
-</li>
-<li><p>背景图、插入图，如果通过布局视口的CSS设置宽高，要是需要在移动设备显示更清晰，可通过将图片做成2-4倍等比例放大的图片，然后CSS设置图片为布局视口的宽高（图片默认会有下间隙，记得使用vertical-aline:top/middle/bottom,清除），在移动设备上则能实现高清图。</p>
-</li>
-<li><p><code>background-origin:boder-box/padding-box/content-box;</code>可以实现改变背景图片的显示起始位置</p>
-</li>
-</ol>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">padding-box</span>： 从<span class="selector-tag">padding</span>区域（含<span class="selector-tag">padding</span>）开始显示背景图像。 </span><br><span class="line"><span class="selector-tag">border-box</span>： 从<span class="selector-tag">border</span>区域（含<span class="selector-tag">border</span>）开始显示背景图像。 </span><br><span class="line"><span class="selector-tag">content-box</span>： 从<span class="selector-tag">content</span>区域开始显示背景图像。 </span><br><span class="line">默认值：<span class="selector-tag">padding-box</span></span><br></pre></td></tr></table></figure>
-
-<img src="C:\Users\14046\AppData\Roaming\Typora\typora-user-images\image-20191113214217195.png" alt="image-20191113214217195" style="zoom:55%;" />
-
-<img src="C:\Users\14046\AppData\Roaming\Typora\typora-user-images\image-20191113214254438.png" alt="image-20191113214254438" style="width:200px;margin:0 0 0 20%;" /> 
-
-<blockquote>
-<p>​                                                                                  原图</p>
-</blockquote>
-<p>如图是通过以下代码实现</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"zh-CN"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span></span></span><br><span class="line"><span class="tag">          <span class="attr">content</span>=<span class="string">"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"ie=edge"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>背景设置练习<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">        * &#123;</span><br><span class="line">            margin: 0;</span><br><span class="line">            padding: 0;</span><br><span class="line">        &#125;</span><br><span class="line">        div &#123;</span><br><span class="line">            margin: 200px auto;</span><br><span class="line">            width: 500px;</span><br><span class="line">            height: 500px;</span><br><span class="line">            padding: 200px;</span><br><span class="line"><span class="css">            <span class="selector-tag">border</span>: 10<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-tag">rgba</span>(99,12,211,<span class="selector-class">.2</span>);</span></span><br><span class="line">            box-sizing: border-box;</span><br><span class="line">            background: url(images/1.png) no-repeat;</span><br><span class="line">            background-origin: content-box;</span><br><span class="line">            background-clip: content-box;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        我是内容主体</span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-      
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing...</a></p>
+            
+            <span class="read-more"><a href="/2019/11/23/hello-world/" title="查看全文" class="posttitle">查看全文</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
+        </div>
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/24/%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E5%A4%9A%E7%A7%8D%E8%AE%BE%E7%BD%AE%E6%96%B9%E5%BC%8F/" data-id="ck3ehduus000jrohocx2s1xhf" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
+</div>
 
 
-  
-    <article id="post-7.动画 animation之打印效果" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/24/7.%E5%8A%A8%E7%94%BB%20animation%E4%B9%8B%E6%89%93%E5%8D%B0%E6%95%88%E6%9E%9C/" class="article-date">
-  <time datetime="2019-11-24T07:59:06.526Z" itemprop="datePublished">2019-11-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/24/7.%E5%8A%A8%E7%94%BB%20animation%E4%B9%8B%E6%89%93%E5%8D%B0%E6%95%88%E6%9E%9C/">7.动画 animation之打印效果</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="实现-文字打字机效果1-CSS实现"><a href="#实现-文字打字机效果1-CSS实现" class="headerlink" title="实现 文字打字机效果1  CSS实现"></a>实现 文字打字机效果1  CSS实现</h1><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"zh-CN"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>通过animation: steps(12);实现打印效果<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">        @<span class="keyword">keyframes</span> typed &#123;</span></span><br><span class="line">            0% &#123;</span><br><span class="line">                width: 0;</span><br><span class="line">            &#125;</span><br><span class="line">            100% &#123;</span><br><span class="line">                width: 360px;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        div &#123;</span><br><span class="line">            height: 32px;</span><br><span class="line">            line-height: 30px;</span><br><span class="line">            font-size: 30px;</span><br><span class="line">            white-space: nowrap;</span><br><span class="line">            overflow: hidden;</span><br><span class="line">            animation: typed 12s steps(12) infinite;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span>我是一个打印文字的效果<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-      
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/24/7.%E5%8A%A8%E7%94%BB%20animation%E4%B9%8B%E6%89%93%E5%8D%B0%E6%95%88%E6%9E%9C/" data-id="ck3ehdutv0008roho09uhc92y" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
-
-  <nav id="page-nav">
     
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">下一页 &amp;raquo;</a>
-  </nav>
+</div>
+<div id="preview"></div>
 
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%89%8D%E7%AB%AF-web/" rel="tag">前端 web</a></li></ul>
+    <div id="back-to-top" class="animated fadeIn faster">
+        <div class="flow"></div>
+        <span class="percentage animated fadeIn faster">0%</span>
+        <span class="iconfont icon-top02 animated fadeIn faster"></span>
     </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签云</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/%E5%89%8D%E7%AB%AF-web/" style="font-size: 10px;">前端 web</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">十一月 2016</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">最新文章</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2019/11/24/%E6%B3%A81%EF%BC%9A%E6%A0%BC%E5%BC%8F%E5%8C%96%E4%BB%A3%E7%A0%81%E8%87%AA%E5%AE%9A%E4%B9%89%E5%88%9D%E5%A7%8B%E5%8C%96%E6%A0%B7%E5%BC%8F/">注1：格式化代码自定义初始化样式</a>
-          </li>
-        
-          <li>
-            <a href="/2019/11/24/%E7%A7%BB%E5%8A%A8web%E7%AC%AC%E4%B8%80%E5%A4%A9/">移动web第一天</a>
-          </li>
-        
-          <li>
-            <a href="/2019/11/24/%E5%B0%8F%E7%89%B9%E6%95%88-%E8%83%8C%E6%99%AF%E6%B8%90%E5%8F%98%E8%89%B2/">小特效-背景渐变色</a>
-          </li>
-        
-          <li>
-            <a href="/2019/11/24/%E5%AE%9E%E7%8E%B0%E4%B8%80%E5%B7%A6%E4%B8%80%E5%8F%B3%E7%9A%84%E5%AF%B9%E9%BD%90/">实现一左一右的对齐</a>
-          </li>
-        
-          <li>
-            <a href="/2019/11/24/%E4%B8%89%E7%A7%8D%E4%B8%BB%E6%B5%81%E5%B8%83%E5%B1%80/">三种主流布局</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2019 Mr Guo<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
-
-
-
-  </div>
 </body>
+<footer>
+    <p class="copyright" id="copyright">
+        &copy; 2019
+        <span class="gradient-text">
+            Mr Guo
+        </span>.
+        Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
+        Theme
+        <span class="gradient-text">
+            <a href="https://github.com/TriDiamond/hexo-theme-obsidian" title="Obsidian" target="_blank" rel="noopener">Obsidian</a>
+        </span>
+        <small><a href="https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md" title="v1.4.3" target="_blank" rel="noopener">v1.4.3</a></small>
+    </p>
+</footer>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script>
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+      preferredFont: "TeX",
+      availableFonts: ["STIX", "TeX"],
+      linebreaks: {
+        automatic: true
+      },
+      EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+      inlineMath: [
+        ["$", "$"],
+        ["\\(", "\\)"]
+      ],
+      processEscapes: true,
+      ignoreClass: "tex2jax_ignore|dno",
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      noUndefined: {
+        attributes: {
+          mathcolor: "red",
+          mathbackground: "#FFEEEE",
+          mathsize: "90%"
+        }
+      },
+      Macros: {
+        href: "{}"
+      }
+    },
+    messageStyle: "none"
+  });
+</script>
+<script>
+  function initialMathJax() {
+    MathJax.Hub.Queue(function () {
+      var all = MathJax.Hub.getAllJax(),
+        i;
+      // console.log(all);
+      for (i = 0; i < all.length; i += 1) {
+        console.log(all[i].SourceElement().parentNode)
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  }
+
+  function reprocessMathJax() {
+    if (typeof MathJax !== 'undefined') {
+      MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+    }
+  }
+</script>
+
+
+
+    <link rel="stylesheet" href="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.css">
+    <script src="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/obsidian.js"></script>
+<script src="/js/jquery.truncate.js"></script>
+<script src="/js/search.js"></script>
+<script src="//cdn.bootcss.com/typed.js/2.0.10/typed.min.js"></script>
+<script src="//cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+<script src="https://cdn.bootcss.com/codemirror/5.48.4/codemirror.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/javascript/javascript.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/css/css.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/xml/xml.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/htmlmixed/htmlmixed.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/clike/clike.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/php/php.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/shell/shell.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/python/python.min.js"></script>
+
+
+
+    <script src="/js/busuanzi.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            if ($('span[id^="busuanzi_"]').length) {
+                initialBusuanzi();
+            }
+        });
+    </script>
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="//www.googletagmanager.com/gtag/js?id=UA-149874671-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-149874671-1');
+    </script>
+
+
+
+
+
+<script>
+    function initialTyped () {
+        var typedTextEl = $('.typed-text');
+        if (typedTextEl && typedTextEl.length > 0) {
+            var typed = new Typed('.typed-text', {
+                strings: ["Think like an artist, develop like an artisan", "艺术家思维去思考问题，工匠创造精神去开发"],
+                typeSpeed: 90,
+                loop: true,
+                loopCount: Infinity,
+                backSpeed: 20,
+            });
+        }
+    }
+
+    if ($('.article-header') && $('.article-header').length) {
+        $(document).ready(function () {
+            initialTyped();
+        });
+    }
+</script>
+
+
+
+
 </html>
