@@ -82,19 +82,6 @@
     
     
     <entry>
-      <title>补充知识点</title>
-      <link href="/2019/11/27/bu-chong-zhi-shi-dian/"/>
-      <url>/2019/11/27/bu-chong-zhi-shi-dian/</url>
-      
-        <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">title: typora-vue-theme主题介绍</span><br><span class="line">date: 2018-09-07 09:25:00</span><br><span class="line">author: 赵奇</span><br><span class="line">img: /source/images/xxx.jpg</span><br><span class="line">top: true</span><br><span class="line">cover: true</span><br><span class="line">coverImg: /images/1.jpg</span><br><span class="line">password: 8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92</span><br><span class="line">toc: false</span><br><span class="line">mathjax: false</span><br><span class="line">summary: 这是你自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要</span><br><span class="line">categories: Markdown</span><br><span class="line">tags:</span><br><span class="line">  - Typora</span><br><span class="line">  - Markdown</span><br></pre></td></tr></table></figure><h1 id="补充知识"><a href="#补充知识" class="headerlink" title="补充知识"></a>补充知识</h1><ol><li><p>广义的HTML5，是HTML5本身+CSS3新特性+javascript的更新</p></li><li><p>html5 新增了语义化标签</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">header</span>&gt;</span>头部标签<span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">nav</span>&gt;</span>导航标签<span class="tag">&lt;/<span class="name">nav</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">article</span>&gt;</span>内容标签<span class="tag">&lt;/<span class="name">article</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">section</span>&gt;</span>块级标签<span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">aside</span>&gt;</span>侧边栏标签<span class="tag">&lt;/<span class="name">aside</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">footer</span>&gt;</span>底部标签<span class="tag">&lt;/<span class="name">footer</span>&gt;</span></span><br></pre></td></tr></table></figure><p>由于语义化标签</p></li></ol>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>笔记</title>
       <link href="/2019/11/27/bi-ji/"/>
       <url>/2019/11/27/bi-ji/</url>
@@ -232,6 +219,33 @@
         <content type="html"><![CDATA[<p>##js第一天：<br>什么编程语言： 具有一定的逻辑思维 实现特定的功能  java   c  c++ c#  php  .net  js<br>###什么是javascript —— js<br>    实现网页的动态效果<br>###js的历史背景：<br>    1995年  布兰登艾奇  7-10天<br>    原创之处并不优秀  优秀之处并非原创<br>    sun公司—java<br>    javascript<br>###早起js的价值：<br>    主要的需求<br>        当用户输入表单信息 提交 过5分钟 服务器返回内容 说 信息输入错误<br>        javascript—-解决表单验证（不通过服务器  只要用户输入错误 直接告诉用户）<br>###现在的价值：<br>    网页的交互（动态效果）<br>    表单验证<br>    小游戏<br>    地图（数据可视化）<br>###js的特点：<br>    1.js脚本语言（不需要服务器  直接挂在到浏览器）<br>    2.js是弱类型语言  指定什么变量名都可以 可以存储任意类型   强类型想存储数值 必须指定int才可以<br>    3.js是直译型语言（浏览器认识js  直接翻译不需要转换）  java浏览器不认识  需要转换浏览器能够识别的语言<br>###js的组成<br>    ECMAscript（基础语法）+ BOM（浏览器对象） + DOM（文档对象模型）<br>###js的两种书写方式：<br>    1.内部<br>        <script>....</script><br>    2.外部<br>        <script src="外部js文件"></script><br>###js注释：<br>    // 单行<br>    /* 多行 */<br>###js输出语句：<br>    1.弹出警示框<br>        alert()<br>    2.弹出输入框<br>         prompt(“请输入”, 1234)<br>         第一个参数：代表提示信息<br>         第二个参数：文本框的默认值<br>    3.控制面板：<br>        console.log(值) 常用！！！<br>    4.文档输出：<br>        document.write()<br>###变量：<br>    变量就是产量  容器  盒子<br>    var num = 10:  声明一个变量名叫num   变量名的值10<br>###声明变量的几种方式：<br>    1.var num = 10<br>    2. var num; num = 10<br>    3. 统一声明再去赋值<br>    var num, num1, num2, num3;<br>    num = 1;<br>    num1 = 2;<br>    num2 = 3;<br>    4.var num1 = 10, num2 = 20, num3 = 30;<br>###声明变量的注意点：<br>    1.只声明没有赋值<br>        undefined<br>    2.没有声明 直接赋值<br>        浏览器自动加上var关键字<br>    3.没有声明，没有给值<br>        报错   num is not defined<br>    var num1 = prompt(“请输入第一个值”);<br>    var num2 = prompt(“请输入第二个值”);<br>    document.write(num1 - num2);     </p><pre><code>// 交换两个值的变量？？var n1 = 10;var n2 = 20;第一种：var n3;n3 = n1;n1 = n2;n2 = n3第二种：n1 = n2 + n1;n2 = n1 - n2;n1 = n1 - n2;</code></pre><p>###变量的命名规范：<br>    1.包含 数字  字母 下划线 （不能以数字开头）<br>    2.不能包含特殊字符<br>    3. uName  mySchool<br>    4.不能超过255个字符;<br>    5.不能是关键字与保留字;<br>        var  for  while if<br>###数据类型：<br>    基本数据类型<br>        数值型   字符型  布尔型  undefined  null<br><strong>数值型</strong>:<br>            二进制  三进制 五进制  八进制 10进制 16进制<br>            0  小数  负数 整数   NaN<br>    isNaN判断当前数据是否是数字  如果是数字返回false  不是返回true<br>       isNaN(“123”)  会默认尝试转换数字   “123”—-123<br>       总结：<br>        1.只要字符串里面全是数字就会转化成功<br>        2.isNaN判断的是 是否是数字并不是判断数值型<br>    转移字符：<br>        \n:换行<br>        :原样输出<br>        \t:tab<br>        \b:空格<br><strong>字符串</strong><br>    只要加引号的都属于字符型<br>        数值相加  字符相连<br>        var str = “hello”<br>        字符串的长度：str.length<br>        找到具体的元素：str[索引]   索引从0开始   0默认第一个字符<br>null  undefined 特殊类型 先知道</p><p><strong>布尔类型</strong><br>    true   false<br><strong>typeof检测数据类型</strong><br>    console.log(typeof )<br>###数据类型转换：<br><strong>转换为字符串：</strong><br>    1.显示（强制）类型转换   var num = 10;<br>        1.num.toString()<br>        2.String(num)<br>    2.隐式类型转换：<br>        与字符串拼接<br>    不会影响原来的数据类型！！！！<br><strong>转换数值类型</strong> var str = “10”;<br>    1.显示类型转换<br>        1.parseInt()<br>        2.parseFloat()<br>        3.Number()<br>        三者的区别：<br>            1.当字符串是整数 三者没有区别<br>            2.当字符串是小数  parseInt取整（干掉小数）   parseFloat与Number保留小数<br>            3.当字符串包含字母<br>                1.字母在后面： parseFloat保留小数   Number：NaN<br>                2.字母在前面： 三者结果都是NaN<br>    2.隐式类型转换：<br>        1.str-0;<br>        2.str<em>1<br>        3.str/1<br>        4.+str ！！！<br>        5.-str<br>*</em>转换布尔类型**<br>    1.强制类型转换<br>        1.Boolean()<br>    2.隐式类型转换：<br>        !!<br>    转换为false的情况：  0  null  undefined  NaN “”  false<br>    剩下的全是true</p>]]></content>
       
       
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>typora-vue-theme主题介绍</title>
+      <link href="/2018/09/07/bu-chong-zhi-shi-dian/"/>
+      <url>/2018/09/07/bu-chong-zhi-shi-dian/</url>
+      
+        <content type="html"><![CDATA[<h1 id="补充知识"><a href="#补充知识" class="headerlink" title="补充知识"></a>补充知识</h1><ol><li><p>广义的HTML5，是HTML5本身+CSS3新特性+javascript的更新</p></li><li><p>html5 新增了语义化标签</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">header</span>&gt;</span>头部标签<span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">nav</span>&gt;</span>导航标签<span class="tag">&lt;/<span class="name">nav</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">article</span>&gt;</span>内容标签<span class="tag">&lt;/<span class="name">article</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">section</span>&gt;</span>块级标签<span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">aside</span>&gt;</span>侧边栏标签<span class="tag">&lt;/<span class="name">aside</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">footer</span>&gt;</span>底部标签<span class="tag">&lt;/<span class="name">footer</span>&gt;</span></span><br></pre></td></tr></table></figure><p>由于语义化标签</p></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> Markdown </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Typora </tag>
+            
+            <tag> Markdown </tag>
+            
+        </tags>
       
     </entry>
     

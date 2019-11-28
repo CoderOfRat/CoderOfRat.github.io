@@ -153,29 +153,6 @@
   </entry>
   
   <entry>
-    <title>补充知识点</title>
-    <link href="http://yoursite.com/2019/11/27/bu-chong-zhi-shi-dian/"/>
-    <id>http://yoursite.com/2019/11/27/bu-chong-zhi-shi-dian/</id>
-    <published>2019-11-27T12:52:12.340Z</published>
-    <updated>2019-11-28T02:20:09.051Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>笔记</title>
     <link href="http://yoursite.com/2019/11/27/bi-ji/"/>
     <id>http://yoursite.com/2019/11/27/bi-ji/</id>
@@ -426,6 +403,35 @@
     </summary>
     
     
+    
+  </entry>
+  
+  <entry>
+    <title>typora-vue-theme主题介绍</title>
+    <link href="http://yoursite.com/2018/09/07/bu-chong-zhi-shi-dian/"/>
+    <id>http://yoursite.com/2018/09/07/bu-chong-zhi-shi-dian/</id>
+    <published>2018-09-07T01:25:00.000Z</published>
+    <updated>2019-11-28T05:50:11.078Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;补充知识&quot;&gt;&lt;a href=&quot;#补充知识&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Markdown" scheme="http://yoursite.com/categories/Markdown/"/>
+    
+    
+      <category term="Typora" scheme="http://yoursite.com/tags/Typora/"/>
+    
+      <category term="Markdown" scheme="http://yoursite.com/tags/Markdown/"/>
     
   </entry>
   
