@@ -4,8 +4,16 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="contact, 代码,coder,code,it,communication,交流">
-    <meta name="description" content="contact | Coder Rat">
+    <meta name="keywords" content="1.定位, 代码,coder,code,it,communication,交流">
+    <meta name="description" content="定位 position 重点一个完整的定位，是定位模式+边偏移
+position:属性值
+top:100px
+left:100px
+1.1 定位模式
+static：  
+对象遵循常规流。此时4个定位偏移属性不会被应用。 
+
+relative">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +21,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>contact | Coder Rat</title>
+    <title>1.定位 | Coder Rat</title>
     <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -289,7 +297,7 @@
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        contact
+                        1.定位
                     </div>
                 </div>
             </div>
@@ -408,7 +416,113 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="定位-position-重点"><a href="#定位-position-重点" class="headerlink" title="定位 position 重点"></a>定位 position 重点</h1><p>一个完整的定位，是<strong>定位模式+边偏移</strong></p>
+<p><code>position:属性值</code></p>
+<p><code>top:100px</code></p>
+<p><code>left:100px</code></p>
+<h2 id="1-1-定位模式"><a href="#1-1-定位模式" class="headerlink" title="1.1 定位模式"></a>1.1 定位模式</h2><ul>
+<li><p>static：  </p>
+<p>对象遵循常规流。此时4个定位偏移属性不会被应用。 </p>
+</li>
+<li><p>relative：  </p>
+<p>对象遵循常规流，并且参照自身在常规流中的位置通过top，right，bottom，left这4个定位偏移属性进行偏移时不会影响常规流中的任何元素。 </p>
+</li>
+<li><p>absolute：  </p>
+<p>对象脱离常规流，此时偏移属性参照的是离自身最近的定位祖先元素，如果没有定位的祖先元素，则一直回溯到<code>body</code>元素。盒子的偏移位置不影响常规流中的任何元素，其margin不与其他任何margin折叠。 </p>
+</li>
+<li><p>fixed：  </p>
+<p>与<code>absolute</code>一致，但偏移定位是以窗口为参考。当出现滚动条时，对象不会随着滚动。 </p>
+</li>
+<li><p>center：  </p>
+<p>与<code>absolute</code>一致，但偏移定位是以定位祖先元素的中心点为参考。盒子在其包含容器垂直水平居中。（CSS3） </p>
+</li>
+<li><p>page：  </p>
+<p>与<code>absolute</code>一致。元素在分页媒体或者区域块内，元素的包含块始终是初始包含块，否则取决于每个<code>absolute</code>模式。（CSS3） </p>
+</li>
+<li><p>sticky：  </p>
+<p>对象在常态时遵循常规流。它就像是<code>relative</code>和<code>fixed</code>的合体，当在屏幕中时按常规流排版，当卷动到屏幕外时则表现如<code>fixed</code>。该属性的表现是现实中你见到的吸附效果。（CSS3） </p>
+</li>
+</ul>
+<p>*  CSS3新增属性可能存在描述错误及变更，仅供参考，持续更新</p>
+<h2 id="引申"><a href="#引申" class="headerlink" title="引申"></a>引申</h2><ul>
+<li><p>当<code>position</code>的值为<code>非static</code>时，其层叠级别通过<code>z-index</code>属性定义。  </p>
+</li>
+<li><p>z-index的默认值为auto：  </p>
+<p>元素在当前层叠上下文中的层叠级别是0。元素不会创建新的局部层叠上下文，除非它是根元素。比如固定定位，不会按照定位的元素会漂浮在标准流和浮动流之上的原则，因为他起定位依据作用的父级是根元素body,所以符合写在后面的会在上面的特性，或者通过z-index进行提升层级。它和正常流在一个上下文</p>
+</li>
+<li><p>绝对定位的元素，在top，right，bottom，left属性未设置时，会紧随在其前面的兄弟元素之后，但在位置上不影响常规流中的任何元素。 </p>
+</li>
+<li><p>标准流的子盒子，总是以父级元素为准，移动位置。 </p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>语义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>static</td>
+<td>静态定位（默认）</td>
+</tr>
+<tr>
+<td>relative</td>
+<td>相对定位</td>
+</tr>
+<tr>
+<td>absolute</td>
+<td>绝对定位</td>
+</tr>
+<tr>
+<td>fixed</td>
+<td>固定定位</td>
+</tr>
+</tbody></table>
+<h3 id="1-1-1-相对定位的2点特性"><a href="#1-1-1-相对定位的2点特性" class="headerlink" title="1.1.1 相对定位的2点特性"></a>1.1.1 相对定位的2点特性</h3><ol>
+<li><p>是相对于<strong>它原来在标准流中的位置</strong>进行定位移动的。</p>
+</li>
+<li><p>原来<strong>在标准流的区域继续占有</strong>，后面的元素依然以标准流的方式对待它。</p>
+</li>
+</ol>
+<h3 id="1-1-2-绝对定位的特性"><a href="#1-1-2-绝对定位的特性" class="headerlink" title="1.1.2 绝对定位的特性"></a>1.1.2 绝对定位的特性</h3><ol>
+<li><p>是以<strong>带有定位的祖先元素</strong>来进行定位移动的，祖先元素如果没有定位，则向上回溯到<code>body</code>元素，最终以浏览器可视区域为准进行定位移动。</p>
+</li>
+<li><p>完全脱标——完全不占位置，盒子的偏移位置不影响标准流中的任何元素，其margin不与其他任何margin折叠。 </p>
+<p><strong>布局要点</strong>：<strong>父级要占有位置，子级要任意摆放</strong>，这就是<strong>子绝父相</strong>的由来。</p>
+</li>
+</ol>
+<h3 id="1-1-3-固定定位的特性"><a href="#1-1-3-固定定位的特性" class="headerlink" title="1.1.3 固定定位的特性"></a>1.1.3 固定定位的特性</h3><ol>
+<li><p><strong>完全脱标</strong> —— 完全不占位置；</p>
+</li>
+<li><p>只认<strong>浏览器的可视窗口</strong> —— <code>浏览器可视窗口 + 边偏移属性</code> 来设置元素的位置；</p>
+<ul>
+<li>跟父元素没有任何关系；单独使用的</li>
+<li>不随滚动条滚动而滚动。</li>
+</ul>
+</li>
+<li><p>IE 6 等低版本浏览器不支持固定定位。</p>
+</li>
+</ol>
+<h3 id="1-1-4-z-index的堆叠顺序"><a href="#1-1-4-z-index的堆叠顺序" class="headerlink" title="1.1.4 z-index的堆叠顺序"></a>1.1.4 z-index的堆叠顺序</h3><p><code>z-index</code> 的特性如下：</p>
+<ol>
+<li><strong>属性值</strong>：<strong>正整数</strong>、<strong>负整数</strong>或 <strong>0</strong>，默认值是 0，数值越大，盒子越靠上；</li>
+<li>如果<strong>属性值相同</strong>，则按照书写顺序，<strong>后来居上</strong>；</li>
+<li><strong>数字后面不能加单位</strong>。</li>
+</ol>
+<p><strong>注意</strong>：<code>z-index</code> 只能应用于<strong>相对定位</strong>、<strong>绝对定位</strong>和<strong>固定定位</strong>的元素，其他<strong>标准流</strong>、<strong>浮动</strong>和<strong>静态定位</strong>无效。</p>
+<h3 id="1-1-5-绝对定位和固定定位，可以改变display属性"><a href="#1-1-5-绝对定位和固定定位，可以改变display属性" class="headerlink" title="1.1.5 绝对定位和固定定位，可以改变display属性"></a>1.1.5 绝对定位和固定定位，可以改变display属性</h3><p>前面我们讲过， display 是 显示模式， 可以改变显示模式有以下方式:</p>
+<ul>
+<li>可以用inline-block  转换为行内块</li>
+<li>可以用浮动 float 默认转换为行内块（类似，并不完全一样，因为浮动是脱标的）</li>
+<li>绝对定位和固定定位也和浮动类似， 默认转换的特性 转换为行内块。</li>
+</ul>
+<p>所以说， 一个行内的盒子，如果加了<strong>浮动</strong>、<strong>固定定位</strong>和<strong>绝对定位</strong>，不用转换，就可以给这个盒子直接设置宽度和高度等。</p>
+<p><strong>同时注意：</strong></p>
+<p>浮动元素、绝对定位(固定定位）元素的都不会触发外边距合并的问题。 （我们以前是用padding border overflow解决的）</p>
+<p>也就是说，我们给盒子改为了浮动或者定位，就不会有垂直外边距合并的问题了。</p>
+<h3 id="后续拓展补充"><a href="#后续拓展补充" class="headerlink" title="后续拓展补充"></a>后续拓展补充</h3><p><strong>CSS的三大特性：层叠  继承  优先级</strong></p>
+
             </div>
             <hr/>
 
@@ -548,7 +662,7 @@
                     </span>
                     <a href="http://yoursite.com" class="b-link-green">Coder Rat</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/contact/index.html" class="b-link-green">contact</a>
+                    <a href="/2019/11/27/1.ding-wei/" class="b-link-green">1.定位</a>
                 </p>
             </div>
         </div>
@@ -569,26 +683,29 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/contact/index.html">
+                <a href="/2019/11/27/2.yuan-su-yin-cang-ke-jian-de-ji-chong-she-zhi-fang-shi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="contact">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="2.元素隐藏可见的几种设置方式">
                         
-                        <span class="card-title">contact</span>
+                        <span class="card-title">2.元素隐藏可见的几种设置方式</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary"></div>
+                    <div class="summary">元素的显示与隐藏1.1 display的显示隐藏特性
+display:none; 元素隐藏，且不保留原来位置，常用于置顶广告的删除等。
+display:block; 可以实现元素由隐藏到显示的效果，并恢复原有位置。
+
+1.2 visibil</div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-27
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-27
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-user fa-fw"></i>
@@ -597,7 +714,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -605,20 +721,20 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="fa fa-dot-circle-o"></i>
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/contact/index.html">
+                <a href="/2019/11/27/zong-jie/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="contact">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="总结">
                         
-                        <span class="card-title">contact</span>
+                        <span class="card-title">总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary"></div>
+                    <div class="summary">##js第一天：什么编程语言： 具有一定的逻辑思维 实现特定的功能  java   c  c++ c#  php  .net  js###什么是javascript —— js    实现网页的动态效果###js的历史背景：    1995</div>
                     <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-27
@@ -631,7 +747,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>

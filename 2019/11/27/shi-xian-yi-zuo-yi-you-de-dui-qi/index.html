@@ -4,8 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="contact, 代码,coder,code,it,communication,交流">
-    <meta name="description" content="contact | Coder Rat">
+    <meta name="keywords" content="实现一左一右的对齐, 代码,coder,code,it,communication,交流">
+    <meta name="description" content="一左一右对齐让元素在一行显示，并且向一侧对齐，可以使用float实现
+让元素以不同布局在一行或一列排列 可以使用flex弹性布局实现
+让元素在一行且左右对齐的方法
+如果使用float
+可以一个float:left;一个float:right">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +17,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>contact | Coder Rat</title>
+    <title>实现一左一右的对齐 | Coder Rat</title>
     <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -283,13 +287,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        contact
+                        实现一左一右的对齐
                     </div>
                 </div>
             </div>
@@ -408,7 +412,17 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="一左一右对齐"><a href="#一左一右对齐" class="headerlink" title="一左一右对齐"></a>一左一右对齐</h1><p>让元素在一行显示，并且向一侧对齐，可以使用float实现</p>
+<p>让元素以不同布局在一行或一列排列 可以使用flex弹性布局实现</p>
+<p>让元素在一行且左右对齐的方法</p>
+<p><strong>如果使用float</strong></p>
+<p>可以一个<code>float:left;</code>一个<code>float:right;</code>来实现，行内元素设置float,也会同时改变其布局属性为<code>inline-block</code>,就可以设置宽高了，行高是行内元素本来具备的属性。</p>
+<p><strong>如果使用flex</strong></p>
+<p>可以对需要在一行显示的元素使用<code>display:flex;</code></p>
+<p>此种情况需要有三个以上的盒子，两个盒子固定宽度，剩下中间的盒子分配剩余宽度</p>
+<p><strong>如果使用position</strong></p>
+<p>父盒子<code>position:relative;</code>两个子盒子<code>position:absolute;</code>,分别定位到两侧</p>
+
             </div>
             <hr/>
 
@@ -548,7 +562,7 @@
                     </span>
                     <a href="http://yoursite.com" class="b-link-green">Coder Rat</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/contact/index.html" class="b-link-green">contact</a>
+                    <a href="/2019/11/27/shi-xian-yi-zuo-yi-you-de-dui-qi/" class="b-link-green">实现一左一右的对齐</a>
                 </p>
             </div>
         </div>
@@ -569,26 +583,25 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/contact/index.html">
+                <a href="/2019/11/27/xiao-te-xiao-bei-jing-jian-bian-se/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="contact">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="小特效-背景渐变色">
                         
-                        <span class="card-title">contact</span>
+                        <span class="card-title">小特效-背景渐变色</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary"></div>
+                    <div class="summary">渐变色设置123456789101112131415161718192021直接设置背景颜色为红色background: red; 设置背景为线性渐变颜色  上到下（注意：如果加了特定的浏览器支持，就不能用to bottom了，to要省略掉</div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-27
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-27
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-user fa-fw"></i>
@@ -597,7 +610,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -605,16 +617,16 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="fa fa-dot-circle-o"></i>
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/contact/index.html">
+                <a href="/2019/11/27/san-chong-zhu-liu-bu-ju/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="contact">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="三种主流布局">
                         
-                        <span class="card-title">contact</span>
+                        <span class="card-title">三种主流布局</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -631,7 +643,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>

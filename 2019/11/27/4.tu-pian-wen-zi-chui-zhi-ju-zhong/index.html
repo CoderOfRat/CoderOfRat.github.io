@@ -4,8 +4,13 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="contact, 代码,coder,code,it,communication,交流">
-    <meta name="description" content="contact | Coder Rat">
+    <meta name="keywords" content="4.图片文字垂直居中, 代码,coder,code,it,communication,交流">
+    <meta name="description" content="3. vertical-align 垂直对齐
+有宽度的块级元素水平居中对齐，是margin: 0 auto;
+让内容水平居中对齐，是 text-align: center;
+
+但是我们从来没有讲过有垂直居中的属性。
+vertical-ali">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +18,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>contact | Coder Rat</title>
+    <title>4.图片文字垂直居中 | Coder Rat</title>
     <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -283,13 +288,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        contact
+                        4.图片文字垂直居中
                     </div>
                 </div>
             </div>
@@ -408,7 +413,37 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h2 id="3-vertical-align-垂直对齐"><a href="#3-vertical-align-垂直对齐" class="headerlink" title="3. vertical-align 垂直对齐"></a>3. vertical-align 垂直对齐</h2><ul>
+<li>有宽度的块级元素水平居中对齐，是margin: 0 auto;</li>
+<li>让内容水平居中对齐，是 text-align: center;</li>
+</ul>
+<p>但是我们从来没有讲过有垂直居中的属性。</p>
+<p>vertical-align 垂直对齐，它只针对于<strong>行内元素</strong>或者<strong>行内块元素</strong>，</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vertical-align : baseline |top |middle |bottom</span><br></pre></td></tr></table></figure>
+
+<p>设置或检索对象内容的垂直对其方式。</p>
+<ul>
+<li><p>注意：</p>
+<p>vertical-align 不影响块级元素中的内容对齐，它只针对于<strong>行内元素</strong>或者<strong>行内块元素</strong>，</p>
+<p>特别是行内块元素， <strong>通常用来控制图片/表单与文字的对齐</strong>。</p>
+</li>
+</ul>
+<h3 id="3-1-图片、表单和文字对齐"><a href="#3-1-图片、表单和文字对齐" class="headerlink" title="3.1 图片、表单和文字对齐"></a>3.1 图片、表单和文字对齐</h3><p>所以我们知道，我们可以通过vertical-align 控制图片和文字的垂直关系了。 默认的图片会和文字基线对齐。</p>
+<h3 id="3-2-去除图片底侧空白缝隙"><a href="#3-2-去除图片底侧空白缝隙" class="headerlink" title="3.2 去除图片底侧空白缝隙"></a>3.2 去除图片底侧空白缝隙</h3><ul>
+<li><p>原因：</p>
+<p>图片或者表单等行内块元素，他的底线会和父级盒子的基线对齐。</p>
+<p>就是图片底侧会有一个空白缝隙。</p>
+</li>
+<li><p>解决的方法就是：  </p>
+<ul>
+<li><p>给img vertical-align:middle | top| bottom等等。  让图片不要和基线对齐。</p>
+</li>
+<li><p>给img 添加 display：block; 转换为块级元素就不会存在问题了。</p>
+</li>
+</ul>
+</li>
+</ul>
+
             </div>
             <hr/>
 
@@ -548,7 +583,7 @@
                     </span>
                     <a href="http://yoursite.com" class="b-link-green">Coder Rat</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/contact/index.html" class="b-link-green">contact</a>
+                    <a href="/2019/11/27/4.tu-pian-wen-zi-chui-zhi-ju-zhong/" class="b-link-green">4.图片文字垂直居中</a>
                 </p>
             </div>
         </div>
@@ -569,26 +604,25 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/contact/index.html">
+                <a href="/2019/11/27/5.css-shi-xian-xiao-san-jiao-xing/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="contact">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="5.CSS实现小三角形">
                         
-                        <span class="card-title">contact</span>
+                        <span class="card-title">5.CSS实现小三角形</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary"></div>
+                    <div class="summary">CSS三角形之美1234567891011div &#123;	width: 0;    height: 0;   line-height:0；   font-size: 0;border-top: 10px solid red;borde</div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-27
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-27
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-user fa-fw"></i>
@@ -597,7 +631,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -605,20 +638,45 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="fa fa-dot-circle-o"></i>
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/contact/index.html">
+                <a href="/2019/11/27/3.css-yong-hu-jie-mian-ti-yan/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="contact">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="3.CSS用户界面体验">
                         
-                        <span class="card-title">contact</span>
+                        <span class="card-title">3.CSS用户界面体验</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary"></div>
+                    <div class="summary">用户界面体验设计1.1 鼠标样式设置cursor 设置或检索在对象上移动的鼠标指针采用何种系统预定义的光标形状。
+
+
+
+属性值
+描述
+
+
+
+default
+小白  默认
+
+
+pointer
+小手
+
+
+move
+移动
+
+
+text
+文本
+
+
+</div>
                     <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-27
@@ -631,7 +689,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>

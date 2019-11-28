@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="contact, 代码,coder,code,it,communication,交流">
-    <meta name="description" content="contact | Coder Rat">
+    <meta name="keywords" content="总结, 代码,coder,code,it,communication,交流">
+    <meta name="description" content="##js第一天：什么编程语言： 具有一定的逻辑思维 实现特定的功能  java   c  c++ c#  php  .net  js###什么是javascript —— js    实现网页的动态效果###js的历史背景：    1995">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>contact | Coder Rat</title>
+    <title>总结 | Coder Rat</title>
     <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -283,13 +283,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        contact
+                        总结
                     </div>
                 </div>
             </div>
@@ -408,7 +408,21 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <p>##js第一天：<br>什么编程语言： 具有一定的逻辑思维 实现特定的功能  java   c  c++ c#  php  .net  js<br>###什么是javascript —— js<br>    实现网页的动态效果<br>###js的历史背景：<br>    1995年  布兰登艾奇  7-10天<br>    原创之处并不优秀  优秀之处并非原创<br>    sun公司—java<br>    javascript<br>###早起js的价值：<br>    主要的需求<br>        当用户输入表单信息 提交 过5分钟 服务器返回内容 说 信息输入错误<br>        javascript—-解决表单验证（不通过服务器  只要用户输入错误 直接告诉用户）<br>###现在的价值：<br>    网页的交互（动态效果）<br>    表单验证<br>    小游戏<br>    地图（数据可视化）<br>###js的特点：<br>    1.js脚本语言（不需要服务器  直接挂在到浏览器）<br>    2.js是弱类型语言  指定什么变量名都可以 可以存储任意类型   强类型想存储数值 必须指定int才可以<br>    3.js是直译型语言（浏览器认识js  直接翻译不需要转换）  java浏览器不认识  需要转换浏览器能够识别的语言<br>###js的组成<br>    ECMAscript（基础语法）+ BOM（浏览器对象） + DOM（文档对象模型）<br>###js的两种书写方式：<br>    1.内部<br>        <script>....</script><br>    2.外部<br>        <script src="外部js文件"></script><br>###js注释：<br>    // 单行<br>    /* 多行 */<br>###js输出语句：<br>    1.弹出警示框<br>        alert()<br>    2.弹出输入框<br>         prompt(“请输入”, 1234)<br>         第一个参数：代表提示信息<br>         第二个参数：文本框的默认值<br>    3.控制面板：<br>        console.log(值) 常用！！！<br>    4.文档输出：<br>        document.write()<br>###变量：<br>    变量就是产量  容器  盒子<br>    var num = 10:  声明一个变量名叫num   变量名的值10<br>###声明变量的几种方式：<br>    1.var num = 10<br>    2. var num; num = 10<br>    3. 统一声明再去赋值<br>    var num, num1, num2, num3;<br>    num = 1;<br>    num1 = 2;<br>    num2 = 3;<br>    4.var num1 = 10, num2 = 20, num3 = 30;<br>###声明变量的注意点：<br>    1.只声明没有赋值<br>        undefined<br>    2.没有声明 直接赋值<br>        浏览器自动加上var关键字<br>    3.没有声明，没有给值<br>        报错   num is not defined<br>    var num1 = prompt(“请输入第一个值”);<br>    var num2 = prompt(“请输入第二个值”);<br>    document.write(num1 - num2);     </p>
+<pre><code>// 交换两个值的变量？？
+var n1 = 10;
+var n2 = 20;
+第一种：
+var n3;
+n3 = n1;
+n1 = n2;
+n2 = n3
+第二种：
+n1 = n2 + n1;
+n2 = n1 - n2;
+n1 = n1 - n2;</code></pre><p>###变量的命名规范：<br>    1.包含 数字  字母 下划线 （不能以数字开头）<br>    2.不能包含特殊字符<br>    3. uName  mySchool<br>    4.不能超过255个字符;<br>    5.不能是关键字与保留字;<br>        var  for  while if<br>###数据类型：<br>    基本数据类型<br>        数值型   字符型  布尔型  undefined  null<br><strong>数值型</strong>:<br>            二进制  三进制 五进制  八进制 10进制 16进制<br>            0  小数  负数 整数   NaN<br>    isNaN判断当前数据是否是数字  如果是数字返回false  不是返回true<br>       isNaN(“123”)  会默认尝试转换数字   “123”—-123<br>       总结：<br>        1.只要字符串里面全是数字就会转化成功<br>        2.isNaN判断的是 是否是数字并不是判断数值型<br>    转移字符：<br>        \n:换行<br>        :原样输出<br>        \t:tab<br>        \b:空格<br><strong>字符串</strong><br>    只要加引号的都属于字符型<br>        数值相加  字符相连<br>        var str = “hello”<br>        字符串的长度：str.length<br>        找到具体的元素：str[索引]   索引从0开始   0默认第一个字符<br>null  undefined 特殊类型 先知道</p>
+<p><strong>布尔类型</strong><br>    true   false<br><strong>typeof检测数据类型</strong><br>    console.log(typeof )<br>###数据类型转换：<br><strong>转换为字符串：</strong><br>    1.显示（强制）类型转换   var num = 10;<br>        1.num.toString()<br>        2.String(num)<br>    2.隐式类型转换：<br>        与字符串拼接<br>    不会影响原来的数据类型！！！！<br><strong>转换数值类型</strong> var str = “10”;<br>    1.显示类型转换<br>        1.parseInt()<br>        2.parseFloat()<br>        3.Number()<br>        三者的区别：<br>            1.当字符串是整数 三者没有区别<br>            2.当字符串是小数  parseInt取整（干掉小数）   parseFloat与Number保留小数<br>            3.当字符串包含字母<br>                1.字母在后面： parseFloat保留小数   Number：NaN<br>                2.字母在前面： 三者结果都是NaN<br>    2.隐式类型转换：<br>        1.str-0;<br>        2.str<em>1<br>        3.str/1<br>        4.+str ！！！<br>        5.-str<br>*</em>转换布尔类型**<br>    1.强制类型转换<br>        1.Boolean()<br>    2.隐式类型转换：<br>        !!<br>    转换为false的情况：  0  null  undefined  NaN “”  false<br>    剩下的全是true</p>
+
             </div>
             <hr/>
 
@@ -548,7 +562,7 @@
                     </span>
                     <a href="http://yoursite.com" class="b-link-green">Coder Rat</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/contact/index.html" class="b-link-green">contact</a>
+                    <a href="/2019/11/27/zong-jie/" class="b-link-green">总结</a>
                 </p>
             </div>
         </div>
@@ -569,26 +583,33 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/contact/index.html">
+                <a href="/2019/11/27/1.ding-wei/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="contact">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="1.定位">
                         
-                        <span class="card-title">contact</span>
+                        <span class="card-title">1.定位</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary"></div>
+                    <div class="summary">定位 position 重点一个完整的定位，是定位模式+边偏移
+position:属性值
+top:100px
+left:100px
+1.1 定位模式
+static：  
+对象遵循常规流。此时4个定位偏移属性不会被应用。 
+
+relative</div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-27
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-27
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-user fa-fw"></i>
@@ -597,7 +618,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -608,17 +628,17 @@
                 本篇&nbsp;<i class="fa fa-dot-circle-o"></i>
             </div>
             <div class="card">
-                <a href="/contact/index.html">
+                <a href="/2019/11/27/zong-jie/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="contact">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="总结">
                         
-                        <span class="card-title">contact</span>
+                        <span class="card-title">总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary"></div>
+                    <div class="summary">##js第一天：什么编程语言： 具有一定的逻辑思维 实现特定的功能  java   c  c++ c#  php  .net  js###什么是javascript —— js    实现网页的动态效果###js的历史背景：    1995</div>
                     <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-27

@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Coder Rat</title>
+  
+  <subtitle>Codding my life</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2019-11-15T12:26:13.944Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Mr Guo</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>注1：格式化代码自定义初始化样式</title>
+    <link href="http://yoursite.com/2019/11/27/zhu-1-ge-shi-hua-dai-ma-zi-ding-yi-chu-shi-hua-yang-shi/"/>
+    <id>http://yoursite.com/2019/11/27/zhu-1-ge-shi-hua-dai-ma-zi-ding-yi-chu-shi-hua-yang-shi/</id>
+    <published>2019-11-27T12:52:12.436Z</published>
+    <updated>2019-11-15T12:26:13.944Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;格式化代码-自定义初始化样式整合-format-css&quot;&gt;&lt;a href=&quot;#格式化代码-自定义初始化样式整合-format-css&quot; class=&quot;headerlink&quot; title=&quot;格式化代码/自定义初始化样式整合
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>移动web第一天</title>
+    <link href="http://yoursite.com/2019/11/27/yi-dong-web-di-yi-tian/"/>
+    <id>http://yoursite.com/2019/11/27/yi-dong-web-di-yi-tian/</id>
+    <published>2019-11-27T12:52:12.411Z</published>
+    <updated>2019-11-15T11:57:27.721Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;移动web第一天&quot;&gt;&lt;a href=&quot;#移动web第一天&quot; class=&quot;headerlink&quot; title=&quot;移动web第一天&quot;&gt;&lt;/a&gt;移动web第一天&lt;/h2&gt;&lt;h3 id=&quot;什么是HTML5？&quot;&gt;&lt;a href=&quot;#什么是HTML5？&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>小特效-背景渐变色</title>
+    <link href="http://yoursite.com/2019/11/27/xiao-te-xiao-bei-jing-jian-bian-se/"/>
+    <id>http://yoursite.com/2019/11/27/xiao-te-xiao-bei-jing-jian-bian-se/</id>
+    <published>2019-11-27T12:52:12.397Z</published>
+    <updated>2019-11-15T13:05:31.645Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;渐变色设置&quot;&gt;&lt;a href=&quot;#渐变色设置&quot; class=&quot;headerlink&quot; title=&quot;渐变色设置&quot;&gt;&lt;/a&gt;渐变色设置&lt;/h1&gt;&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>实现一左一右的对齐</title>
+    <link href="http://yoursite.com/2019/11/27/shi-xian-yi-zuo-yi-you-de-dui-qi/"/>
+    <id>http://yoursite.com/2019/11/27/shi-xian-yi-zuo-yi-you-de-dui-qi/</id>
+    <published>2019-11-27T12:52:12.376Z</published>
+    <updated>2019-11-21T00:48:25.591Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;一左一右对齐&quot;&gt;&lt;a href=&quot;#一左一右对齐&quot; class=&quot;headerlink&quot; title=&quot;一左一右对齐&quot;&gt;&lt;/a&gt;一左一右对齐&lt;/h1&gt;&lt;p&gt;让元素在一行显示，并且向一侧对齐，可以使用float实现&lt;/p&gt;
+&lt;p&gt;让元素以不同布局在一行或一列排列
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>三种主流布局</title>
+    <link href="http://yoursite.com/2019/11/27/san-chong-zhu-liu-bu-ju/"/>
+    <id>http://yoursite.com/2019/11/27/san-chong-zhu-liu-bu-ju/</id>
+    <published>2019-11-27T12:52:12.354Z</published>
+    <updated>2019-11-15T10:33:25.250Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>递增递减规律</title>
+    <link href="http://yoursite.com/2019/11/27/di-zeng-di-jian-gui-lu/"/>
+    <id>http://yoursite.com/2019/11/27/di-zeng-di-jian-gui-lu/</id>
+    <published>2019-11-27T12:52:12.350Z</published>
+    <updated>2019-11-22T02:20:40.066Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;递增递减规律&lt;/p&gt;
+&lt;p&gt;a++ = a    a=a+1&lt;/p&gt;
+&lt;p&gt;++a =a+1  a = a+1&lt;/p&gt;
+&lt;p&gt;a = 1&lt;/p&gt;
+&lt;p&gt;​             a++ + ++a  + a++ + ++a + a++&lt;/p&gt;
+&lt;p&gt;结果      1 
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>补充知识点</title>
+    <link href="http://yoursite.com/2019/11/27/bu-chong-zhi-shi-dian/"/>
+    <id>http://yoursite.com/2019/11/27/bu-chong-zhi-shi-dian/</id>
+    <published>2019-11-27T12:52:12.340Z</published>
+    <updated>2019-11-28T02:20:09.051Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>笔记</title>
+    <link href="http://yoursite.com/2019/11/27/bi-ji/"/>
+    <id>http://yoursite.com/2019/11/27/bi-ji/</id>
+    <published>2019-11-27T12:52:12.329Z</published>
+    <updated>2019-11-11T09:27:37.520Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;导航-列表-小竖线的写法&quot;&gt;&lt;a href=&quot;#导航-列表-小竖线的写法&quot; class=&quot;headerlink&quot; title=&quot;导航 列表 小竖线的写法&quot;&gt;&lt;/a&gt;导航 列表
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>背景图片插入图片多种设置方式</title>
+    <link href="http://yoursite.com/2019/11/27/bei-jing-tu-pian-cha-ru-tu-pian-duo-chong-she-zhi-fang-shi/"/>
+    <id>http://yoursite.com/2019/11/27/bei-jing-tu-pian-cha-ru-tu-pian-duo-chong-she-zhi-fang-shi/</id>
+    <published>2019-11-27T12:52:12.312Z</published>
+    <updated>2019-11-18T01:18:27.697Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;背景图片-图片设置技巧&quot;&gt;&lt;a href=&quot;#背景图片-图片设置技巧&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>7.动画 animation之打印效果</title>
+    <link href="http://yoursite.com/2019/11/27/7.dong-hua-animation-zhi-da-yin-xiao-guo/"/>
+    <id>http://yoursite.com/2019/11/27/7.dong-hua-animation-zhi-da-yin-xiao-guo/</id>
+    <published>2019-11-27T12:52:12.297Z</published>
+    <updated>2019-11-12T13:14:18.920Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;实现-文字打字机效果1-CSS实现&quot;&gt;&lt;a href=&quot;#实现-文字打字机效果1-CSS实现&quot; class=&quot;headerlink&quot; title=&quot;实现 文字打字机效果1  CSS实现&quot;&gt;&lt;/a&gt;实现 文字打字机效果1  CSS实现&lt;/h1&gt;&lt;figure
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>6.边框突出之美</title>
+    <link href="http://yoursite.com/2019/11/27/6.bian-kuang-tu-chu-zhi-mei/"/>
+    <id>http://yoursite.com/2019/11/27/6.bian-kuang-tu-chu-zhi-mei/</id>
+    <published>2019-11-27T12:52:12.278Z</published>
+    <updated>2019-11-12T01:14:40.144Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;利用&lt;code&gt;margin&lt;/code&gt;负值之美和悬停改变显示模式为&lt;code&gt;position:relative;&lt;/code&gt;,提升其显示层次。&lt;/p&gt;
+
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>6.2D3D转换</title>
+    <link href="http://yoursite.com/2019/11/27/6.2d3d-zhuan-huan/"/>
+    <id>http://yoursite.com/2019/11/27/6.2d3d-zhuan-huan/</id>
+    <published>2019-11-27T12:52:12.265Z</published>
+    <updated>2019-11-21T13:32:47.885Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;2D-转换综合写法&quot;&gt;&lt;a href=&quot;#2D-转换综合写法&quot; class=&quot;headerlink&quot; title=&quot;2D 转换综合写法&quot;&gt;&lt;/a&gt;2D 转换综合写法&lt;/h1&gt;&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>5.CSS实现小三角形</title>
+    <link href="http://yoursite.com/2019/11/27/5.css-shi-xian-xiao-san-jiao-xing/"/>
+    <id>http://yoursite.com/2019/11/27/5.css-shi-xian-xiao-san-jiao-xing/</id>
+    <published>2019-11-27T12:52:12.254Z</published>
+    <updated>2019-11-21T06:27:41.901Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;CSS三角形之美&quot;&gt;&lt;a href=&quot;#CSS三角形之美&quot; class=&quot;headerlink&quot; title=&quot;CSS三角形之美&quot;&gt;&lt;/a&gt;CSS三角形之美&lt;/h1&gt;&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>4.图片文字垂直居中</title>
+    <link href="http://yoursite.com/2019/11/27/4.tu-pian-wen-zi-chui-zhi-ju-zhong/"/>
+    <id>http://yoursite.com/2019/11/27/4.tu-pian-wen-zi-chui-zhi-ju-zhong/</id>
+    <published>2019-11-27T12:52:12.232Z</published>
+    <updated>2019-11-18T01:15:59.969Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;3-vertical-align-垂直对齐&quot;&gt;&lt;a href=&quot;#3-vertical-align-垂直对齐&quot; class=&quot;headerlink&quot; title=&quot;3. vertical-align 垂直对齐&quot;&gt;&lt;/a&gt;3. vertical-align
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>3.CSS用户界面体验</title>
+    <link href="http://yoursite.com/2019/11/27/3.css-yong-hu-jie-mian-ti-yan/"/>
+    <id>http://yoursite.com/2019/11/27/3.css-yong-hu-jie-mian-ti-yan/</id>
+    <published>2019-11-27T12:52:12.213Z</published>
+    <updated>2019-11-15T12:03:13.486Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;用户界面体验设计&quot;&gt;&lt;a href=&quot;#用户界面体验设计&quot; class=&quot;headerlink&quot; title=&quot;用户界面体验设计&quot;&gt;&lt;/a&gt;用户界面体验设计&lt;/h1&gt;&lt;h3 id=&quot;1-1-鼠标样式设置cursor&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>2.元素隐藏可见的几种设置方式</title>
+    <link href="http://yoursite.com/2019/11/27/2.yuan-su-yin-cang-ke-jian-de-ji-chong-she-zhi-fang-shi/"/>
+    <id>http://yoursite.com/2019/11/27/2.yuan-su-yin-cang-ke-jian-de-ji-chong-she-zhi-fang-shi/</id>
+    <published>2019-11-27T12:52:12.196Z</published>
+    <updated>2019-11-21T06:26:59.722Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;元素的显示与隐藏&quot;&gt;&lt;a href=&quot;#元素的显示与隐藏&quot; class=&quot;headerlink&quot; title=&quot;元素的显示与隐藏&quot;&gt;&lt;/a&gt;元素的显示与隐藏&lt;/h1&gt;&lt;h3 id=&quot;1-1-display的显示隐藏特性&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>1.定位</title>
+    <link href="http://yoursite.com/2019/11/27/1.ding-wei/"/>
+    <id>http://yoursite.com/2019/11/27/1.ding-wei/</id>
+    <published>2019-11-27T12:52:12.171Z</published>
+    <updated>2019-11-15T12:27:46.045Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;定位-position-重点&quot;&gt;&lt;a href=&quot;#定位-position-重点&quot; class=&quot;headerlink&quot; title=&quot;定位 position 重点&quot;&gt;&lt;/a&gt;定位 position
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>总结</title>
+    <link href="http://yoursite.com/2019/11/27/zong-jie/"/>
+    <id>http://yoursite.com/2019/11/27/zong-jie/</id>
+    <published>2019-11-27T12:52:12.161Z</published>
+    <updated>2019-11-21T11:12:43.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;##js第一天：&lt;br&gt;什么编程语言： 具有一定的逻辑思维 实现特定的功能  java   c  c++ c#  php  .net  js&lt;br&gt;###什么是javascript —— js&lt;br&gt;    实现网页的动态效果&lt;br&gt;###js的历史背景：&lt;br&gt;   
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>

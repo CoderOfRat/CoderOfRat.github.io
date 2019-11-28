@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Coder Rat">
+    <meta name="keywords" content="代码,coder,code,it,communication,交流">
     <meta name="description" content="Coder Rat">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +14,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>Coder Rat</title>
-    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/libs/materialize/css/materialize.min.css">
@@ -28,7 +28,8 @@
     </style>
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
-</head>
+<link rel="alternate" href="/atom.xml" title="Coder Rat" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -121,7 +122,7 @@
         <div class="logo-name">Coder Rat</div>
         <div class="logo-desc">
             
-            ������һ�ַ�ʽ��For U or Me?
+            撸码，是一种态度
             
         </div>
     </div>
@@ -208,6 +209,10 @@
     </a>
 
 
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fa fa-rss"></i>
+    </a>
 </div>
 </div>
 
@@ -294,7 +299,7 @@
 
                     <div class="description center-align">
                     
-                        ������һ�ַ�ʽ��For U or Me?
+                        撸码，是一种态度
                     
                     </div>
                 </div>
@@ -326,6 +331,10 @@
     </a>
 
 
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fa fa-rss"></i>
+    </a>
 </div>
         
     </div>
@@ -347,17 +356,52 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                         <div class="dream">
     
     <div class="title center-align">
-        <i class="fa fa-lightbulb-o"></i>&nbsp;&nbsp;我的梦想
+        <i class="fa fa-lightbulb-o"></i>&nbsp;&nbsp;我愿是激流
     </div>
     
     <div class="row">
         <div class="col l8 offset-l2 m10 offset-m1 s10 offset-s1 center-align text">
-            不是每个人都应该像我这样去建造一座水晶大教堂，但是每个人都应该拥有自己的梦想，设计自己的梦想，追求自己的梦想，实现自己的梦想。梦想是生命的灵魂，是心灵的灯塔，是引导人走向成功的信仰。有了崇高的梦想，只要矢志不渝地追求，梦想就会成为现实，奋斗就会变成壮举，生命就会创造奇迹。——罗伯·舒乐
+            我愿意是激流<br>是山里的小河在崎岖的路上<br>在岩石上经过只要我的爱人<br>是一条小鱼在我的浪花中<br>快乐地游来游去我愿意是荒林<br>在河流的两岸面对一阵阵狂风<br>我勇敢地作战只要我的爱人<br>是一只小鸟在我的稠密的树枝间作客鸣叫<br>我愿意是废墟<br>在峻峭的山崖这静默的毁灭<br>并不使我懊丧只要我的爱人<br>是青青的长春藤沿着我荒凉的额头<br>亲密地攀援而上我愿意是草屋<br>在深深的山谷底草屋的顶上<br>饱受着风雨的打击只要我的爱人<br>是可爱的火焰在我的炉子里<br>愉快地缓缓闪现我愿意是云朵<br>是灰色的破旗在广漠的空中<br>懒懒地飘来荡去只要我的爱人<br>是珊瑚似的夕阳傍着我苍白的脸<br>显出鲜艳的辉煌<br>—— 裴多菲(匈牙利)
         </div>
     </div>
 </div>
                     
 
+                    
+                        
+
+<link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<div class="music-player">
+    
+    <div class="title center-align">
+        <i class="fa fa-music"></i>&nbsp;&nbsp;听听音乐
+    </div>
+    
+    <div class="row">
+        <div class="col l8 offset-l2 m10 offset-m1 s12">
+            <div id="aplayer" class="music"></div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script>
+$(function () {
+    new APlayer({
+        container: document.getElementById('aplayer'),
+        fixed: 'false' === 'true',
+        autoplay: 'false' === 'true',
+        theme: '#42b983',
+        loop: 'all',
+        order: 'list',
+        preload: 'auto',
+        volume: Number('0.7'),
+        listFolded: 'false' === 'true',
+        listMaxHeight: '',
+        audio: JSON.parse('[{"name":"五月雨变奏乐音","artist":"AnimeVibe","url":"http://xxx.com/music1.mp3","cover":"http://xxx.com/music-cover1.png"},{"name":"Take me hand","artist":"DAISHI DANCE,Cecile Corbel","url":"/medias/music/music2.mp3","cover":"/medias/music/cover2.png"},{"name":"Shape of You","artist":"J.Fla","url":"http://xxx.com/music3.mp3","cover":"http://xxx.com/music-cover3.png"}]')
+    });
+});
+</script>
                     
 
                     
@@ -382,7 +426,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2019/11/27/%E6%B3%A81%EF%BC%9A%E6%A0%BC%E5%BC%8F%E5%8C%96%E4%BB%A3%E7%A0%81%E8%87%AA%E5%AE%9A%E4%B9%89%E5%88%9D%E5%A7%8B%E5%8C%96%E6%A0%B7%E5%BC%8F/">
+                    <a href="/2019/11/27/zhu-1-ge-shi-hua-dai-ma-zi-ding-yi-chu-shi-hua-yang-shi/">
                         <div class="card-image">
                             
                             
@@ -417,7 +461,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2019/11/27/%E7%A7%BB%E5%8A%A8web%E7%AC%AC%E4%B8%80%E5%A4%A9/">
+                    <a href="/2019/11/27/yi-dong-web-di-yi-tian/">
                         <div class="card-image">
                             
                             
@@ -453,7 +497,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2019/11/27/%E5%B0%8F%E7%89%B9%E6%95%88-%E8%83%8C%E6%99%AF%E6%B8%90%E5%8F%98%E8%89%B2/">
+                    <a href="/2019/11/27/xiao-te-xiao-bei-jing-jian-bian-se/">
                         <div class="card-image">
                             
                             
@@ -488,7 +532,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2019/11/27/%E5%AE%9E%E7%8E%B0%E4%B8%80%E5%B7%A6%E4%B8%80%E5%8F%B3%E7%9A%84%E5%AF%B9%E9%BD%90/">
+                    <a href="/2019/11/27/shi-xian-yi-zuo-yi-you-de-dui-qi/">
                         <div class="card-image">
                             
                             
@@ -525,7 +569,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2019/11/27/%E4%B8%89%E7%A7%8D%E4%B8%BB%E6%B5%81%E5%B8%83%E5%B1%80/">
+                    <a href="/2019/11/27/san-chong-zhu-liu-bu-ju/">
                         <div class="card-image">
                             
                             
@@ -560,7 +604,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2019/11/27/%E9%80%92%E5%A2%9E%E9%80%92%E5%87%8F%E8%A7%84%E5%BE%8B/">
+                    <a href="/2019/11/27/di-zeng-di-jian-gui-lu/">
                         <div class="card-image">
                             
                             
@@ -599,7 +643,7 @@ a = 1
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2019/11/27/%E8%A1%A5%E5%85%85%E7%9F%A5%E8%AF%86%E7%82%B9/">
+                    <a href="/2019/11/27/bu-chong-zhi-shi-dian/">
                         <div class="card-image">
                             
                             
@@ -612,11 +656,7 @@ a = 1
                     <div class="card-content article-content">
                         <div class="summary">
                             
-                                补充知识
-广义的HTML5，是HTML5本身+CSS3新特性+javascript的更新
-
-html5 新增了语义化标签
-123456&lt
+                                123456789101112131415title: typora-vue-theme主题介绍date: 2018-09-07 09:25
                             
                         </div>
                         <div class="publish-info">
@@ -638,7 +678,7 @@ html5 新增了语义化标签
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2019/11/27/%E7%AC%94%E8%AE%B0/">
+                    <a href="/2019/11/27/bi-ji/">
                         <div class="card-image">
                             
                             
@@ -679,7 +719,7 @@ html5 新增了语义化标签
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2019/11/27/%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E5%A4%9A%E7%A7%8D%E8%AE%BE%E7%BD%AE%E6%96%B9%E5%BC%8F/">
+                    <a href="/2019/11/27/bei-jing-tu-pian-cha-ru-tu-pian-duo-chong-she-zhi-fang-shi/">
                         <div class="card-image">
                             
                             
@@ -716,7 +756,7 @@ html5 新增了语义化标签
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2019/11/27/7.%E5%8A%A8%E7%94%BB%20animation%E4%B9%8B%E6%89%93%E5%8D%B0%E6%95%88%E6%9E%9C/">
+                    <a href="/2019/11/27/7.dong-hua-animation-zhi-da-yin-xiao-guo/">
                         <div class="card-image">
                             
                             
@@ -751,7 +791,7 @@ html5 新增了语义化标签
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2019/11/27/6.%E8%BE%B9%E6%A1%86%E7%AA%81%E5%87%BA%E4%B9%8B%E7%BE%8E/">
+                    <a href="/2019/11/27/6.bian-kuang-tu-chu-zhi-mei/">
                         <div class="card-image">
                             
                             
@@ -787,7 +827,7 @@ html5 新增了语义化标签
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2019/11/27/6.2D3D%E8%BD%AC%E6%8D%A2/">
+                    <a href="/2019/11/27/6.2d3d-zhuan-huan/">
                         <div class="card-image">
                             
                             
@@ -891,6 +931,10 @@ html5 新增了语义化标签
     </a>
 
 
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fa fa-rss"></i>
+    </a>
 </div>
     </div>
 </footer>

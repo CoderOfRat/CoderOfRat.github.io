@@ -4,8 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="contact, 代码,coder,code,it,communication,交流">
-    <meta name="description" content="contact | Coder Rat">
+    <meta name="keywords" content="2.元素隐藏可见的几种设置方式, 代码,coder,code,it,communication,交流">
+    <meta name="description" content="元素的显示与隐藏1.1 display的显示隐藏特性
+display:none; 元素隐藏，且不保留原来位置，常用于置顶广告的删除等。
+display:block; 可以实现元素由隐藏到显示的效果，并恢复原有位置。
+
+1.2 visibil">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +17,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>contact | Coder Rat</title>
+    <title>2.元素隐藏可见的几种设置方式 | Coder Rat</title>
     <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -283,13 +287,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        contact
+                        2.元素隐藏可见的几种设置方式
                     </div>
                 </div>
             </div>
@@ -408,7 +412,53 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="元素的显示与隐藏"><a href="#元素的显示与隐藏" class="headerlink" title="元素的显示与隐藏"></a>元素的显示与隐藏</h1><h3 id="1-1-display的显示隐藏特性"><a href="#1-1-display的显示隐藏特性" class="headerlink" title="1.1 display的显示隐藏特性"></a>1.1 display的显示隐藏特性</h3><ol>
+<li><code>display:none;</code> 元素隐藏，且不保留原来位置，常用于置顶广告的删除等。</li>
+<li><code>display:block;</code> 可以实现元素由隐藏到显示的效果，并恢复原有位置。</li>
+</ol>
+<h3 id="1-2-visibility的显示隐藏特性"><a href="#1-2-visibility的显示隐藏特性" class="headerlink" title="1.2 visibility的显示隐藏特性"></a>1.2 visibility的显示隐藏特性</h3><ol>
+<li><code>visibility:hidden;</code> 元素隐藏，但是保留原来的位置，常用于某些特效的实现。如配合绝对定位的元素使用，实现划入显示，划出隐藏。</li>
+<li><code>visibility:visible;</code> 元素显示。</li>
+</ol>
+<h3 id="1-3-overflow的溢出显示与隐藏"><a href="#1-3-overflow的溢出显示与隐藏" class="headerlink" title="1.3 overflow的溢出显示与隐藏"></a>1.3 overflow的溢出显示与隐藏</h3><ul>
+<li><p>visible：  </p>
+<p>对溢出内容不做处理，内容可能会超出容器。 </p>
+</li>
+<li><p>hidden：  </p>
+<p>隐藏溢出容器的内容且不出现滚动条。 </p>
+</li>
+<li><p>scroll：  </p>
+<p>隐藏溢出容器的内容，溢出的内容将以卷动滚动条的方式呈现。 </p>
+</li>
+<li><p>auto：  </p>
+<p>当内容没有溢出容器时不出现滚动条，当内容溢出容器时出现滚动条，按需出现滚动条。此为body对象和textarea的默认值。</p>
+</li>
+</ul>
+<h3 id="1-4-显示与隐藏总结"><a href="#1-4-显示与隐藏总结" class="headerlink" title="1.4 显示与隐藏总结"></a>1.4 显示与隐藏总结</h3><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>区别</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>display</strong></td>
+<td>隐藏对象，不保留位置</td>
+<td>配合后面js做特效，比如下拉菜单，原先没有，鼠标经过，显示下拉菜单， 应用极为广泛</td>
+</tr>
+<tr>
+<td><strong>visibility</strong></td>
+<td>隐藏对象，保留位置</td>
+<td>使用较少</td>
+</tr>
+<tr>
+<td><strong>overflow</strong></td>
+<td>只是隐藏超出大小的部分</td>
+<td>1. 可以清除浮动 2. 保证盒子里面的内容不会超出该盒子范围 3.配合transform:scale(1.x)使用</td>
+</tr>
+</tbody></table>
+
             </div>
             <hr/>
 
@@ -548,7 +598,7 @@
                     </span>
                     <a href="http://yoursite.com" class="b-link-green">Coder Rat</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/contact/index.html" class="b-link-green">contact</a>
+                    <a href="/2019/11/27/2.yuan-su-yin-cang-ke-jian-de-ji-chong-she-zhi-fang-shi/" class="b-link-green">2.元素隐藏可见的几种设置方式</a>
                 </p>
             </div>
         </div>
@@ -569,26 +619,50 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/contact/index.html">
+                <a href="/2019/11/27/3.css-yong-hu-jie-mian-ti-yan/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="contact">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="3.CSS用户界面体验">
                         
-                        <span class="card-title">contact</span>
+                        <span class="card-title">3.CSS用户界面体验</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary"></div>
+                    <div class="summary">用户界面体验设计1.1 鼠标样式设置cursor 设置或检索在对象上移动的鼠标指针采用何种系统预定义的光标形状。
+
+
+
+属性值
+描述
+
+
+
+default
+小白  默认
+
+
+pointer
+小手
+
+
+move
+移动
+
+
+text
+文本
+
+
+</div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-27
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-27
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-user fa-fw"></i>
@@ -597,7 +671,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -605,20 +678,28 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="fa fa-dot-circle-o"></i>
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/contact/index.html">
+                <a href="/2019/11/27/1.ding-wei/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="contact">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="1.定位">
                         
-                        <span class="card-title">contact</span>
+                        <span class="card-title">1.定位</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary"></div>
+                    <div class="summary">定位 position 重点一个完整的定位，是定位模式+边偏移
+position:属性值
+top:100px
+left:100px
+1.1 定位模式
+static：  
+对象遵循常规流。此时4个定位偏移属性不会被应用。 
+
+relative</div>
                     <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-27
@@ -631,7 +712,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>

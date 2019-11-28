@@ -4,8 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="contact, 代码,coder,code,it,communication,交流">
-    <meta name="description" content="contact | Coder Rat">
+    <meta name="keywords" content="背景图片插入图片多种设置方式, 代码,coder,code,it,communication,交流">
+    <meta name="description" content="背景图片/图片设置技巧
+精灵图二倍图
+精灵图如果想要缩小，然后再定位到指定位置，可以先将精灵图缩小到和图标需要缩小的倍数一致，然后再测量需要定位的数值，然后设置的时候 同比例设置 background-size: X%；即可实现。放大同理
+">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>contact | Coder Rat</title>
+    <title>背景图片插入图片多种设置方式 | Coder Rat</title>
     <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -283,13 +286,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        contact
+                        背景图片插入图片多种设置方式
                     </div>
                 </div>
             </div>
@@ -408,7 +411,28 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="背景图片-图片设置技巧"><a href="#背景图片-图片设置技巧" class="headerlink" title="背景图片/图片设置技巧"></a>背景图片/图片设置技巧</h1><ol>
+<li><p>精灵图二倍图</p>
+<p>精灵图如果想要缩小，然后再定位到指定位置，可以先将精灵图缩小到和图标需要缩小的倍数一致，然后再测量需要定位的数值，然后设置的时候 同比例设置 background-size: X%；即可实现。放大同理</p>
+</li>
+<li><p>背景图、插入图，如果通过布局视口的CSS设置宽高，要是需要在移动设备显示更清晰，可通过将图片做成2-4倍等比例放大的图片，然后CSS设置图片为布局视口的宽高（图片默认会有下间隙，记得使用vertical-aline:top/middle/bottom,清除），在移动设备上则能实现高清图。</p>
+</li>
+<li><p><code>background-origin:boder-box/padding-box/content-box;</code>可以实现改变背景图片的显示起始位置</p>
+</li>
+</ol>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">padding-box</span>： 从<span class="selector-tag">padding</span>区域（含<span class="selector-tag">padding</span>）开始显示背景图像。 </span><br><span class="line"><span class="selector-tag">border-box</span>： 从<span class="selector-tag">border</span>区域（含<span class="selector-tag">border</span>）开始显示背景图像。 </span><br><span class="line"><span class="selector-tag">content-box</span>： 从<span class="selector-tag">content</span>区域开始显示背景图像。 </span><br><span class="line">默认值：<span class="selector-tag">padding-box</span></span><br></pre></td></tr></table></figure>
+
+<img src="C:\Users\14046\AppData\Roaming\Typora\typora-user-images\image-20191113214217195.png" alt="image-20191113214217195" style="zoom:55%;" />
+
+<img src="C:\Users\14046\AppData\Roaming\Typora\typora-user-images\image-20191113214254438.png" alt="image-20191113214254438" style="width:200px;margin:0 0 0 20%;" /> 
+
+<blockquote>
+<p>​                                                                                  原图</p>
+</blockquote>
+<p>如图是通过以下代码实现</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"zh-CN"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span></span></span><br><span class="line"><span class="tag">          <span class="attr">content</span>=<span class="string">"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"ie=edge"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>背景设置练习<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">        * &#123;</span><br><span class="line">            margin: 0;</span><br><span class="line">            padding: 0;</span><br><span class="line">        &#125;</span><br><span class="line">        div &#123;</span><br><span class="line">            margin: 200px auto;</span><br><span class="line">            width: 500px;</span><br><span class="line">            height: 500px;</span><br><span class="line">            padding: 200px;</span><br><span class="line"><span class="css">            <span class="selector-tag">border</span>: 10<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-tag">rgba</span>(99,12,211,<span class="selector-class">.2</span>);</span></span><br><span class="line">            box-sizing: border-box;</span><br><span class="line">            background: url(images/1.png) no-repeat;</span><br><span class="line">            background-origin: content-box;</span><br><span class="line">            background-clip: content-box;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        我是内容主体</span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
             </div>
             <hr/>
 
@@ -548,7 +572,7 @@
                     </span>
                     <a href="http://yoursite.com" class="b-link-green">Coder Rat</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/contact/index.html" class="b-link-green">contact</a>
+                    <a href="/2019/11/27/bei-jing-tu-pian-cha-ru-tu-pian-duo-chong-she-zhi-fang-shi/" class="b-link-green">背景图片插入图片多种设置方式</a>
                 </p>
             </div>
         </div>
@@ -569,26 +593,33 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/contact/index.html">
+                <a href="/2019/11/27/bi-ji/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="contact">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="笔记">
                         
-                        <span class="card-title">contact</span>
+                        <span class="card-title">笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary"></div>
+                    <div class="summary">导航 列表 小竖线的写法
+边框法
+
+包裹在
+1&lt;li&gt;
+
+里面，对设置一个左或者右边框，这样做有些不好的显示效果，因为很难控制竖线的高度和文字高度相同，不太推荐使用。如下图，作为新闻列表模块的title内容前面的修饰，更佳。
+
+</div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-27
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-27
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-user fa-fw"></i>
@@ -597,7 +628,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -605,20 +635,20 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="fa fa-dot-circle-o"></i>
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/contact/index.html">
+                <a href="/2019/11/27/7.dong-hua-animation-zhi-da-yin-xiao-guo/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="contact">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="7.动画 animation之打印效果">
                         
-                        <span class="card-title">contact</span>
+                        <span class="card-title">7.动画 animation之打印效果</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary"></div>
+                    <div class="summary">实现 文字打字机效果1  CSS实现12345678910111213141516171819202122232425262728&lt;!DOCTYPE html&gt;&lt;html lang="zh-CN"&gt;&lt;head&</div>
                     <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-27
@@ -631,7 +661,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
