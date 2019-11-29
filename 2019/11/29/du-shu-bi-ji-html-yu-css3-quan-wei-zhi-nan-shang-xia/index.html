@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hexo+Github+Matery 主题配置, 代码,coder,code,it,communication,交流">
+    <meta name="keywords" content="HTML5与CSS3权威指南, 代码,coder,code,it,communication,交流">
     <meta name="description" content="
 前言 此版本为第三版技术范围：截止2015年5月前
 HTML5：基于2014年10月28日，W3C的HTML工作组正式发布的HTML5的正式推荐标准。
@@ -16,7 +16,7 @@ HTML5：基于2014年10月28日，W3C的HTML工作组正式发布的HTML5的正�
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Hexo+Github+Matery 主题配置 | Coder Rat</title>
+    <title>HTML5与CSS3权威指南 | Coder Rat</title>
     <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -296,7 +296,7 @@ HTML5：基于2014年10月28日，W3C的HTML工作组正式发布的HTML5的正�
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Hexo+Github+Matery 主题配置
+                        HTML5与CSS3权威指南
                     </div>
                 </div>
             </div>
@@ -306,10 +306,80 @@ HTML5：基于2014年10月28日，W3C的HTML工作组正式发布的HTML5的正�
 
 
 
-<main class="container content">
+<main class="post-container content">
 
     
-    <!-- 文章内容详情 -->
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+</style>
+<div class="row">
+    <div class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
@@ -559,7 +629,7 @@ HTML5：基于2014年10月28日，W3C的HTML工作组正式发布的HTML5的正�
                     </span>
                     <a href="https://coderofrat.github.io" class="b-link-green">Coder Rat</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2019/11/29/du-shu-bi-ji-html-yu-css3-quan-wei-zhi-nan-shang-xia/" class="b-link-green">Hexo+Github+Matery 主题配置</a>
+                    <a href="/2019/11/29/du-shu-bi-ji-html-yu-css3-quan-wei-zhi-nan-shang-xia/" class="b-link-green">HTML5与CSS3权威指南</a>
                 </p>
             </div>
         </div>
@@ -588,9 +658,9 @@ HTML5：基于2014年10月28日，W3C的HTML工作组正式发布的HTML5的正�
                 <a href="/2019/11/29/du-shu-bi-ji-html-yu-css3-quan-wei-zhi-nan-shang-xia/">
                     <div class="card-image">
                         
-                        <img src="/images/HTML5与CSS3权威指南.jpg" class="responsive-img" alt="Hexo+Github+Matery 主题配置">
+                        <img src="/images/HTML5与CSS3权威指南.jpg" class="responsive-img" alt="HTML5与CSS3权威指南">
                         
-                        <span class="card-title">Hexo+Github+Matery 主题配置</span>
+                        <span class="card-title">HTML5与CSS3权威指南</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -680,6 +750,53 @@ HTML5：基于2014年10月28日，W3C的HTML工作组正式发布的HTML5的正�
 </div>
 
 
+    </div>
+    <div class="col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+    });
+</script>
     
 
 </main>
