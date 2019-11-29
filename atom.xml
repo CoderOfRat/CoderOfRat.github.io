@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://coderofrat.github.io/"/>
-  <updated>2019-11-24T01:15:16.868Z</updated>
+  <updated>2019-11-29T00:54:31.108Z</updated>
   <id>https://coderofrat.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>读书笔记--HTML与CSS3权威指南 上&amp;下/第二章 HTML 5 与 HTML 4 的区别</title>
-    <link href="https://coderofrat.github.io/2019/11/28/du-shu-bi-ji-html-yu-css3-quan-wei-zhi-nan-shang-xia/di-er-zhang-html-5-yu-html-4-de-qu-bie/"/>
-    <id>https://coderofrat.github.io/2019/11/28/du-shu-bi-ji-html-yu-css3-quan-wei-zhi-nan-shang-xia/di-er-zhang-html-5-yu-html-4-de-qu-bie/</id>
-    <published>2019-11-28T13:03:02.428Z</published>
-    <updated>2019-11-24T01:15:16.868Z</updated>
+    <title>Hexo+Github+Matery 主题配置</title>
+    <link href="https://coderofrat.github.io/2019/11/29/du-shu-bi-ji-html-yu-css3-quan-wei-zhi-nan-shang-xia/"/>
+    <id>https://coderofrat.github.io/2019/11/29/du-shu-bi-ji-html-yu-css3-quan-wei-zhi-nan-shang-xia/</id>
+    <published>2019-11-29T00:42:42.536Z</published>
+    <updated>2019-11-29T00:54:31.108Z</updated>
     
     <summary type="html">
     
@@ -29,23 +29,28 @@
       
         
         
-          &lt;p&gt;从 HTML 5 开始，对于文件的字符编码，推荐使用UTF-8。&lt;/p&gt;
-&lt;pre class=&quot; language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token
+          &lt;p&gt;&lt;img src=&quot;C:%5CUsers%5C14046%5Cblog%5Csource%5Cimages%5CHTML5%E4%B8%8ECSS3%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E5%B0%81%E9%9D%A2.jpg&quot;
         
       
     
     </summary>
     
     
+      <category term="读书笔记" scheme="https://coderofrat.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="HTML5" scheme="https://coderofrat.github.io/tags/HTML5/"/>
+    
+      <category term="CSS3" scheme="https://coderofrat.github.io/tags/CSS3/"/>
     
   </entry>
   
   <entry>
-    <title>读书笔记--HTML与CSS3权威指南 上&amp;下/第一章 H5的优势</title>
-    <link href="https://coderofrat.github.io/2019/11/28/du-shu-bi-ji-html-yu-css3-quan-wei-zhi-nan-shang-xia/di-yi-zhang-h5-de-you-shi/"/>
-    <id>https://coderofrat.github.io/2019/11/28/du-shu-bi-ji-html-yu-css3-quan-wei-zhi-nan-shang-xia/di-yi-zhang-h5-de-you-shi/</id>
-    <published>2019-11-28T13:03:02.423Z</published>
-    <updated>2019-11-23T06:26:09.428Z</updated>
+    <title>标签插件</title>
+    <link href="https://coderofrat.github.io/2019/11/28/index/"/>
+    <id>https://coderofrat.github.io/2019/11/28/index/</id>
+    <published>2019-11-28T13:34:57.000Z</published>
+    <updated>2019-11-28T13:36:36.285Z</updated>
     
     <summary type="html">
     
@@ -53,7 +58,7 @@
       
         
         
-          &lt;h2 id=&quot;HTML-5-为什么如此受欢迎？&quot;&gt;&lt;a href=&quot;#HTML-5-为什么如此受欢迎？&quot; class=&quot;headerlink&quot; title=&quot;HTML 5 为什么如此受欢迎？&quot;&gt;&lt;/a&gt;HTML 5
+          &lt;h1 id=&quot;标签插件（Tag-Plugins）&quot;&gt;&lt;a href=&quot;#标签插件（Tag-Plugins）&quot; class=&quot;headerlink&quot; title=&quot;标签插件（Tag Plugins）&quot;&gt;&lt;/a&gt;标签插件（Tag Plugins）&lt;/h1&gt;&lt;p&gt;标签插件和
         
       
     
@@ -61,55 +66,7 @@
     
     
     
-  </entry>
-  
-  <entry>
-    <title>读书笔记--HTML与CSS3权威指南 上&amp;下/拓展：SGML HTML XML关系</title>
-    <link href="https://coderofrat.github.io/2019/11/28/du-shu-bi-ji-html-yu-css3-quan-wei-zhi-nan-shang-xia/tuo-zhan-sgml-html-xml-guan-xi/"/>
-    <id>https://coderofrat.github.io/2019/11/28/du-shu-bi-ji-html-yu-css3-quan-wei-zhi-nan-shang-xia/tuo-zhan-sgml-html-xml-guan-xi/</id>
-    <published>2019-11-28T13:03:02.409Z</published>
-    <updated>2019-11-23T06:56:36.677Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;HTML 5 已经不是 SGML 的子集，那么 SGML 、XML 、 HTML 之间有什么关联与区别呢?&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;SGML&lt;/strong&gt;是指“标准通用标记语言”(Standard Generalized Markup Language),
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>读书笔记--HTML与CSS3权威指南 上&amp;下/前言</title>
-    <link href="https://coderofrat.github.io/2019/11/28/du-shu-bi-ji-html-yu-css3-quan-wei-zhi-nan-shang-xia/qian-yan/"/>
-    <id>https://coderofrat.github.io/2019/11/28/du-shu-bi-ji-html-yu-css3-quan-wei-zhi-nan-shang-xia/qian-yan/</id>
-    <published>2019-11-28T13:03:02.408Z</published>
-    <updated>2019-11-22T13:05:09.716Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;strong&gt;此版本为第三版&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;技术范围：截止2015年5月前&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;HTML5：&lt;/strong&gt;基于2014年10月28日，W3C的HTML工作组正式发布的HTML5的正式推荐标准。&lt;/p&gt;
-&lt;p&gt;增加了支持web
-        
-      
-    
-    </summary>
-    
-    
+      <category term="Markdown" scheme="https://coderofrat.github.io/tags/Markdown/"/>
     
   </entry>
   

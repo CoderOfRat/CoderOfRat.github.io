@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="标签, 代码,coder,code,it,communication,交流">
-    <meta name="description" content="标签 | Coder Rat">
+    <meta name="keywords" content="分类: 读书笔记, 代码,coder,code,it,communication,交流">
+    <meta name="description" content="分类: 读书笔记 | Coder Rat">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>标签 | Coder Rat</title>
+    <title>分类: 读书笔记 | Coder Rat</title>
     <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -315,85 +315,42 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 
     
 
-<div id="tags" class="container chip-container">
+<div id="category-cloud" class="container chip-container">
     <div class="card">
         <div class="card-content">
             <div class="tag-title center-align">
-                <i class="fa fa-tags"></i>&nbsp;&nbsp;文章标签
+                <i class="fa fa-bookmark"></i>&nbsp;&nbsp;文章分类
             </div>
             <div class="tag-chips">
                 
                 
-                <a href="/tags/Hexo%E4%B8%BB%E9%A2%98/" title="Hexo主题: 1">
+                
+                <a href="/categories/Hexo/" title="Hexo: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="Hexo主题" style="background-color: #F9EBEA;">Hexo主题
+                            style="background-color: #F9EBEA;">Hexo
                         <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/github/" title="github: 1">
+                <a href="/categories/%E5%89%8D%E7%AB%AF/" title="前端: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="github" style="background-color: #F5EEF8;">github
+                            style="background-color: #F5EEF8;">前端
                         <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/github%E5%91%BD%E4%BB%A4/" title="github命令: 1">
+                <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" title="读书笔记: 1">
                     <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="github命令" style="background-color: #D5F5E3;">github命令
+                             chip-active "
+                            style="background-color: #D5F5E3;">读书笔记
                         <span class="tag-length">1</span>
                     </span>
                 </a>
                 
-                
-                <a href="/tags/JavaScript/" title="JavaScript: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="JavaScript" style="background-color: #E8F8F5;">JavaScript
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" title="面向对象: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="面向对象" style="background-color: #FEF9E7;">面向对象
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Markdown/" title="Markdown: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Markdown" style="background-color: #F8F9F9;">Markdown
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/HTML5/" title="HTML5: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="HTML5" style="background-color: #82E0AA;">HTML5
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/CSS3/" title="CSS3: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="CSS3" style="background-color: #D7BDE2;">CSS3
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
                 
             </div>
         </div>
@@ -401,31 +358,63 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 </div>
 
     
-    <link rel="stylesheet" type="text/css" href="/libs/jqcloud/jqcloud.css">
-<style type="text/css">
-    #tag-wordcloud {
-        width: 100%;
-        height: 300px;
-    }
-</style>
 
-<div class="container" data-aos="fade-up">
-    <div class="card">
-        <div id="tag-wordcloud" class="card-content"></div>
-    </div>
-</div>
+    <article id="articles" class="container articles">
+        <div class="row tags-posts">
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2019/11/29/du-shu-bi-ji-html-yu-css3-quan-wei-zhi-nan-shang-xia/">
+                        <div class="card-image tag-image">
+                            
+                            <img src="/images/HTML5与CSS3权威指南.jpg" class="responsive-img" alt="Hexo+Github+Matery 主题配置">
+                            
+                            <span class="card-title">Hexo+Github+Matery 主题配置</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary">
+                            
+                                这是一个采用 Material Design 和响应式设计的 Hexo 博客主题。
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-29
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fa fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" class="post-category" target="_blank">
+                                    读书笔记
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
 
-<script type="text/javascript" src="/libs/jqcloud/jqcloud-1.0.4.min.js"></script>
-<script type="text/javascript">
-    
-
-    $('#tag-wordcloud').jQCloud([{"text":"Hexo主题","weight":1,"link":"https://coderofrat.github.io/tags/Hexo%E4%B8%BB%E9%A2%98/"},{"text":"github","weight":1,"link":"https://coderofrat.github.io/tags/github/"},{"text":"github命令","weight":1,"link":"https://coderofrat.github.io/tags/github%E5%91%BD%E4%BB%A4/"},{"text":"JavaScript","weight":1,"link":"https://coderofrat.github.io/tags/JavaScript/"},{"text":"面向对象","weight":1,"link":"https://coderofrat.github.io/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"},{"text":"Markdown","weight":1,"link":"https://coderofrat.github.io/tags/Markdown/"},{"text":"HTML5","weight":1,"link":"https://coderofrat.github.io/tags/HTML5/"},{"text":"CSS3","weight":1,"link":"https://coderofrat.github.io/tags/CSS3/"}], {
-        autoResize: true
-    });
-</script>
-    
-
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/HTML5/" target="_blank">
+                            <span class="chip bg-color">HTML5</span>
+                        </a>
+                        
+                        <a href="/tags/CSS3/" target="_blank">
+                            <span class="chip bg-color">CSS3</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </article>
 </main>
+
 
 <footer class="page-footer bg-color">
     <div class="container row center-align">
