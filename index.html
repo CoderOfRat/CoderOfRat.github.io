@@ -7,113 +7,120 @@
     <meta name="keywords" content="代码,coder,code,it,communication,交流">
     <meta name="description" content="Coder Rat">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>Coder Rat</title>
-    <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" href="/favicon.png">
 
-    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="/libs/materialize/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
     <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
     <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
     <link rel="stylesheet" type="text/css" href="/css/matery.css">
     <link rel="stylesheet" type="text/css" href="/css/my.css">
-    <style type="text/css">
-        
-    </style>
-
-    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+    
+    <script src="/libs/jquery/jquery.min.js"></script>
+    
 <link rel="alternate" href="/atom.xml" title="Coder Rat" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
-
-<header class="navbar-fixed">
+    <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
-        <div id="navContainer" class="container">
-            <div class="nav-wrapper">
-                <div class="brand-logo">
-                    <a href="/" class="waves-effect waves-light">
-                        
-                        <img src="/medias/logo.png" class="logo-img hide-on-small-only">
-                        
-                        <span class="logo-span">Coder Rat</span>
-                    </a>
-                </div>
-                
+        <div id="navContainer" class="nav-wrapper head-container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Coder Rat</span>
+                </a>
+            </div>
+            
 
-<a href="#" data-activates="mobile-nav" class="button-collapse"><i class="fa fa-navicon"></i></a>
-<ul class="right">
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
     
-    <li class="hide-on-med-and-down">
-        <a href="/" class="waves-effect waves-light">
-            
-            <i class="fa fa-home"></i>
-            
-            <span>首页</span>
-        </a>
-    </li>
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
     
-    <li class="hide-on-med-and-down">
-        <a href="/tags" class="waves-effect waves-light">
-            
-            <i class="fa fa-tags"></i>
-            
-            <span>标签</span>
-        </a>
-    </li>
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
     
-    <li class="hide-on-med-and-down">
-        <a href="/categories" class="waves-effect waves-light">
-            
-            <i class="fa fa-bookmark"></i>
-            
-            <span>分类</span>
-        </a>
-    </li>
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
     
-    <li class="hide-on-med-and-down">
-        <a href="/archives" class="waves-effect waves-light">
-            
-            <i class="fa fa-archive"></i>
-            
-            <span>归档</span>
-        </a>
-    </li>
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
     
-    <li class="hide-on-med-and-down">
-        <a href="/about" class="waves-effect waves-light">
-            
-            <i class="fa fa-user-circle-o"></i>
-            
-            <span>关于</span>
-        </a>
-    </li>
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
     
-    <li class="hide-on-med-and-down">
-        <a href="/friends" class="waves-effect waves-light">
-            
-            <i class="fa fa-address-book"></i>
-            
-            <span>友情链接</span>
-        </a>
-    </li>
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
     
-    <li>
-        <a id="toggleSearch" class="waves-effect waves-light">
-            <i id="searchIcon" class="mdi-action-search" title="搜索"></i>
-        </a>
-    </li>
-
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
 </ul>
 
-<div class="side-nav" id="mobile-nav">
+<div id="mobile-nav" class="side-nav sidenav">
 
     <div class="mobile-head bg-color">
         
@@ -131,100 +138,87 @@
 
     <ul class="menu-list mobile-menu-list">
         
-        <li>
-            <a href="/" class="waves-effect waves-light">
-                
-                <i class="fa fa-fw fa-home"></i>
-                
-                首页
-            </a>
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
         </li>
         
-        <li>
-            <a href="/tags" class="waves-effect waves-light">
-                
-                <i class="fa fa-fw fa-tags"></i>
-                
-                标签
-            </a>
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
         </li>
         
-        <li>
-            <a href="/categories" class="waves-effect waves-light">
-                
-                <i class="fa fa-fw fa-bookmark"></i>
-                
-                分类
-            </a>
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
         </li>
         
-        <li>
-            <a href="/archives" class="waves-effect waves-light">
-                
-                <i class="fa fa-fw fa-archive"></i>
-                
-                归档
-            </a>
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
         </li>
         
-        <li>
-            <a href="/about" class="waves-effect waves-light">
-                
-                <i class="fa fa-fw fa-user-circle-o"></i>
-                
-                关于
-            </a>
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
         </li>
         
-        <li>
-            <a href="/friends" class="waves-effect waves-light">
-                
-                <i class="fa fa-fw fa-address-book"></i>
-                
-                友情链接
-            </a>
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
         </li>
         
         
         <li><div class="divider"></div></li>
         <li>
             <a href="https://github.com/CoderOfRat" class="waves-effect waves-light" target="_blank">
-                <i class="fa fa-github-square fa-fw"></i>Fork Me
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
             </a>
         </li>
         
     </ul>
-
-    <div class="social-link">
-    <a href="https://github.com/CoderOfRat" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
-        <i class="fa fa-github"></i>
-    </a>
-
-
-
-    <a href="mailto:1404616446@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
-        <i class="fa fa-envelope-open"></i>
-    </a>
-
-
-
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1404616446" target="_blank" rel="noopener" class="tooltipped" data-tooltip="QQ联系我: 1404616446" data-position="top" data-delay="50">
-        <i class="fa fa-qq"></i>
-    </a>
-
-
-
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
-        <i class="fa fa-rss"></i>
-    </a>
-</div>
 </div>
 
-            </div>
         </div>
 
         
-        <style>
+            <style>
     .nav-transparent .github-corner {
         display: none !important;
     }
@@ -281,82 +275,187 @@
 </a>
         
     </nav>
+
 </header>
 
-<style type="text/css">
-    /* don't remove. */
-    .index-cover {
-        height: 100vh;
+    
+<style>
+    .carousel-control {
+        width: 45px;
+        height: 45px;
+        line-height: 55px;
+        border-radius: 45px;
+        background: transparent;
+        cursor: pointer;
+        z-index: 100;
+    }
+
+    #prev-cover {
+        position: absolute;
+        top: 48%;
+        left: 8px;
+    }
+
+    #next-cover {
+        position: absolute;
+        top: 48%;
+        right: 8px;;
+    }
+
+    #prev-cover i {
+        margin-right: 3px;
+    }
+
+    #next-cover i {
+        margin-left: 3px;
+    }
+
+    .carousel-control:hover {
+        background-color:rgba(0, 0, 0, .4);
+    }
+
+    .carousel-control i {
+        color: #fff;
+        font-size: 2.4rem;
     }
 </style>
 
-<div class="bg-cover index-cover about-cover" style="background-image: url('/medias/cover.jpg')">
-    <div class="container">
-        <div class="row">
-            <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-                <div class="brand">
-                    <div class="title center-align">
-                    
-                        Codding my life
-                    
-                    </div>
 
-                    <div class="description center-align">
-                    
-                        撸码，是一种态度
-                    
-                    </div>
-                </div>
+
+<div class="carousel carousel-slider center index-cover" data-indicators="true" style="margin-top: -64px;">
+    
+
+    <div class="carousel-item red white-text bg-cover about-cover">
+        <div class="container">
+            <div class="row">
+    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+        <div class="brand">
+            <div class="title center-align">
+                
+                Codding my life
+                
+            </div>
+
+            <div class="description center-align">
+                
+                <span id="subtitle"></span>
+                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+                <script>
+                    var typed = new Typed("#subtitle", {
+                        strings: ['从来没有真正的绝境, 只有心灵的迷途','Never really desperate, only the lost of the soul'],
+                        startDelay: 300,
+                        typeSpeed: 100,
+                        loop: true,
+                        backSpeed: 50,
+                        showCursor: true
+                    });
+                </script>
+                
             </div>
         </div>
-        
-        <div class="cover-btns">
-            <a href="#recommend-sections" class="waves-effect waves-light btn">
-                <i class="fa fa-angle-double-down"></i>继续阅读
-            </a>
+    </div>
+</div>
 
-            
-            <a href="https://github.com/CoderOfRat" class="waves-effect waves-light btn" target="_blank">
-                <i class="fa fa-github-alt"></i>Github
-            </a>
-            
-        </div>
-        <div class="cover-social-link">
+
+<script>
+    // 每天切换 banner 图.  Switch banner image every day.
+    $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay() + '.jpg)');
+</script>
+
+
+
+            <div class="cover-btns">
+                <a href="#indexCard" class="waves-effect waves-light btn">
+                    <i class="fa fa-angle-double-down"></i>开始阅读
+                </a>
+
+                
+                    <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light btn" target="_blank">
+                        <i class="fab fa-github-alt"></i>Github
+                    </a>
+                
+            </div>
+            <div class="cover-social-link">
     <a href="https://github.com/CoderOfRat" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
-        <i class="fa fa-github"></i>
+        <i class="fab fa-github"></i>
     </a>
 
 
 
     <a href="mailto:1404616446@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
-        <i class="fa fa-envelope-open"></i>
+        <i class="fas fa-envelope-open"></i>
     </a>
 
 
 
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1404616446" target="_blank" rel="noopener" class="tooltipped" data-tooltip="QQ联系我: 1404616446" data-position="top" data-delay="50">
-        <i class="fa fa-qq"></i>
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1404616446" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1404616446" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
     </a>
 
 
 
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
-        <i class="fa fa-rss"></i>
-    </a>
+
+
+
+
 </div>
-        
+        </div>
     </div>
+
+    
 </div>
 
 <script>
-// Dynamically switch banner pictures every day.
-$('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay() + '.jpg)');
+    $(function () {
+        let coverSlider = $('.carousel');
+        coverSlider.carousel({
+            duration: Number('120'),
+            fullWidth: true,
+            indicators: 'true' === 'true'
+        });
+
+        let carouselIntervalId;
+        
+        // Loop to call the next cover article picture.
+        let autoCarousel = function() {
+            carouselIntervalId = setInterval(function () {
+                coverSlider.carousel('next');
+            }, 5000);
+        };
+        autoCarousel();
+        
+
+        let restartPlay = function () {
+            
+            clearInterval(carouselIntervalId);
+            autoCarousel();
+            
+        };
+
+        
+        // prev and next cover post.
+        $('#prev-cover').click(function () {
+            coverSlider.carousel('prev');
+            restartPlay();
+        });
+        $('#next-cover').click(function () {
+            coverSlider.carousel('next');
+            restartPlay();
+        });
+        
+    });
 </script>
+
+
 
 <main class="content">
 
     
-    <div class="index-card">
+    <div id="indexCard" class="index-card">
         <div class="container ">
             <div class="card">
                 <div class="card-content">
@@ -364,12 +463,12 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                         <div class="dream">
     
     <div class="title center-align">
-        <i class="fa fa-lightbulb-o"></i>&nbsp;&nbsp;我愿是激流
+        <i class="far fa-lightbulb"></i>&nbsp;&nbsp;面向对象
     </div>
     
     <div class="row">
         <div class="col l8 offset-l2 m10 offset-m1 s10 offset-s1 center-align text">
-            我愿意是激流<br>是山里的小河在崎岖的路上<br>在岩石上经过只要我的爱人<br>是一条小鱼在我的浪花中<br>快乐地游来游去我愿意是荒林<br>在河流的两岸面对一阵阵狂风<br>我勇敢地作战只要我的爱人<br>是一只小鸟在我稠密的树枝间作客鸣叫<br>我愿意是废墟<br>在峻峭的山崖这静默的毁灭<br>并不使我懊丧只要我的爱人<br>是青青的长春藤沿着我荒凉的额头<br>亲密地攀援而上我愿意是草屋<br>在深深的山谷底草屋的顶上<br>饱受着风雨的打击只要我的爱人<br>是可爱的火焰在我的炉子里<br>愉快地缓缓闪现我愿意是云朵<br>是灰色的破旗在广漠的空中<br>懒懒地飘来荡去只要我的爱人<br>是珊瑚似的夕阳傍着我苍白的脸<br>显出鲜艳的辉煌<br><strong>—— 裴多菲(匈牙利)<strong/>
+            戴上耳机<br>世界是音符<br>拿起笔<br>世界是诗坯<br>闭上眼<br>世界是<strong>你<strong/>
         </div>
     </div>
 </div>
@@ -382,7 +481,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 <div class="music-player">
     
     <div class="title center-align">
-        <i class="fa fa-music"></i>&nbsp;&nbsp;听听音乐
+        <i class="fas fa-music"></i>&nbsp;&nbsp;Music
     </div>
     
     <div class="row">
@@ -406,7 +505,7 @@ $(function () {
         volume: Number('0.7'),
         listFolded: 'false' === 'true',
         listMaxHeight: '',
-        audio: JSON.parse('[{"name":"五月雨变奏乐音","artist":"AnimeVibe","url":"http://xxx.com/music1.mp3","cover":"http://xxx.com/music-cover1.png"},{"name":"Take me hand","artist":"DAISHI DANCE,Cecile Corbel","url":"/medias/music/music2.mp3","cover":"/medias/music/cover2.png"},{"name":"Shape of You","artist":"J.Fla","url":"http://xxx.com/music3.mp3","cover":"http://xxx.com/music-cover3.png"}]')
+        audio: eval([{"name":"Macho J","artist":"AnimeVibe","url":"http://sc1.111ttt.cn/2017/1/05/09/298092204432.mp3","cover":"http://p3.music.126.net/u6yqvrTEmRKQw06CHpf3pA==/1399678305673544.jpg?param=30y30"},{"name":"Take me hand","artist":"DAISHI DANCE,Cecile Corbel","url":"/medias/music/music2.mp3","cover":"/medias/music/cover2.png"},{"name":"Flo Rida - Whistle口哨","artist":"J.Fla","url":"http://sc1.111ttt.cn/2016/1/12/10/205102120460.mp3","cover":"http://xxx.com/music-cover3.png"}])
     });
 });
 </script>
@@ -414,6 +513,7 @@ $(function () {
 
                     
 
+                    
                     <div id="recommend-sections" class="recommend">
                         
 
@@ -421,27 +521,60 @@ $(function () {
 
 
 
-<div class="title"><i class="fa fa-thumbs-o-up"></i>&nbsp;&nbsp;推荐文章</div>
+<div class="title"><i class="far fa-thumbs-up"></i>&nbsp;&nbsp;推荐文章</div>
 
 <div class="row">
 
     
     
-    <div class="col s12" >
+    <div class="col s12 m6" >
+        <div class="post-card" style="background-image: url('/images/JavascriptOOP.jpg')">
+            <div class="post-body">
+                <div class="post-categories">
+                    
+                        
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="category">前端</a>
+                        
+                    
+                </div>
+                <a href="/2019/11/28/js-mian-xiang-dui-xiang/">
+                    <h3 class="post-title">JavaScript面向对象</h3>
+                </a>
+                <p class="post-description">
+                    
+                        JavaScript 面向对象 精选模拟京东倒计时
+function countTime(time){
+    var nowTime = 
+                    
+                </p>
+                <a href="/2019/11/28/js-mian-xiang-dui-xiang/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FF5E3A 0%, #FF2A68 100%)" target="_blank">
+                    <i class="icon far fa-eye fa-fw"></i>阅读更多
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="col s12 m6" >
         <div class="post-card" style="background-image: url('/images/1.jpg')">
             <div class="post-body">
                 <div class="post-categories">
                     
-                    <a href="/categories/Hexo/" class="category" target="_blank">Hexo</a>
+                        
+                            <a href="/categories/Hexo/" class="category">Hexo</a>
+                        
                     
                 </div>
-                <a href="/2019/11/28/hexo-github-matery-zhu-ti-pei-zhi/" target="_blank">
+                <a href="/2019/11/28/hexo-github-matery-zhu-ti-pei-zhi/">
                     <h3 class="post-title">Hexo+Github+Matery 主题配置</h3>
                 </a>
-                <p class="post-description">这是一个采用 Material Design 和响应式设计的 Hexo 博客主题。</p>
-                <a href="/2019/11/28/hexo-github-matery-zhu-ti-pei-zhi/" target="_blank"
-                        class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FF5E3A 0%, #FF2A68 100%)">
-                    <i class="icon fa fa-eye fa-fw"></i>阅读更多
+                <p class="post-description">
+                    
+                        这是一个采用 Material Design 和响应式设计的 Hexo 博客主题。
+                    
+                </p>
+                <a href="/2019/11/28/hexo-github-matery-zhu-ti-pei-zhi/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #EF4DB6 0%, #C643FC 100%)" target="_blank">
+                    <i class="icon far fa-eye fa-fw"></i>阅读更多
                 </a>
             </div>
         </div>
@@ -453,18 +586,25 @@ $(function () {
             <div class="post-body">
                 <div class="post-categories">
                     
-                    <a href="/categories/%E5%89%8D%E7%AB%AF/" class="category" target="_blank">前端</a>
+                        
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="category">前端</a>
+                        
                     
                 </div>
-                <a href="/2019/11/28/js-mian-xiang-dui-xiang/" target="_blank">
-                    <h3 class="post-title">JavaScript面向对象</h3>
+                <a href="/2019/11/30/javascript-hui-zong/">
+                    <h3 class="post-title">JavaScript</h3>
                 </a>
-                <p class="post-description">JavaScript 面向对象 精选模拟京东倒计时
-function countTime(time){
-    var nowTime = </p>
-                <a href="/2019/11/28/js-mian-xiang-dui-xiang/" target="_blank"
-                        class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #EF4DB6 0%, #C643FC 100%)">
-                    <i class="icon fa fa-eye fa-fw"></i>阅读更多
+                <p class="post-description">
+                    
+                        程序运行之内存条
+打开某个程序时，先从硬盘中把程序的代码加载到内存中
+
+CPU执行内存中的代码（此时读取的应该是机器码0，1）
+之所以要内存
+                    
+                </p>
+                <a href="/2019/11/30/javascript-hui-zong/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #1AD6FD 0%, #1D62F0 100%)" target="_blank">
+                    <i class="icon far fa-eye fa-fw"></i>阅读更多
                 </a>
             </div>
         </div>
@@ -476,16 +616,21 @@ function countTime(time){
             <div class="post-body">
                 <div class="post-categories">
                     
-                    <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" class="category" target="_blank">读书笔记</a>
+                        
+                            <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" class="category">读书笔记</a>
+                        
                     
                 </div>
-                <a href="/2019/11/29/du-shu-bi-ji-html-yu-css3-quan-wei-zhi-nan-shang-xia/" target="_blank">
+                <a href="/2019/11/29/du-shu-bi-ji-html-yu-css3-quan-wei-zhi-nan-shang-xia/">
                     <h3 class="post-title">HTML5与CSS3权威指南</h3>
                 </a>
-                <p class="post-description">增加了支持web应用开发者的许多新特性，以及更符合开发者使用习惯的新元素，并重点关注定义<srtong>清晰的、一致的<strong/>准则，以确保web应用和内容在不同用户代理（浏览器）中的互操作性。</p>
-                <a href="/2019/11/29/du-shu-bi-ji-html-yu-css3-quan-wei-zhi-nan-shang-xia/" target="_blank"
-                        class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #1AD6FD 0%, #1D62F0 100%)">
-                    <i class="icon fa fa-eye fa-fw"></i>阅读更多
+                <p class="post-description">
+                    
+                        增加了支持web应用开发者的许多新特性，以及更符合开发者使用习惯的新元素，并重点关注定义<srtong>清晰的、一致的<strong/>准则，以确保web应用和内容在不同用户代理（浏览器）中的互操作性。
+                    
+                </p>
+                <a href="/2019/11/29/du-shu-bi-ji-html-yu-css3-quan-wei-zhi-nan-shang-xia/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FFCC00 0%, #FF9500 100%)" target="_blank">
+                    <i class="icon far fa-eye fa-fw"></i>阅读更多
                 </a>
             </div>
         </div>
@@ -496,6 +641,7 @@ function countTime(time){
 
 
                     </div>
+                    
                 </div>
             </div>
         </div>
@@ -504,9 +650,65 @@ function countTime(time){
 
     
 
+    
+
     <!-- 所有文章卡片 -->
     <article id="articles" class="container articles">
         <div class="row article-row">
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2019/11/30/javascript-hui-zong/">
+                        <div class="card-image">
+                            
+                            <img src="/images/JavascriptOOP.jpg" class="responsive-img" alt="JavaScript">
+                            
+                            <span class="card-title">JavaScript</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                程序运行之内存条
+打开某个程序时，先从硬盘中把程序的代码加载到内存中
+
+CPU执行内存中的代码（此时读取的应该是机器码0，1）
+之所以要内存的一个重要原因，是因为CPU运行太快了，如果只从硬盘中读取数据会浪费CPU性能，所以，才使用存取速度
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-30
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/JavaScript/">
+                            <span class="chip bg-color">JavaScript</span>
+                        </a>
+                        
+                        <a href="/tags/JS%E7%9F%A5%E8%AF%86%E6%B1%87%E6%80%BB/">
+                            <span class="chip bg-color">JS知识汇总</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
@@ -520,20 +722,20 @@ function countTime(time){
                     </a>
 
                     <div class="card-content article-content">
-                        <div class="summary">
+                        <div class="summary block-with-text">
                             
                                 增加了支持web应用开发者的许多新特性，以及更符合开发者使用习惯的新元素，并重点关注定义<srtong>清晰的、一致的<strong/>准则，以确保web应用和内容在不同用户代理（浏览器）中的互操作性。
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-29
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-29
                             </span>
                             <span class="publish-author">
                                 
-                                <i class="fa fa-bookmark fa-fw icon-category"></i>
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" class="post-category" target="_blank">
+                                <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" class="post-category">
                                     读书笔记
                                 </a>
                                 
@@ -545,11 +747,11 @@ function countTime(time){
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/HTML5/" target="_blank">
+                        <a href="/tags/HTML5/">
                             <span class="chip bg-color">HTML5</span>
                         </a>
                         
-                        <a href="/tags/CSS3/" target="_blank">
+                        <a href="/tags/CSS3/">
                             <span class="chip bg-color">CSS3</span>
                         </a>
                         
@@ -571,19 +773,21 @@ function countTime(time){
                     </a>
 
                     <div class="card-content article-content">
-                        <div class="summary">
+                        <div class="summary block-with-text">
                             
                                 标签插件（Tag Plugins）标签插件和 Front-matter 中的标签不同，它们是用于在文章中快速插入特定内容的插件。
-引用块在文
+引用块在文章中插入引言，可包含作者、来源和标题。
+别号： quote
+{% blockquote [autho
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-28
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-28
                             </span>
                             <span class="publish-author">
                                 
-                                <i class="fa fa-user fa-fw"></i>
+                                <i class="fas fa-user fa-fw"></i>
                                 Mr Guo
                                 
                             </span>
@@ -593,7 +797,7 @@ function countTime(time){
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/Markdown/" target="_blank">
+                        <a href="/tags/Markdown/">
                             <span class="chip bg-color">Markdown</span>
                         </a>
                         
@@ -614,20 +818,20 @@ function countTime(time){
                     </a>
 
                     <div class="card-content article-content">
-                        <div class="summary">
+                        <div class="summary block-with-text">
                             
                                 这是一个采用 Material Design 和响应式设计的 Hexo 博客主题。
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-28
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-28
                             </span>
                             <span class="publish-author">
                                 
-                                <i class="fa fa-bookmark fa-fw icon-category"></i>
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/Hexo/" class="post-category" target="_blank">
+                                <a href="/categories/Hexo/" class="post-category">
                                     Hexo
                                 </a>
                                 
@@ -639,15 +843,15 @@ function countTime(time){
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/Hexo%E4%B8%BB%E9%A2%98/" target="_blank">
+                        <a href="/tags/Hexo%E4%B8%BB%E9%A2%98/">
                             <span class="chip bg-color">Hexo主题</span>
                         </a>
                         
-                        <a href="/tags/github/" target="_blank">
+                        <a href="/tags/github/">
                             <span class="chip bg-color">github</span>
                         </a>
                         
-                        <a href="/tags/github%E5%91%BD%E4%BB%A4/" target="_blank">
+                        <a href="/tags/github%E5%91%BD%E4%BB%A4/">
                             <span class="chip bg-color">github命令</span>
                         </a>
                         
@@ -668,22 +872,24 @@ function countTime(time){
                     </a>
 
                     <div class="card-content article-content">
-                        <div class="summary">
+                        <div class="summary block-with-text">
                             
                                 JavaScript 面向对象 精选模拟京东倒计时
 function countTime(time){
-    var nowTime = 
+    var nowTime = +new Date();
+    var inputTime = +new Date(time);
+
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-28
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-28
                             </span>
                             <span class="publish-author">
                                 
-                                <i class="fa fa-bookmark fa-fw icon-category"></i>
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category" target="_blank">
+                                <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
                                     前端
                                 </a>
                                 
@@ -695,11 +901,11 @@ function countTime(time){
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/JavaScript/" target="_blank">
+                        <a href="/tags/JavaScript/">
                             <span class="chip bg-color">JavaScript</span>
                         </a>
                         
-                        <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" target="_blank">
+                        <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">
                             <span class="chip bg-color">面向对象</span>
                         </a>
                         
@@ -715,55 +921,110 @@ function countTime(time){
 
 
 
-<footer class="page-footer bg-color">
+
+    <footer class="page-footer bg-color">
     <div class="container row center-align">
         <div class="col s12 m8 l8 copy-right">
-            本站由&copy;<a href="https://coderofrat.github.io/" target="_blank">Mr Guo</a>基于
-            Hexo-Matery 主题搭建.
+            Copyright&nbsp;&copy;
+            <span id="year">年份</span>
+            <a href="https://coderofrat.github.io" target="_blank">Mr Guo</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
             
-                &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">7.4k</span>
             
-
             
-			
-                <br>
-                
-                <span id="busuanzi_container_site_pv">
-                    <i class="fa fa-heart-o"></i>
-                    本站总访问量 <span id="busuanzi_value_site_pv" class="white-color"></span>
-                </span>
-                
-                
-                <span id="busuanzi_container_site_uv">
-                    <i class="fa fa-users"></i>
-                    次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
-                </span>
-                
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    window.setTimeout("siteTime()", 1000);
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2018";
+                    var startMonth = "6";
+                    var startDate = "28";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
     <a href="https://github.com/CoderOfRat" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
-        <i class="fa fa-github"></i>
+        <i class="fab fa-github"></i>
     </a>
 
 
 
     <a href="mailto:1404616446@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
-        <i class="fa fa-envelope-open"></i>
+        <i class="fas fa-envelope-open"></i>
     </a>
 
 
 
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1404616446" target="_blank" rel="noopener" class="tooltipped" data-tooltip="QQ联系我: 1404616446" data-position="top" data-delay="50">
-        <i class="fa fa-qq"></i>
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1404616446" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1404616446" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
     </a>
 
 
 
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
-        <i class="fa fa-rss"></i>
-    </a>
+
+
+
+
 </div>
     </div>
 </footer>
@@ -771,13 +1032,13 @@ function countTime(time){
 <div class="progress-bar"></div>
 
 
-<!-- 搜索遮罩框 -->
+    <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
         <div class="search-header">
-            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
             <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
-                   class="search-input" autofocus="">
+                   class="search-input">
         </div>
         <div id="searchResult"></div>
     </div>
@@ -785,32 +1046,69 @@ function countTime(time){
 
 <script src="/js/search.js"></script>
 <script type="text/javascript">
+$(function () {
     searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
 </script>
-<!-- 回到顶部按钮 -->
+    <!-- 回到顶部按钮 -->
 <div id="backTop" class="top-scroll">
     <a class="btn-floating btn-large waves-effect waves-light" href="#!">
-        <i class="fa fa-angle-up"></i>
+        <i class="fas fa-arrow-up"></i>
     </a>
 </div>
 
 
-<script src="/libs/materialize/js/materialize.min.js"></script>
-<script src="/libs/masonry/masonry.pkgd.min.js"></script>
-<script src="/libs/aos/aos.js"></script>
-<script src="/libs/scrollprogress/scrollProgress.min.js"></script>
-<script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
-<script src="/js/matery.js"></script>
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-
-
-
-    <script src="/libs/others/clicklove.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
 
+    
+
+    
+
+    
+
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+    
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
 
 </body>
+
 </html>

@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>JavaScript</title>
+      <link href="/2019/11/30/javascript-hui-zong/"/>
+      <url>/2019/11/30/javascript-hui-zong/</url>
+      
+        <content type="html"><![CDATA[<h1 id="程序运行之内存条"><a href="#程序运行之内存条" class="headerlink" title="程序运行之内存条"></a>程序运行之内存条</h1><ol><li><p>打开某个程序时，先从硬盘中把程序的代码加载到内存中</p></li><li><p>CPU执行内存中的代码（此时读取的应该是机器码<code>0</code>，<code>1</code>）</p><p>之所以要内存的一个重要原因，是因为CPU运行太快了，如果只从硬盘中读取数据会浪费CPU性能，所以，才使用存取速度更快的内存来保存<strong>运行时</strong>的数据。（内存是电，硬盘是机械）</p></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+            <tag> JS知识汇总 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>HTML5与CSS3权威指南</title>
       <link href="/2019/11/29/du-shu-bi-ji-html-yu-css3-quan-wei-zhi-nan-shang-xia/"/>
       <url>/2019/11/29/du-shu-bi-ji-html-yu-css3-quan-wei-zhi-nan-shang-xia/</url>
