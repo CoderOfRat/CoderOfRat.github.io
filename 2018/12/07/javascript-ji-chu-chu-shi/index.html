@@ -444,7 +444,7 @@ CPU执行内存中的代码（此时读取的应该是机器码0，1）
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4.2k
+                    4.3k
                 </div>
                 
 
@@ -750,7 +750,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>strMsg <span class="token operator">+</span> <span class="token string">"\n"</span> <span class="token operator">+</span> strMsg<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <blockquote>
 <p>I am Coder Rat.<br>15</p>
-<!--注意：空格和符号也占字符串长度-->
+<p>–注意：空格和符号也占字符串长度–</p>
 </blockquote>
 <h4 id="1-2-3-字符串的拼接"><a href="#1-2-3-字符串的拼接" class="headerlink" title="1.2.3 字符串的拼接"></a>1.2.3 字符串的拼接</h4><p>多个字符串之间可以使用 <code>+</code> 进行拼接，其拼接方式为 :</p>
 <pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">//拼接后的新字符串 = 字符串 + 任何类型;</span>
@@ -764,8 +764,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <blockquote>
 <p> 我是Coder Rat，我18岁了,你呢？Thu Dec 05 2018 21:16:36 GMT+0800 (中国标准时间)function () {<br>        alert(“不告诉你”);<br>    }false<br>null</p>
 </blockquote>
-<!-- 注意：拼接前会把与字符串相加的任何类型转成字符串，再拼接成一个新的字符串，函数的话也不会执行，直接返回函数体，方法调用会执行，将结果转为字符串以供拼接 -->
-
+<p>– 注意：拼接前会把与字符串相加的任何类型转成字符串，再拼接成一个新的字符串，函数的话也不会执行，直接返回函数体，方法调用会执行，将结果转为字符串以供拼接 –</p>
 <h3 id="1-3-Boolean-布尔型"><a href="#1-3-Boolean-布尔型" class="headerlink" title="1.3 Boolean 布尔型"></a>1.3 Boolean 布尔型</h3><p>布尔型有两个值：<code>true</code> <code>false</code>，其中true表示真（对），false表示假（错）</p>
 <pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">/*
 Boolean类型的值，可以参与数学运算
@@ -909,7 +908,8 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <h3 id="JIT概念"><a href="#JIT概念" class="headerlink" title="JIT概念"></a>JIT概念</h3><p>JIT：Just In Time Compiler，一般翻译为即时编译器，这是是针对解释型语言而言的，而且并非虚拟机必须，是一种优化手段，Java的商用虚拟机HotSpot就有这种技术手段，Java虚拟机标准对JIT的存在没有作出任何规范，所以这是虚拟机实现的自定义优化技术。</p>
 <p>  HotSpot虚拟机的执行引擎在执行Java代码是可以采用【解释执行】和【编译执行】两种方式的，如果采用的是编译执行方式，那么就会使用到JIT，而解释执行就不会使用到JIT，所以，早期说Java是解释型语言，是没有任何问题的，而在拥有JIT的Java虚拟机环境下，说Java是解释型语言严格意义上已经不正确了。</p>
 <p>  HotSpot中的编译器是javac，他的工作是将源代码编译成字节码，这部分工作是完全独立的，完全不需要运行时参与，所以Java程序的编译是半独立的实现。有了字节码，就有解释器来进行解释执行，这是早期虚拟机的工作流程，后来，虚拟机会将执行频率高的方法或语句块通过JIT编译成本地机器码，提高了代码执行的效率，至此你已经了解了JIT在Java虚拟机中所处的地位和工作的主要内容。</p>
-<p><strong>1.JIT的工作原理图</strong><br><img src="https://imgconvert.csdnimg.cn/aHR0cDovL2hpLmNzZG4ubmV0L2F0dGFjaG1lbnQvMjAxMTA5LzE2LzBfMTMxNjE1OTYwNGRTNjAuZ2lm" alt="img"><br>工作原理<br>当JIT编译启用时（默认是启用的），JVM读入.class文件解释后，将其发给JIT编译器。JIT编译器将字节码编译成本机机器代码。 </p>
+<p><strong>1.JIT的工作原理图</strong><br><img src="https://imgconvert.csdnimg.cn/aHR0cDovL2hpLmNzZG4ubmV0L2F0dGFjaG1lbnQvMjAxMTA5LzE2LzBfMTMxNjE1OTYwNGRTNjAuZ2lm" alt="img"></p>
+<p>工作原理<br>当JIT编译启用时（默认是启用的），JVM读入.class文件解释后，将其发给JIT编译器。JIT编译器将字节码编译成本机机器代码。 </p>
 <p>通常javac将程序源码编译，转换成java字节码，JVM通过解释字节码将其翻译成相应的机器指令，逐条读入，逐条解释翻译。非常显然，经过解释运行，其运行速度必定会比可运行的二进制字节码程序慢。为了提高运行速度，引入了JIT技术。 </p>
 <p>在执行时JIT会把翻译过的机器码保存起来，已备下次使用，因此从理论上来说，採用该JIT技术能够，能够接近曾经纯编译技术。 </p>
 <p><strong>2.相关知识</strong><br>JIT是just in time,即时编译技术。使用该技术，可以加速java程序的运行速度。 </p>
