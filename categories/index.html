@@ -297,9 +297,9 @@
                     var typed = new Typed("#subtitle", {
                         strings: ['大简之道, 唯有初心','Simple Way, Beginning Mind'],
                         startDelay: 300,
-                        typeSpeed: 100,
+                        typeSpeed: 200,
                         loop: true,
-                        backSpeed: 50,
+                        backSpeed: 100,
                         showCursor: true
                     });
                 </script>
@@ -333,10 +333,28 @@
                 
                 
                 
-                <a href="/categories/%E5%89%8D%E7%AB%AF/" title="前端: 1">
+                <a href="/categories/%E5%BA%93/" title="库: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #F9EBEA;">前端
+                            style="background-color: #F9EBEA;">库
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/%E5%89%8D%E7%AB%AF/" title="前端: 3">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #F5EEF8;">前端
+                        <span class="tag-length">3</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/%E5%90%8E%E7%AB%AF/" title="后端: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #D5F5E3;">后端
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -345,7 +363,7 @@
                 <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" title="读书笔记: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #F5EEF8;">读书笔记
+                            style="background-color: #E8F8F5;">读书笔记
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -392,7 +410,7 @@
                     color: '#3C4858'
                 }
             },
-            indicator: [{"name":"前端","max":2},{"name":"读书笔记","max":2}],
+            indicator: [{"name":"库","max":4},{"name":"前端","max":4},{"name":"后端","max":4},{"name":"读书笔记","max":4}],
             nameGap: 5,
             center: ['50%','55%'],
             radius: '66%'
@@ -403,7 +421,7 @@
             itemStyle: {normal: {areaStyle: {type: 'default'}}},
             data : [
                 {
-                    value : [1,1],
+                    value : [1,3,1,1],
                     name : '文章分类数量'
                 }
             ]
@@ -451,11 +469,11 @@
                     var years = days * 365;
                     var today = new Date();
                     var startYear = "2018";
-                    var startMonth = "6";
-                    var startDate = "28";
-                    var startHour = "0";
-                    var startMinute = "0";
-                    var startSecond = "0";
+                    var startMonth = "2";
+                    var startDate = "12";
+                    var startHour = "5";
+                    var startMinute = "3";
+                    var startSecond = "4";
                     var todayYear = today.getFullYear();
                     var todayMonth = today.getMonth() + 1;
                     var todayDate = today.getDate();
@@ -587,11 +605,6 @@ $(function () {
 
     
 
-    
-    <script type="text/javascript" color="0,0,255"
-        pointColor="0,0,255" opacity='0.7'
-        zIndex="-1" count="99"
-        src="/libs/background/canvas-nest.js"></script>
     
 
     

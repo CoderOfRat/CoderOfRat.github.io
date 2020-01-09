@@ -1,0 +1,1541 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Node.js基础, 代码,coder,code,it,communication,交流,web,vue,echart">
+    <meta name="description" content="为什么需要学习服务器开发？
+能够和后端人员更好配合
+
+网站业务逻辑前置，学习前端技术需要后端技术支持（Ajax）
+
+实现网站的业务逻辑
+
+配合数据库处理一些数据请求
+
+
+为什么选择Node
+使用JavaScript语法开发后端应用
+
+一些公">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Node.js基础 | Coder Rat</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    
+    <script src="/libs/jquery/jquery.min.js"></script>
+    
+<link rel="alternate" href="/atom.xml" title="Coder Rat" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper head-container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Coder Rat</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Coder Rat</div>
+        <div class="logo-desc">
+            
+            撸码，是一种态度
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/CoderOfRat" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/CoderOfRat" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        Node.js基础
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/NodeJS/">
+                                <span class="chip bg-color">NodeJS</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%90%8E%E7%AB%AF/" class="post-category">
+                                后端
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2019-12-23
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    5.6k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    22 分
+                </div>
+                
+				
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+            
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h3 id="为什么需要学习服务器开发？"><a href="#为什么需要学习服务器开发？" class="headerlink" title="为什么需要学习服务器开发？"></a>为什么需要学习服务器开发？</h3><ul>
+<li><p>能够和后端人员更好配合</p>
+</li>
+<li><p>网站<strong>业务逻辑前置</strong>，学习前端技术需要后端技术支持（Ajax）</p>
+</li>
+<li><p>实现网站的业务逻辑</p>
+</li>
+<li><p>配合数据库处理一些数据请求</p>
+</li>
+</ul>
+<h3 id="为什么选择Node"><a href="#为什么选择Node" class="headerlink" title="为什么选择Node"></a>为什么选择Node</h3><ul>
+<li><p>使用JavaScript语法开发后端应用</p>
+</li>
+<li><p>一些公司要求前端工程师掌握Node开发</p>
+</li>
+<li><p>Node的生态系统活跃，有大量开源库可以使用</p>
+</li>
+<li><p>前端开发工具多基于Node开发（webpack）</p>
+</li>
+</ul>
+<h3 id="Node是什么？"><a href="#Node是什么？" class="headerlink" title="Node是什么？"></a>Node是什么？</h3><p>Node是基于Chrome V8引擎的JavaScript代码<strong>运行环境</strong>（V8是 JavaScript 解释器）</p>
+<p><strong>JavaScript运行环境</strong></p>
+<p> 和 浏览器一样 Node 也是 JavaScript 代码的运行环境。</p>
+<p><strong>Node运行环境安装失败的解决办法</strong></p>
+<ul>
+<li><p>错误代码 2502 2503 失败原因：系统权限不足</p>
+<ul>
+<li><p>解决办法</p>
+<p>以管理员身份运行powershell</p>
+<p>执行命令 msiexec 安装包位置+安装包名称</p>
+</li>
+</ul>
+</li>
+<li><p>安装成功 但是执行node -v 命令时报错</p>
+<ul>
+<li><p>解决办法</p>
+<p>将nodejs的安装目录 加入系统变量path中</p>
+<p><strong>环境变量的path的作用：</strong></p>
+<p>当输入命令行命令的时候，命令行工具默认先查找当前所在目录查找对应可执行文件（命令前缀.exe），找不到的话，就会在系统环境变量path中查找，在对应目录中查找对应的可执行文件。</p>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="Node-js的组成"><a href="#Node-js的组成" class="headerlink" title="Node.js的组成"></a>Node.js的组成</h3><ul>
+<li>JavaScript 由 ECMAScript，DOM，BOM 三个部分组成</li>
+<li>Node.js 由ECMAScript及Node 环境提供的一些附加API组成。包括文件、网络、路径等一些更加强大的API。</li>
+</ul>
+<p><img src="images/image-20200102185736248.png" alt="image-20200102185736248"></p>
+<h3 id="Node-js全局对象–global"><a href="#Node-js全局对象–global" class="headerlink" title="Node.js全局对象–global"></a>Node.js全局对象–global</h3><p>和JavaScript中的window对象类似，global是 node.js 的内置对象，是 node.js 的顶层（全局）对象，所有的属性和方法都挂载在global上。</p>
+<p><img src="images/image-20200102192906972.png" alt="image-20200102192906972"></p>
+<pre class=" language-typescript"><code class="language-typescript"><span class="token keyword">declare</span> <span class="token keyword">var</span> global<span class="token punctuation">:</span> NodeJS<span class="token punctuation">.</span>Global<span class="token punctuation">;</span>
+<span class="token keyword">interface</span> <span class="token class-name">Global</span> <span class="token punctuation">{</span>
+    <span class="token keyword">Array</span><span class="token punctuation">:</span> <span class="token keyword">typeof</span> <span class="token keyword">Array</span><span class="token punctuation">;</span>
+    ArrayBuffer<span class="token punctuation">:</span> <span class="token keyword">typeof</span> ArrayBuffer<span class="token punctuation">;</span>
+    Boolean<span class="token punctuation">:</span> <span class="token keyword">typeof</span> Boolean<span class="token punctuation">;</span>
+    Buffer<span class="token punctuation">:</span> <span class="token keyword">typeof</span> Buffer<span class="token punctuation">;</span>
+    DataView<span class="token punctuation">:</span> <span class="token keyword">typeof</span> DataView<span class="token punctuation">;</span>
+    Date<span class="token punctuation">:</span> <span class="token keyword">typeof</span> Date<span class="token punctuation">;</span>
+    Error<span class="token punctuation">:</span> <span class="token keyword">typeof</span> Error<span class="token punctuation">;</span>
+    EvalError<span class="token punctuation">:</span> <span class="token keyword">typeof</span> EvalError<span class="token punctuation">;</span>
+    Float32Array<span class="token punctuation">:</span> <span class="token keyword">typeof</span> Float32Array<span class="token punctuation">;</span>
+    Float64Array<span class="token punctuation">:</span> <span class="token keyword">typeof</span> Float64Array<span class="token punctuation">;</span>
+    <span class="token keyword">Function</span><span class="token punctuation">:</span> <span class="token keyword">typeof</span> <span class="token keyword">Function</span><span class="token punctuation">;</span>
+    GLOBAL<span class="token punctuation">:</span> Global<span class="token punctuation">;</span>
+    <span class="token number">Infinity</span><span class="token punctuation">:</span> <span class="token keyword">typeof</span> <span class="token number">Infinity</span><span class="token punctuation">;</span>
+    Int16Array<span class="token punctuation">:</span> <span class="token keyword">typeof</span> Int16Array<span class="token punctuation">;</span>
+    Int32Array<span class="token punctuation">:</span> <span class="token keyword">typeof</span> Int32Array<span class="token punctuation">;</span>
+    Int8Array<span class="token punctuation">:</span> <span class="token keyword">typeof</span> Int8Array<span class="token punctuation">;</span>
+    Intl<span class="token punctuation">:</span> <span class="token keyword">typeof</span> Intl<span class="token punctuation">;</span>
+    JSON<span class="token punctuation">:</span> <span class="token keyword">typeof</span> JSON<span class="token punctuation">;</span>
+    Map<span class="token punctuation">:</span> MapConstructor<span class="token punctuation">;</span>
+    Math<span class="token punctuation">:</span> <span class="token keyword">typeof</span> Math<span class="token punctuation">;</span>
+    <span class="token number">NaN</span><span class="token punctuation">:</span> <span class="token keyword">typeof</span> <span class="token number">NaN</span><span class="token punctuation">;</span>
+    Number<span class="token punctuation">:</span> <span class="token keyword">typeof</span> Number<span class="token punctuation">;</span>
+    Object<span class="token punctuation">:</span> <span class="token keyword">typeof</span> Object<span class="token punctuation">;</span>
+    Promise<span class="token punctuation">:</span> <span class="token keyword">typeof</span> Promise<span class="token punctuation">;</span>
+    RangeError<span class="token punctuation">:</span> <span class="token keyword">typeof</span> RangeError<span class="token punctuation">;</span>
+    ReferenceError<span class="token punctuation">:</span> <span class="token keyword">typeof</span> ReferenceError<span class="token punctuation">;</span>
+    RegExp<span class="token punctuation">:</span> <span class="token keyword">typeof</span> RegExp<span class="token punctuation">;</span>
+    Set<span class="token punctuation">:</span> SetConstructor<span class="token punctuation">;</span>
+    String<span class="token punctuation">:</span> <span class="token keyword">typeof</span> String<span class="token punctuation">;</span>
+    Symbol<span class="token punctuation">:</span> <span class="token keyword">Function</span><span class="token punctuation">;</span>
+    SyntaxError<span class="token punctuation">:</span> <span class="token keyword">typeof</span> SyntaxError<span class="token punctuation">;</span>
+    TypeError<span class="token punctuation">:</span> <span class="token keyword">typeof</span> TypeError<span class="token punctuation">;</span>
+    URIError<span class="token punctuation">:</span> <span class="token keyword">typeof</span> URIError<span class="token punctuation">;</span>
+    Uint16Array<span class="token punctuation">:</span> <span class="token keyword">typeof</span> Uint16Array<span class="token punctuation">;</span>
+    Uint32Array<span class="token punctuation">:</span> <span class="token keyword">typeof</span> Uint32Array<span class="token punctuation">;</span>
+    Uint8Array<span class="token punctuation">:</span> <span class="token keyword">typeof</span> Uint8Array<span class="token punctuation">;</span>
+    Uint8ClampedArray<span class="token punctuation">:</span> <span class="token keyword">typeof</span> Uint8ClampedArray<span class="token punctuation">;</span>
+    WeakMap<span class="token punctuation">:</span> WeakMapConstructor<span class="token punctuation">;</span>
+    WeakSet<span class="token punctuation">:</span> WeakSetConstructor<span class="token punctuation">;</span>
+    clearImmediate<span class="token punctuation">:</span> <span class="token punctuation">(</span>immediateId<span class="token punctuation">:</span> Immediate<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">void</span><span class="token punctuation">;</span>
+    clearInterval<span class="token punctuation">:</span> <span class="token punctuation">(</span>intervalId<span class="token punctuation">:</span> Timeout<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">void</span><span class="token punctuation">;</span>
+    clearTimeout<span class="token punctuation">:</span> <span class="token punctuation">(</span>timeoutId<span class="token punctuation">:</span> Timeout<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">void</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">:</span> <span class="token keyword">typeof</span> console<span class="token punctuation">;</span>
+    decodeURI<span class="token punctuation">:</span> <span class="token keyword">typeof</span> decodeURI<span class="token punctuation">;</span>
+    decodeURIComponent<span class="token punctuation">:</span> <span class="token keyword">typeof</span> decodeURIComponent<span class="token punctuation">;</span>
+    encodeURI<span class="token punctuation">:</span> <span class="token keyword">typeof</span> encodeURI<span class="token punctuation">;</span>
+    encodeURIComponent<span class="token punctuation">:</span> <span class="token keyword">typeof</span> encodeURIComponent<span class="token punctuation">;</span>
+    escape<span class="token punctuation">:</span> <span class="token punctuation">(</span>str<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">string</span><span class="token punctuation">;</span>
+    eval<span class="token punctuation">:</span> <span class="token keyword">typeof</span> eval<span class="token punctuation">;</span>
+    global<span class="token punctuation">:</span> Global<span class="token punctuation">;</span>
+    isFinite<span class="token punctuation">:</span> <span class="token keyword">typeof</span> isFinite<span class="token punctuation">;</span>
+    isNaN<span class="token punctuation">:</span> <span class="token keyword">typeof</span> isNaN<span class="token punctuation">;</span>
+    parseFloat<span class="token punctuation">:</span> <span class="token keyword">typeof</span> parseFloat<span class="token punctuation">;</span>
+    parseInt<span class="token punctuation">:</span> <span class="token keyword">typeof</span> parseInt<span class="token punctuation">;</span>
+    process<span class="token punctuation">:</span> Process<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">/**
+    * @deprecated Use `global`.
+    */</span>
+    root<span class="token punctuation">:</span> Global<span class="token punctuation">;</span>
+    setImmediate<span class="token punctuation">:</span> <span class="token punctuation">(</span>callback<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token operator">...</span>args<span class="token punctuation">:</span> <span class="token keyword">any</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">void</span><span class="token punctuation">,</span> <span class="token operator">...</span>args<span class="token punctuation">:</span> <span class="token keyword">any</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> Immediate<span class="token punctuation">;</span>
+    setInterval<span class="token punctuation">:</span> <span class="token punctuation">(</span>callback<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token operator">...</span>args<span class="token punctuation">:</span> <span class="token keyword">any</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">void</span><span class="token punctuation">,</span> ms<span class="token punctuation">:</span> <span class="token keyword">number</span><span class="token punctuation">,</span> <span class="token operator">...</span>args<span class="token punctuation">:</span> <span class="token keyword">any</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> Timeout<span class="token punctuation">;</span>
+    setTimeout<span class="token punctuation">:</span> <span class="token punctuation">(</span>callback<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token operator">...</span>args<span class="token punctuation">:</span> <span class="token keyword">any</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">void</span><span class="token punctuation">,</span> ms<span class="token punctuation">:</span> <span class="token keyword">number</span><span class="token punctuation">,</span> <span class="token operator">...</span>args<span class="token punctuation">:</span> <span class="token keyword">any</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> Timeout<span class="token punctuation">;</span>
+    queueMicrotask<span class="token punctuation">:</span> <span class="token keyword">typeof</span> queueMicrotask<span class="token punctuation">;</span>
+    undefined<span class="token punctuation">:</span> <span class="token keyword">typeof</span> undefined<span class="token punctuation">;</span>
+    unescape<span class="token punctuation">:</span> <span class="token punctuation">(</span>str<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">string</span><span class="token punctuation">;</span>
+    gc<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">void</span><span class="token punctuation">;</span>
+    v8debug<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token keyword">any</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<hr>
+<h3 id="Node-js模块化开发"><a href="#Node-js模块化开发" class="headerlink" title="Node.js模块化开发"></a>Node.js模块化开发</h3><h4 id="模块化开发（软件的开发方式）"><a href="#模块化开发（软件的开发方式）" class="headerlink" title="模块化开发（软件的开发方式）"></a>模块化开发（软件的开发方式）</h4><p>软件中的模块化开发：一个功能就是一个模块，多个模块可以组成完整应用，抽离一个模块不会影响其他功能的运行。</p>
+<p><img src="images/image-20191229202835251.png" alt="image-20191229202835251"></p>
+<h4 id="JavaScript开发的弊端"><a href="#JavaScript开发的弊端" class="headerlink" title="JavaScript开发的弊端"></a>JavaScript开发的弊端</h4><ol>
+<li>文件依赖不明确问题</li>
+<li>命名冲突（存在变量覆盖等问题）</li>
+</ol>
+<h4 id="Node-js中的模块化开发规范"><a href="#Node-js中的模块化开发规范" class="headerlink" title="Node.js中的模块化开发规范"></a>Node.js中的模块化开发规范</h4><p><strong>Node.js规定：一个JavaScript文件就是一个模块，模块内部定义的变量和函数默认情况下在外部无法得到。</strong></p>
+<p><strong>模块内部可以使用exports/module.exports对象对内部成员进行导出，在其他模块中，如果需要依赖此模块，访问其内部导出的成员（函数/变量），可以在其他模块使用require方法进行此模块的导入，从而访问此模块导出的内部成员</strong>（可以解决模块与模块之间的依赖不明确问题，模块之间的依赖关系，取决于是否导入其他模块）</p>
+<p>require(‘modulePath’)的返回值，实质上是一个对象,等价于所引用模块的exports对象。</p>
+<p><img src="images/image-20191230103113231.png" alt="image-20191230103113231"></p>
+<p>A模块</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token string">"我是A模块中变量a的值"</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> fnA <span class="token operator">=</span> param <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>param<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">let</span> objA <span class="token operator">=</span> <span class="token punctuation">{</span>
+    name<span class="token punctuation">:</span> <span class="token string">"coder rat"</span><span class="token punctuation">,</span>
+    age<span class="token punctuation">:</span> <span class="token number">24</span><span class="token punctuation">,</span>
+    hobbies<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">"codding"</span><span class="token punctuation">,</span><span class="token string">"travelling"</span><span class="token punctuation">,</span><span class="token string">"sleep"</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+<span class="token function">fnA</span><span class="token punctuation">(</span><span class="token string">"Coder Rat"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+exports<span class="token punctuation">.</span>a <span class="token operator">=</span> a<span class="token punctuation">;</span>
+exports<span class="token punctuation">.</span>fnA <span class="token operator">=</span> fnA<span class="token punctuation">;</span>
+exports<span class="token punctuation">.</span>moduleA <span class="token operator">=</span> exports<span class="token punctuation">;</span>
+module<span class="token punctuation">.</span>exports<span class="token punctuation">.</span>objA <span class="token operator">=</span> objA<span class="token punctuation">;</span></code></pre>
+<p><img src="images/image-20200102202151386.png" alt="image-20200102202151386"></p>
+<p>由上图可以看出：module对象中包含exports属性，此属性的值为对象，包含了使用exports添加的所有的属性。</p>
+<p>并且证明了：exports === module.exports === 导入模块中的require(‘./moduleA’)即导入模块的返回值</p>
+<blockquote>
+<p><strong>注意点：</strong> require()在导入模块过程中，会执行引入模块中的代码，如果被引用的模块中包含执行代码，则执行require()的时候被调用的模块中可执行的函数会整体执行。返回值为exports对象。</p>
+</blockquote>
+<p>B模块</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">const</span> moduleA <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"./moduleA"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"./moduleA"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"./moduleA"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"./moduleA"</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"./moduleA"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>moduleA<span class="token punctuation">)</span><span class="token punctuation">;</span>
+moduleA<span class="token punctuation">.</span><span class="token function">fnA</span><span class="token punctuation">(</span><span class="token string">'我是调用moduleA中的fnA函数执行的参数'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p><img src="images/image-20200102211947122.png" alt="image-20200102211947122"></p>
+<p>由上图可以看出：require(“./moduleA”);执行的时候，就输出了Coder Rat，而且后面再有require(“./moduleA”)的执行，也不会重复，原因是module.loaded === true</p>
+<p><img src="images/image-20200102212908654.png" alt="image-20200102212908654"></p>
+<p>exports是module.exports的别名（地址引用关系），导出对象最终以module.exports为准，例如以下代码，如果为A模块代码</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">const</span> greeting <span class="token operator">=</span> name <span class="token operator">=</span><span class="token operator">></span> <span class="token template-string"><span class="token string">`hello </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> x <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+exports<span class="token punctuation">.</span>x <span class="token operator">=</span> x<span class="token punctuation">;</span>
+module<span class="token punctuation">.</span>exports<span class="token punctuation">.</span>greeting <span class="token operator">=</span> greeting<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//当exports对象和module.exports对象指向的不是同一个对象时 以module.exports为准,执行下述语句之前，exports/module.exports都是{x: 100,greeting: name => `hello ${name}`</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    name<span class="token punctuation">:</span> <span class="token string">'Coder Rat'</span>
+<span class="token punctuation">}</span>
+exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    name<span class="token punctuation">:</span> <span class="token string">'Rat Guo'</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">//在此时exports/module.exports都变成了 {name: 'Coder Rat'} 后面的exports指向 并未生效</span></code></pre>
+<p> 综上思想：Node.js模块化开发，类似于Java中的import，只有被导入的包（jar包），其内部定义的函数接口等才能被调用。</p>
+<p>其他补充：require()的查询规则</p>
+<hr>
+<h3 id="Node-js-系统模块"><a href="#Node-js-系统模块" class="headerlink" title="Node.js 系统模块"></a>Node.js 系统模块</h3><p><strong>什么是系统模块</strong></p>
+<p>Node运行环境提供的API。因为这些API都是以模块化的方式进行开发的，所以我们又称Node运行环境提供的API为系统模块。</p>
+<p>Node运行环境提供了很多API，所以了解NodeJS的编程风格也是很有必要的。可以通过对系统模块的使用、自定义模块加深对NodeJS的了解。</p>
+<p>中文官方文档地址：<a href="http://nodejs.cn/api/" target="_blank" rel="noopener">http://nodejs.cn/api/</a></p>
+<hr>
+<h4 id="1-系统模块-–-fs-文件操作API（模块）"><a href="#1-系统模块-–-fs-文件操作API（模块）" class="headerlink" title="1. 系统模块 – fs 文件操作API（模块）"></a>1. 系统模块 – fs 文件操作API（模块）</h4><p>f: file s: system  fs:文件操作系统</p>
+<p>官方文档说明：</p>
+<h4 id="fs-readFile-path-options-callback"><a href="#fs-readFile-path-options-callback" class="headerlink" title="fs.readFile(path[, options],callback)"></a>fs.readFile(path[, options],callback)</h4><p><img src="images/image-20200104112822930.png" alt="image-20200104112822930"></p>
+<p>异步地读取文件的全部内容。</p>
+<pre class=" language-js"><code class="language-js">fs<span class="token punctuation">.</span><span class="token function">readFile</span><span class="token punctuation">(</span><span class="token string">'/etc/passwd'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>err<span class="token punctuation">,</span> data<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">throw</span> err<span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>回调会传入两个参数 <code>(err, data)</code>，其中 <code>data</code> 是文件的内容。</p>
+<p>如果没有指定 <code>encoding</code>，则返回原始的 buffer。</p>
+<p>如果 <code>options</code> 是字符串，则它指定字符编码：</p>
+<pre class=" language-js"><code class="language-js">fs<span class="token punctuation">.</span><span class="token function">readFile</span><span class="token punctuation">(</span><span class="token string">'/etc/passwd'</span><span class="token punctuation">,</span> <span class="token string">'utf8'</span><span class="token punctuation">,</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>当 <code>path</code> 是目录时， <code>fs.readFile()</code> 与 <code>fs.readFileSync()</code>的行为是特定于平台的。 在 Mac OS、Linux 和 Windows 上，将返回错误。 在 FreeBSD 上，将返回目录内容的表示。</p>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 在 macOS、Linux 和 Windows 上：</span>
+fs<span class="token punctuation">.</span><span class="token function">readFile</span><span class="token punctuation">(</span><span class="token string">'&lt;目录>'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>err<span class="token punctuation">,</span> data<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">// => [Error: EISDIR: illegal operation on a directory, read &lt;目录>]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// 在 FreeBSD 上：</span>
+fs<span class="token punctuation">.</span><span class="token function">readFile</span><span class="token punctuation">(</span><span class="token string">'&lt;目录>'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>err<span class="token punctuation">,</span> data<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">// => null, &lt;data></span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p><code>fs.readFile()</code> 函数会缓冲整个文件。 为了最小化内存成本，尽可能通过 <code>fs.createReadStream()</code> 进行流式传输。</p>
+<h4 id="文件描述符"><a href="#文件描述符" class="headerlink" title="文件描述符"></a>文件描述符</h4><ol>
+<li>任何指定的文件描述符都必须支持读取。</li>
+<li>如果将文件描述符指定为 <code>path</code>，则不会自动关闭它。</li>
+<li>读数将从当前位置开始。例如，如果文件已经有内容 <code>&#39;Hello World</code>‘ 并且使用文件描述符读取了六个字节，则使用相同文件描述符调用 <code>fs.readFile()</code> 将返回 <code>&#39;World&#39;</code> 而不是 <code>&#39;Hello World&#39;</code>。</li>
+</ol>
+<h4 id="fs-createReadStream-path-options"><a href="#fs-createReadStream-path-options" class="headerlink" title="fs.createReadStream(path[, options])"></a>fs.createReadStream(path[, options])</h4><p><img src="images/image-20200104113401446.png" alt="image-20200104113401446"></p>
+<p>与用于可读流的 16 kb 的默认的 <code>highWaterMark</code> 不同，此方法返回的流具有 64 kb 的默认的 <code>highWaterMark</code>。</p>
+<p><code>options</code> 可以包括 <code>start</code> 和 <code>end</code> 值，以从文件中读取一定范围的字节而不是整个文件。 <code>start</code> 和 <code>end</code> 都包含在内并从 0 开始计数，允许的值在 [0, <a href="http://nodejs.cn/s/e9ereu" target="_blank" rel="noopener"><code>Number.MAX_SAFE_INTEGER</code></a>] 的范围内。 如果指定了 <code>fd</code> 并且省略 <code>start</code> 或为 <code>undefined</code>，则 <code>fs.createReadStream()</code> 从当前的文件位置开始顺序地读取。 <code>encoding</code> 可以是 <a href="http://nodejs.cn/s/FApxjh" target="_blank" rel="noopener"><code>Buffer</code></a> 接受的任何一种字符编码。</p>
+<p>如果指定了 <code>fd</code>，则 <code>ReadStream</code> 将会忽略 <code>path</code> 参数并将会使用指定的文件描述符。 这意味着将不会触发 <code>&#39;open&#39;</code> 事件。 <code>fd</code> 必须是阻塞的，非阻塞的 <code>fd</code> 应该传给 <a href="http://nodejs.cn/s/wsJ1o1" target="_blank" rel="noopener"><code>net.Socket</code></a>。</p>
+<p>如果 <code>fd</code> 指向仅支持阻塞读取的字符设备（例如键盘或声卡），则在数据可用之前，读取操作不会完成。 这可以防止进程退出并且流自然地关闭。</p>
+<p>默认情况下，流在销毁后将不会触发 <code>&#39;close&#39;</code> 事件。 这与其他 <code>Readable</code> 流的默认行为相反。 将 <code>emitClose</code> 选项设置为 <code>true</code> 可更改此行为。</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 从某个字符设备创建一个流。</span>
+<span class="token keyword">const</span> stream <span class="token operator">=</span> fs<span class="token punctuation">.</span><span class="token function">createReadStream</span><span class="token punctuation">(</span><span class="token string">'/dev/input/event0'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  stream<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 这可能不会关闭流。</span>
+  <span class="token comment" spellcheck="true">// 人工标记流的结束，就像底层的资源自身已表明文件的结束一样，允许流进行关闭。</span>
+  <span class="token comment" spellcheck="true">// 这不会取消挂起中的读取操作，如果存在此类操作，则过程可能仍无法成功地退出，直到完成。</span>
+  stream<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  stream<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>如果 <code>autoClose</code> 为 <code>false</code>，则即使出现错误，文件描述符也不会被关闭。 应用程序负责关闭它并确保没有文件描述符泄漏。 如果 <code>autoClose</code> 设为 <code>true</code>（默认的行为），则在 <code>&#39;error&#39;</code> 或 <code>&#39;end&#39;</code> 事件时文件描述符将会被自动地关闭。</p>
+<p><code>mode</code> 用于设置文件模式（权限和粘滞位），但仅限于创建文件时。</p>
+<p>示例，从一个大小为 100 个字节的文件中读取最后 10 个字节：</p>
+<pre class=" language-js"><code class="language-js">fs<span class="token punctuation">.</span><span class="token function">createReadStream</span><span class="token punctuation">(</span><span class="token string">'sample.txt'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> start<span class="token punctuation">:</span> <span class="token number">90</span><span class="token punctuation">,</span> end<span class="token punctuation">:</span> <span class="token number">99</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>如果 <code>options</code> 是字符串，则它指定字符编码。</p>
+<h4 id="fs-createWriteStream-path-options"><a href="#fs-createWriteStream-path-options" class="headerlink" title="fs.createWriteStream(path[, options])"></a>fs.createWriteStream(path[, options])</h4><p><img src="images/image-20200104113436642.png" alt="image-20200104113436642"></p>
+<p><code>options</code> 可以包括 <code>start</code> 选项，允许在文件的开头之后的某个位置写入数据，允许的值在 [0, <a href="http://nodejs.cn/s/e9ereu" target="_blank" rel="noopener"><code>Number.MAX_SAFE_INTEGER</code></a>] 的范围内。 若要修改文件而不是覆盖它，则 <code>flags</code> 模式需要为 <code>r+</code> 而不是默认的 <code>w</code> 模式。 <code>encoding</code> 可以是 <a href="http://nodejs.cn/s/FApxjh" target="_blank" rel="noopener"><code>Buffer</code></a> 接受的任何一种字符编码。</p>
+<p>如果 <code>autoClose</code> 设置为 <code>true</code>（默认的行为），则在 <code>&#39;error&#39;</code> 或 <code>&#39;finish&#39;</code> 事件时文件描述符将会被自动地关闭。 如果 <code>autoClose</code> 为 <code>false</code>，则即使出现错误，文件描述符也不会被关闭。 应用程序负责关闭它并确保没有文件描述符泄漏。</p>
+<p>默认情况下，流在销毁后将不会触发 <code>&#39;close&#39;</code> 事件。 这与其他 <code>Writable</code> 流的默认行为相反。 将 <code>emitClose</code> 选项设置为 <code>true</code> 可更改此行为。</p>
+<p>与 <a href="http://nodejs.cn/s/C3Eioq" target="_blank" rel="noopener"><code>ReadStream</code></a> 类似，如果指定了 <code>fd</code>，则 <a href="http://nodejs.cn/s/2uZDVA" target="_blank" rel="noopener"><code>WriteStream</code></a> 将会忽略 <code>path</code> 参数并将会使用指定的文件描述符。 这意味着不会触发 <code>&#39;open&#39;</code> 事件。 <code>fd</code> 必须是阻塞的，非阻塞的 <code>fd</code> 应该传给 <a href="http://nodejs.cn/s/wsJ1o1" target="_blank" rel="noopener"><code>net.Socket</code></a>。</p>
+<p>如果 <code>options</code> 是字符串，则它指定字符编码。</p>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 系统模块 直接通过模块的名字fs对模块进行引用</span>
+<span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">/**
+ * 通过模板内部的readFile函数读取文件内容
+ * 因为读取操作是从系统硬盘读取，所以不是及时反馈的，
+ * 所以不能用fs.readFile的返回值来输出读取内容
+ * 所以采用了回调函数的方式，等待读取操作完成，再执行回调函数，
+ * 返回读取结果。
+ */</span>
+fs<span class="token punctuation">.</span><span class="token function">readFile</span><span class="token punctuation">(</span><span class="token string">'./demo.txt'</span><span class="token punctuation">,</span> <span class="token string">'utf8'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>err<span class="token punctuation">,</span> doc<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">/**
+     * 如果文件读取出错 err 是个对象，包含错误信息
+     * 如果文件读取正确 err 是null
+     * doc 是文件读取的结果
+     */</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>err <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>doc<span class="token punctuation">,</span> <span class="token string">"文件读取成功！"</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">,</span> <span class="token string">"文件读取失败，将创建此文件..."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">/**
+         * 应用场景：
+         * 在网站运行的过程中要实时监控网站的运行情况，
+         * 例如，在网站运行的过程中是否有报错的情况，
+         * 我们不能一直盯着程序后台，所以希望当程序运行
+         * 出错的时候，错误能被写入错误日志当中，也就是说，
+         * 写入到一个文件中。
+         */</span>
+        <span class="token comment" spellcheck="true">/**
+         * fs.writeFile('文件路径/文件名称','数据（字符串类型数据）',callback);
+         */</span>
+
+        <span class="token keyword">const</span> content <span class="token operator">=</span> <span class="token string">'&lt;h3>我是写入的内容&lt;/h3>'</span>
+        fs<span class="token punctuation">.</span><span class="token function">writeFile</span><span class="token punctuation">(</span><span class="token string">'./demo.txt'</span><span class="token punctuation">,</span> content<span class="token punctuation">,</span> <span class="token string">'utf8'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>err <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">,</span> <span class="token string">'&lt;br>文件创建失败'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'文件创建成功！'</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
+<p><img src="images/image-20200104150312813.png" alt="image-20200104150312813"></p>
+<p>NodeJs系统模块中的回调函数，第一个参数都是error错误信息，所以我们又称NodeJS中的回调函数为错误优先的回调函数。</p>
+<hr>
+<h4 id="2-系统模块-–-path-路径操作"><a href="#2-系统模块-–-path-路径操作" class="headerlink" title="2. 系统模块 – path 路径操作"></a>2. 系统模块 – path 路径操作</h4><p>为什么要进行路径拼接</p>
+<ul>
+<li>不同操作系统的路径分隔符不统一</li>
+<li>/public/upload/avatar</li>
+<li>Windows 上是 \ /</li>
+<li>Linux 上是 /</li>
+</ul>
+<p>路径拼接API语法</p>
+<pre class=" language-js"><code class="language-js">path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">'路径'</span><span class="token punctuation">,</span><span class="token string">'路径'</span><span class="token punctuation">,</span><span class="token string">'路径'</span><span class="token punctuation">,</span><span class="token operator">...</span><span class="token punctuation">)</span></code></pre>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 导入path模块</span>
+<span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 路径拼接 因为路径拼接是即时操作，所以直接接收返回值即可</span>
+<span class="token keyword">let</span> finalPath <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">'public'</span><span class="token punctuation">,</span><span class="token string">'css'</span><span class="token punctuation">,</span><span class="token string">'index.css'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 打印出拼接后的路径 并且path.join 会识别目前运行的系统环境 使用相应的拼接符</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>finalPath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 使用读取文件测试__dirname配合拼接路径的正确性</span>
+fs<span class="token punctuation">.</span><span class="token function">readFile</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span><span class="token string">"demos"</span><span class="token punctuation">,</span><span class="token string">"demo.txt"</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token string">'utf8'</span><span class="token punctuation">,</span><span class="token punctuation">(</span>err<span class="token punctuation">,</span>data<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">throw</span> err<span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
+<p><img src="images/image-20200104153750671.png" alt="image-20200104153750671"></p>
+<h5 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h5><p>实际开发中，相对路径和绝对路径的选择</p>
+<ul>
+<li>大多数的情况下使用绝对路径，因为相对路径有时候相对的是命令行工具的当前目录</li>
+<li>在读取文件或者设置文件路径时都会选择绝对路径</li>
+<li>使用<code>__dirname</code>可以获取当前文件的绝对路径</li>
+</ul>
+<p>所以我们实际开发过程中，可以结合path.join()，获取完整的绝对路径</p>
+<pre class=" language-js"><code class="language-js">path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span><span class="token string">'相对此文件的相对路径目录名称，有多个，用逗号隔开'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<hr>
+<h3 id="第三方模块"><a href="#第三方模块" class="headerlink" title="第三方模块"></a>第三方模块</h3><p><strong>什么是第三方模块</strong></p>
+<p>别人写好的、具有特定功能的、我们能直接使用的模块，即称为第三方模块，由于第三方模块通常都是由多个文件组成，并且被放置在同一个文件夹中，所以又名包。</p>
+<p>第三方模块有两种存在形式：</p>
+<ul>
+<li>以JS文件的形式存在，提供实现项目具体功能的API接口。类似于JQuery。</li>
+<li>以命令行工具的形式存在，为我们提供命令行中的命令，以辅助开发。 如：nodemon</li>
+</ul>
+<p>获取第三方模块的方式：</p>
+<p>npm(node package manager)：node的第三方模块管理工具。安装node的时候就已经集成。</p>
+<pre class=" language-npm"><code class="language-npm">下载包
+npm install/i 包名(mouduleName)
+删除
+npm uninstall 包名
+| node_moudules
+| package-lock.json
+全局安装和本地安装
+- 命令行工具/辅助工具：全局安装
+- 库文件：本地安装</code></pre>
+<hr>
+<h4 id="第三方模块-nodemon"><a href="#第三方模块-nodemon" class="headerlink" title="第三方模块 nodemon"></a>第三方模块 nodemon</h4><p>nodemon 是一个命令行工具模块，用于辅助项目开发。</p>
+<p>在编写调试Node.js项目，修改代码后，需要频繁的手动Ctrl+C退出，然后再重新执行，非常麻烦。现在，我们可以使用<code>nodemon</code>这个工具，它的作用是监听代码文件的变动，当代码改变之后，自动重新执行。</p>
+<p>以下是官方说明：</p>
+<p>nodemon is a tool that helps develop node.js based applications by automatically restarting the node application when file changes in the directory are detected.</p>
+<p>Cloning with <a href="https://github.com/remy/nodemon" target="_blank" rel="noopener">git</a> or by using <a href="https://www.npmjs.com/package/nodemon" target="_blank" rel="noopener"><code>npm</code></a>(推荐方式):</p>
+<pre class=" language-npm/git"><code class="language-npm/git">npm install -g nodemon</code></pre>
+<p>And nodemon will be installed globallyto your system path.(全局安装) </p>
+<p>You can also install nodemon as a development dependency:（本地安装/项目安装）</p>
+<pre class=" language-npm/git"><code class="language-npm/git">npm install --save-dev nodemon</code></pre>
+<p>With a local installation, nodemon will not be available in your system path. Instead, the local installation of nodemon can be run by calling it from within an npm script (such as <code>npm start</code>) or using <code>npx nodemon</code>.</p>
+<p>使用nodemon</p>
+<pre class=" language-npm"><code class="language-npm">nodemon [your node app]  || 例如： nodemon app.js</code></pre>
+<p>更多命令，可参考<a href="https://github.com/remy/nodemon" target="_blank" rel="noopener">git</a> or <a href="https://www.npmjs.com/package/nodemon" target="_blank" rel="noopener"><code>npm</code></a></p>
+<hr>
+<h4 id="第三方模块-nrm"><a href="#第三方模块-nrm" class="headerlink" title="第三方模块 nrm"></a>第三方模块 nrm</h4><p>nrm(node registry manager)：npm 下载地址切换工具（命令行工具）</p>
+<p>npm默认的下载地址为:<a href="https://registry.npmjs.org/" target="_blank" rel="noopener">https://registry.npmjs.org/</a> 服务器位于国外，所以访问下载的速度慢，阿里巴巴淘宝镜像服务器，每10分钟就和官方服务器做一次更新同步，所以可以使用</p>
+<pre><code>// 全局安装nrm工具
+npm install nrm -g
+// 查看npm链接源
+nrm ls
+// 切换npm下载源为 taobao
+nrm use taobao</code></pre><p><img src="images/image-20200104164330865.png" alt="image-20200104164330865"></p>
+<hr>
+<h4 id="第三方模块-Gulp"><a href="#第三方模块-Gulp" class="headerlink" title="第三方模块 Gulp"></a>第三方模块 Gulp</h4><p>基于node开发的前端构建工具</p>
+<p>什么是前端构件化工具呢？</p>
+<p>实际上就是将机械化操作 编写成任务，想要执行机械化操作时执行一个命令行命令，任务就能自动执行了。</p>
+<p>gulp可以做些什么呢？</p>
+<ul>
+<li>项目开发完成，需要部署上线的时候，为了加快网站的访问速度，通常要将HTML、CSS、JS文件进行压缩合并重命名等，gulp可以很方便地进行处理</li>
+<li>语法转换（es6、less），</li>
+<li>公共文件抽离</li>
+<li>修改文件浏览器自动刷新</li>
+</ul>
+<p>Gulp的使用步骤</p>
+<ol>
+<li><p>使用 npm install gulp 下载gulp库文件（本地下载）</p>
+</li>
+<li><p>在项目根目录下建立gulpfile.js文件</p>
+</li>
+<li><p>重构项目的文件夹结构</p>
+<p>新建 src 目录用于放置源代码文件</p>
+<p>新建 dist 目录用于放置构建后文件</p>
+</li>
+<li><p>在gulpfile.js文件中编写任务</p>
+</li>
+<li><p>在命令行工具中执行gulp任务</p>
+</li>
+</ol>
+<p>Gulp中提供的方法</p>
+<ul>
+<li>gulp.src()：获取任务要处理的文件</li>
+<li>gulp.dest()：输出文件</li>
+<li>gulp.task()：建立gulp任务</li>
+<li>gulp.watch()：监控文件的变化</li>
+</ul>
+<pre class=" language-npm"><code class="language-npm">// 全局安装gulp-cli 命令行工具
+npm install gulp-cli -g
+
+npm install gulp -D
+npx -p touch nodetouch gulpfile.js
+gulp --help
+
+项目（本地）安装  最顶级文件夹直接子文件夹</code></pre>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">//gulpfile.js</span>
+
+<span class="token keyword">const</span> <span class="token punctuation">{</span> src<span class="token punctuation">,</span> dest<span class="token punctuation">,</span> parallel <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'gulp'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> pug <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'gulp-pug'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> less <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'gulp-less'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> minifyCSS <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'gulp-csso'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> concat <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'gulp-concat'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">html</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token function">src</span><span class="token punctuation">(</span><span class="token string">'client/templates/*.pug'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span><span class="token function">pug</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span><span class="token function">dest</span><span class="token punctuation">(</span><span class="token string">'build/html'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">css</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token function">src</span><span class="token punctuation">(</span><span class="token string">'client/templates/*.less'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span><span class="token function">less</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span><span class="token function">minifyCSS</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span><span class="token function">dest</span><span class="token punctuation">(</span><span class="token string">'build/css'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">js</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token function">src</span><span class="token punctuation">(</span><span class="token string">'client/javascript/*.js'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> sourcemaps<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span><span class="token function">concat</span><span class="token punctuation">(</span><span class="token string">'app.min.js'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span><span class="token function">dest</span><span class="token punctuation">(</span><span class="token string">'build/js'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> sourcemaps<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+exports<span class="token punctuation">.</span>js <span class="token operator">=</span> js<span class="token punctuation">;</span>
+exports<span class="token punctuation">.</span>css <span class="token operator">=</span> css<span class="token punctuation">;</span>
+exports<span class="token punctuation">.</span>html <span class="token operator">=</span> html<span class="token punctuation">;</span>
+exports<span class="token punctuation">.</span><span class="token keyword">default</span> <span class="token operator">=</span> <span class="token function">parallel</span><span class="token punctuation">(</span>html<span class="token punctuation">,</span> css<span class="token punctuation">,</span> js<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>nodejs中的系统模块</p>
+<p>node运行环境提供的API,因为这些模块都是模块化开发的</p>
+<p>系统模块之 fs</p>
+<p>f: file 文件，s: system 文件操作系统</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"fs"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>读取文件语法</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"fs"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"path"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj<span class="token punctuation">.</span>mya<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj<span class="token punctuation">.</span>myb<span class="token punctuation">)</span><span class="token punctuation">;</span>
+fs<span class="token punctuation">.</span><span class="token function">readFile</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span><span class="token string">"a.txt"</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token string">'utf-8'</span><span class="token punctuation">,</span><span class="token punctuation">(</span>err<span class="token punctuation">,</span>doc<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>err <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>doc<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"文件读取成功！"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        fs<span class="token punctuation">.</span><span class="token function">writeFile</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span><span class="token string">"a.txt"</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token string">"neirong"</span><span class="token punctuation">,</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>err <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"文件写入成功"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">return</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
+<p>模块查找规则1</p>
+<p>模块查找规则2</p>
+<p>当模块没有路径且没有后缀</p>
+<ol>
+<li>Node.js会默认为它是系统模块</li>
+<li>Node.js会去node_modules中查找是否存在同名js文件</li>
+<li>如果没有，就会查找node_modules下的同名文件夹中的index.js</li>
+<li>如果有同名文件夹，但是其中不存在index.js，则查找是否有pakege.json文件，如果有就查看其中是否存在”main”: 入口对应的文件</li>
+<li>如果也不存在，就查看</li>
+</ol>
+<p>Node网站服务器</p>
+<p>localhost   本地域名</p>
+<p>本地IP: 127.0.0.1</p>
+<pre class=" language-tex"><code class="language-tex">按下回车以后，首先浏览器会在本地查找hosts文件，如果文件中有对应的域名，就执行本地服务，没有的话。就去公网上访问DNS解析服务，告诉我们要查找的域名，DNS服务会将域名解析成IP地址，我们拿到这个解析过的IP进行匹配，找到指定服务器的端口号进行访问
+
+http协议可以理解成客户端和服务器端之间的沟通语言，http协议包含两部分，第一部分是请求部分，第二部分是响应部分，请求部分中包含了当前客户端</code></pre>
+<p>创建web服务器</p>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">//创建web服务器的模块</span>
+<span class="token keyword">const</span> http <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'https'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//创建服务器</span>
+<span class="token keyword">const</span> app <span class="token operator">=</span> http<span class="token punctuation">.</span><span class="token function">createServer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//当客户端请求的时候</span>
+app<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'request'</span><span class="token punctuation">,</span><span class="token punctuation">(</span>req<span class="token punctuation">,</span>res<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 获取请求方式</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>req<span class="token punctuation">.</span><span class="token function">method</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    res<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token string">'&lt;h2>Hi,Coder Rat&lt;/h2>'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">3000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"网站服务创建成功！"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<blockquote>
+<p>app.on  添加事件监听</p>
+<p>监听的事件是 ‘request’ 只要有请求就会执行</p>
+<p>res.end();</p>
+<p>req 请求的信息  request  请求报文</p>
+<p>res 请求的响应事件   response  响应报文</p>
+</blockquote>
+<p>HTTP协议 Hyper Text Transform Protocol规定了如何从网站服务器传输超文本到本地浏览器，它基于客户端服务器架构工作，是客户端（用户）和服务器端（网站）请求和应答的标准。</p>
+<p>报文 headers ：表现形式，以冒号分隔的键值对</p>
+<p>General headers:</p>
+<p>重要选项</p>
+<p>Response headers: 响应报文</p>
+<p>Request headers: 请求报文</p>
+<p>请求报文：</p>
+<ol>
+<li><p>请求方式（Request Method）</p>
+<ul>
+<li>GET 请求数据   如：浏览器输入网址，表单的默认转跳（action）</li>
+<li>POST 发送数据  如：表单提交，密码验证</li>
+</ul>
+<p>获取请求方式 :</p>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// request Method</span>
+<span class="token comment" spellcheck="true">//创建web服务器的模块</span>
+<span class="token keyword">const</span> http <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'http'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//创建服务器</span>
+<span class="token keyword">const</span> app <span class="token operator">=</span> http<span class="token punctuation">.</span><span class="token function">createServer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//当客户端请求的时候</span>
+app<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'request'</span><span class="token punctuation">,</span><span class="token punctuation">(</span>req<span class="token punctuation">,</span>res<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 获取请求方式</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>req<span class="token punctuation">.</span><span class="token function">method</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+</li>
+<li></li>
+</ol>
+<p>mime模块，可以根据路由自动判断返回的数据应该是什么类型的文件 mime.getType(req.url);</p>
+<p><img src="images/image-20191229092708334.png" alt="image-20191229092708334"></p>
+<p>Express是一个人基于Node平台的web应用开发框架，他提供了一系列强大的特性，帮助你创建各种web应用。</p>
+<p>Express 框架的特性</p>
+<ul>
+<li>提供了方便简洁的路由定义方式</li>
+<li>对获取HTTP请求参数进行了简化处理</li>
+<li>对模板引擎支持程度高，方便渲染动态HTML界面</li>
+</ul>
+<p>restful风格</p>
+<p>express 文档解析</p>
+<p>一个路由 相当于一个简单的业务逻辑处理</p>
+<p>登录的流程是怎么样的？</p>
+<p>客户端通过服务端发送post请求，请求中包含email，password，后端接收到前端传递过来的email，password，首先判断email，password两个字段是否为空，如果为空，就直接返回客户端，如果不为空，就是使用客户端传递过来的email去数据库中查询当前email对应的那条数据，如果没查询到，则直接返回客户端，当前账户不存在在数据库中，如果查询到了，就取出当前这条数据里面的password，并且用它和客户端传递过来的password进行比对，如果不匹配，则返回客户端，提示错误，如果一致，则重定向到相应的登陆成功界面。</p>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://coderofrat.github.io" rel="external nofollow noreferrer">Mr Guo</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://coderofrat.github.io/2019/12/23/node-js-ji-chu/">https://coderofrat.github.io/2019/12/23/node-js-ji-chu/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="https://coderofrat.github.io" target="_blank">Mr Guo</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/NodeJS/">
+                                    <span class="chip bg-color">NodeJS</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2019/12/24/javascript-gao-ji/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="JavaScript高级">
+                        
+                        <span class="card-title">JavaScript高级</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            什么是ES6ES的全称是ECMAScript，它是由ECMA国际标准化组织指定的一项脚本语言的标准化规范。
+
+
+
+年份
+版本
+
+
+
+2015年6月
+ES2015
+
+
+2016年6月
+ES2016
+
+
+2017年6月
+ES2017
+
+
+201
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2019-12-24
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Mr Guo
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/12/19/javascript-gao-ji-mian-xiang-dui-xiang/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="JavaScript高级-面向对象">
+                        
+                        <span class="card-title">JavaScript高级-面向对象</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            面向对象编程介绍两大编程思想
+
+面向过程编程 POP
+按照分析好的过程，一步步利用函数实现
+
+面向对象编程 OOP
+以对象功能划分
+面向对象的特点：
+
+封装性
+继承性
+多态性
+
+
+
+ES6 中的类和对象
+面向对象的思维特点：
+
+抽取（抽象）
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-12-19
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Mr Guo
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+    
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('2'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+    <footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">年份</span>
+            <a href="https://coderofrat.github.io" target="_blank">Mr Guo</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    window.setTimeout("siteTime()", 1000);
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2018";
+                    var startMonth = "2";
+                    var startDate = "12";
+                    var startHour = "5";
+                    var startMinute = "3";
+                    var startSecond = "4";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/CoderOfRat" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1404616446@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1404616446" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1404616446" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+    
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
