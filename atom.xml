@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://coderofrat.github.io/"/>
-  <updated>2019-12-24T08:48:42.000Z</updated>
+  <updated>2020-02-12T01:07:39.000Z</updated>
   <id>https://coderofrat.github.io/</id>
   
   <author>
@@ -15,6 +15,127 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VUE全家桶</title>
+    <link href="https://coderofrat.github.io/2020/02/12/vue-quan-jia-tong/"/>
+    <id>https://coderofrat.github.io/2020/02/12/vue-quan-jia-tong/</id>
+    <published>2020-02-12T01:07:39.000Z</published>
+    <updated>2020-02-12T01:07:39.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;作者： 尤雨溪&lt;/p&gt;
+&lt;h2 id=&quot;Vue-渐进式JavaScript框架&quot;&gt;&lt;a href=&quot;#Vue-渐进式JavaScript框架&quot; class=&quot;headerlink&quot; title=&quot;Vue: 渐进式JavaScript框架&quot;&gt;&lt;/a&gt;Vue:
+        
+      
+    
+    </summary>
+    
+    
+      <category term="VUE" scheme="https://coderofrat.github.io/categories/VUE/"/>
+    
+    
+      <category term="vue" scheme="https://coderofrat.github.io/tags/vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>FormData()的使用</title>
+    <link href="https://coderofrat.github.io/2020/02/11/formdata-de-shi-yong/"/>
+    <id>https://coderofrat.github.io/2020/02/11/formdata-de-shi-yong/</id>
+    <published>2020-02-11T01:31:55.000Z</published>
+    <updated>2020-02-11T01:31:55.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;FormData使用方法详解&quot;&gt;&lt;a href=&quot;#FormData使用方法详解&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>art-template模板引擎</title>
+    <link href="https://coderofrat.github.io/2020/02/06/art-template-mo-ban-yin-qing/"/>
+    <id>https://coderofrat.github.io/2020/02/06/art-template-mo-ban-yin-qing/</id>
+    <published>2020-02-06T01:07:10.000Z</published>
+    <updated>2020-02-06T01:07:10.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;ART-Template-模板引擎&quot;&gt;&lt;a href=&quot;#ART-Template-模板引擎&quot; class=&quot;headerlink&quot; title=&quot;ART-Template 模板引擎&quot;&gt;&lt;/a&gt;ART-Template
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Ajax</title>
+    <link href="https://coderofrat.github.io/2020/01/11/ajax/"/>
+    <id>https://coderofrat.github.io/2020/01/11/ajax/</id>
+    <published>2020-01-11T01:06:42.000Z</published>
+    <updated>2020-01-11T01:06:42.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;什么是Ajax？&quot;&gt;&lt;a href=&quot;#什么是Ajax？&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>git常见使用配置及流程</title>
+    <link href="https://coderofrat.github.io/2020/01/09/git-chang-jian-shi-yong-pei-zhi-ji-liu-cheng/"/>
+    <id>https://coderofrat.github.io/2020/01/09/git-chang-jian-shi-yong-pei-zhi-ji-liu-cheng/</id>
+    <published>2020-01-09T03:02:52.000Z</published>
+    <updated>2020-01-09T03:02:52.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;github提供了github pages服务，可以进行个人博客搭建，使用GitHub托管的网站，全是静态文件，访问的速度非常快（但是由于github是国外服务器，所以带宽速度不够的话，还是请求传输不快），github
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>JavaScript高级</title>

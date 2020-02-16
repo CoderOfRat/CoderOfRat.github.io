@@ -453,14 +453,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    5.6k
+                    6.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    22 分
+                    24 分
                 </div>
                 
 				
@@ -524,9 +524,9 @@
 <li>JavaScript 由 ECMAScript，DOM，BOM 三个部分组成</li>
 <li>Node.js 由ECMAScript及Node 环境提供的一些附加API组成。包括文件、网络、路径等一些更加强大的API。</li>
 </ul>
-<p><img src="images/image-20200102185736248.png" alt="image-20200102185736248"></p>
+<p><img src="/images/image-20200102185736248.png" alt="image-20200102185736248"></p>
 <h3 id="Node-js全局对象–global"><a href="#Node-js全局对象–global" class="headerlink" title="Node.js全局对象–global"></a>Node.js全局对象–global</h3><p>和JavaScript中的window对象类似，global是 node.js 的内置对象，是 node.js 的顶层（全局）对象，所有的属性和方法都挂载在global上。</p>
-<p><img src="images/image-20200102192906972.png" alt="image-20200102192906972"></p>
+<p><img src="/images/image-20200102192906972.png" alt="image-20200102192906972"></p>
 <pre class=" language-typescript"><code class="language-typescript"><span class="token keyword">declare</span> <span class="token keyword">var</span> global<span class="token punctuation">:</span> NodeJS<span class="token punctuation">.</span>Global<span class="token punctuation">;</span>
 <span class="token keyword">interface</span> <span class="token class-name">Global</span> <span class="token punctuation">{</span>
     <span class="token keyword">Array</span><span class="token punctuation">:</span> <span class="token keyword">typeof</span> <span class="token keyword">Array</span><span class="token punctuation">;</span>
@@ -600,7 +600,7 @@
 </code></pre>
 <hr>
 <h3 id="Node-js模块化开发"><a href="#Node-js模块化开发" class="headerlink" title="Node.js模块化开发"></a>Node.js模块化开发</h3><h4 id="模块化开发（软件的开发方式）"><a href="#模块化开发（软件的开发方式）" class="headerlink" title="模块化开发（软件的开发方式）"></a>模块化开发（软件的开发方式）</h4><p>软件中的模块化开发：一个功能就是一个模块，多个模块可以组成完整应用，抽离一个模块不会影响其他功能的运行。</p>
-<p><img src="images/image-20191229202835251.png" alt="image-20191229202835251"></p>
+<p><img src="/images/image-20191229202835251.png" alt="image-20191229202835251"></p>
 <h4 id="JavaScript开发的弊端"><a href="#JavaScript开发的弊端" class="headerlink" title="JavaScript开发的弊端"></a>JavaScript开发的弊端</h4><ol>
 <li>文件依赖不明确问题</li>
 <li>命名冲突（存在变量覆盖等问题）</li>
@@ -608,7 +608,7 @@
 <h4 id="Node-js中的模块化开发规范"><a href="#Node-js中的模块化开发规范" class="headerlink" title="Node.js中的模块化开发规范"></a>Node.js中的模块化开发规范</h4><p><strong>Node.js规定：一个JavaScript文件就是一个模块，模块内部定义的变量和函数默认情况下在外部无法得到。</strong></p>
 <p><strong>模块内部可以使用exports/module.exports对象对内部成员进行导出，在其他模块中，如果需要依赖此模块，访问其内部导出的成员（函数/变量），可以在其他模块使用require方法进行此模块的导入，从而访问此模块导出的内部成员</strong>（可以解决模块与模块之间的依赖不明确问题，模块之间的依赖关系，取决于是否导入其他模块）</p>
 <p>require(‘modulePath’)的返回值，实质上是一个对象,等价于所引用模块的exports对象。</p>
-<p><img src="images/image-20191230103113231.png" alt="image-20191230103113231"></p>
+<p><img src="/images/image-20191230103113231.png" alt="image-20191230103113231"></p>
 <p>A模块</p>
 <pre class=" language-js"><code class="language-js"><span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token string">"我是A模块中变量a的值"</span><span class="token punctuation">;</span>
 <span class="token keyword">let</span> fnA <span class="token operator">=</span> param <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
@@ -624,7 +624,7 @@ exports<span class="token punctuation">.</span>a <span class="token operator">=<
 exports<span class="token punctuation">.</span>fnA <span class="token operator">=</span> fnA<span class="token punctuation">;</span>
 exports<span class="token punctuation">.</span>moduleA <span class="token operator">=</span> exports<span class="token punctuation">;</span>
 module<span class="token punctuation">.</span>exports<span class="token punctuation">.</span>objA <span class="token operator">=</span> objA<span class="token punctuation">;</span></code></pre>
-<p><img src="images/image-20200102202151386.png" alt="image-20200102202151386"></p>
+<p><img src="/images/image-20200102202151386.png" alt="image-20200102202151386"></p>
 <p>由上图可以看出：module对象中包含exports属性，此属性的值为对象，包含了使用exports添加的所有的属性。</p>
 <p>并且证明了：exports === module.exports === 导入模块中的require(‘./moduleA’)即导入模块的返回值</p>
 <blockquote>
@@ -636,9 +636,54 @@ console<span class="token punctuation">.</span><span class="token function">log<
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"./moduleA"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"./moduleA"</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"./moduleA"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>moduleA<span class="token punctuation">)</span><span class="token punctuation">;</span>
 moduleA<span class="token punctuation">.</span><span class="token function">fnA</span><span class="token punctuation">(</span><span class="token string">'我是调用moduleA中的fnA函数执行的参数'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<p><img src="images/image-20200102211947122.png" alt="image-20200102211947122"></p>
+<p><img src="/images/image-20200102211947122.png" alt="image-20200102211947122"></p>
 <p>由上图可以看出：require(“./moduleA”);执行的时候，就输出了Coder Rat，而且后面再有require(“./moduleA”)的执行，也不会重复，原因是module.loaded === true</p>
-<p><img src="images/image-20200102212908654.png" alt="image-20200102212908654"></p>
+<blockquote>
+<p>追附官方文档解释</p>
+<p>模块加载的缓存机制</p>
+<p>模块在第一次加载后会被缓存。 这也意味着（类似其他缓存机制）如果每次调用 <code>require(&#39;foo&#39;)</code> 都解析到同一文件，则返回相同的对象。</p>
+<p>多次调用 <code>require(foo)</code> 不会导致模块的代码被执行多次。 这是一个重要的特性。 借助它, 可以返回“部分完成”的对象，从而允许加载依赖的依赖, 即使它们会导致循环依赖。</p>
+<p>如果想要多次执行一个模块，可以导出一个函数，然后调用该函数。</p>
+<p>拓展：</p>
+<h2 id="核心模块"><a href="#核心模块" class="headerlink" title="核心模块"></a>核心模块</h2><p>Node.js 有些模块会被编译成二进制。 这些模块别的地方有更详细的描述。</p>
+<p>核心模块定义在 Node.js 源代码的 <code>lib/</code> 目录下。</p>
+<p><code>require()</code> 总是会优先加载核心模块。 例如， <code>require(&#39;http&#39;)</code> 始终返回内置的 HTTP 模块，即使有同名文件。</p>
+<h2 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h2><p>当循环调用 <code>require()</code> 时，一个模块可能在未完成执行时被返回。</p>
+<p>例如以下情况:</p>
+<p><code>a.js</code>:</p>
+<pre class=" language-js"><code class="language-js">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'a 开始'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+exports<span class="token punctuation">.</span>done <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 上述副本 exports.done = false</span>
+<span class="token keyword">const</span> b <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./b.js'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 执行b.js </span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'在 a 中，b.done = %j'</span><span class="token punctuation">,</span> b<span class="token punctuation">.</span>done<span class="token punctuation">)</span><span class="token punctuation">;</span>
+exports<span class="token punctuation">.</span>done <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'a 结束'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p><code>b.js</code>:</p>
+<pre class=" language-js"><code class="language-js">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'b 开始'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+exports<span class="token punctuation">.</span>done <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./a.js'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// a.js未完成加载，执行打印'a 开始'，并返回副本对象 exports</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'在 b 中，a.done = %j'</span><span class="token punctuation">,</span> a<span class="token punctuation">.</span>done<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 此时a.done为副本对象exports.done = false </span>
+exports<span class="token punctuation">.</span>done <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'b 结束'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 打印 执行完继续加载a.js</span></code></pre>
+<p><code>main.js</code>:</p>
+<pre class=" language-js"><code class="language-js">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'main 开始'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./a.js'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> b <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./b.js'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'在 main 中，a.done=%j，b.done=%j'</span><span class="token punctuation">,</span> a<span class="token punctuation">.</span>done<span class="token punctuation">,</span> b<span class="token punctuation">.</span>done<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token comment" spellcheck="true">// %d 为输出整数，%s 为输出字符串，%j 为输出 JSON 的字符串格式。 如把exports.done = false 改为exports.done = {a : '我是对象'}，打印结果就为 {"a":"我是对象"}</span></code></pre>
+<p>当 <code>main.js</code> 加载 <code>a.js</code> 时， <code>a.js</code> 又加载 <code>b.js</code>。 此时， <code>b.js</code> 会尝试去加载 <code>a.js</code>。 为了防止无限的循环，会返回一个 <code>a.js</code> 的 <code>exports</code> 对象的 <strong>未完成的副本</strong> 给 <code>b.js</code> 模块。 然后 <code>b.js</code> 完成加载，并将 <code>exports</code> 对象提供给 <code>a.js</code> 模块。</p>
+<p>当 <code>main.js</code> 加载这两个模块时，它们都已经完成加载。 因此，该程序的输出会是：</p>
+<pre class=" language-console"><code class="language-console">$ node main.js
+main 开始
+a 开始
+b 开始
+在 b 中，a.done = false
+b 结束
+在 a 中，b.done = true
+a 结束
+在 main 中，a.done=true，b.done=true</code></pre>
+<p>需要仔细的规划, 以允许循环模块依赖在应用程序内正常工作.</p>
+</blockquote>
+<p><img src="/images/image-20200102212908654.png" alt="image-20200102212908654"></p>
 <p>exports是module.exports的别名（地址引用关系），导出对象最终以module.exports为准，例如以下代码，如果为A模块代码</p>
 <pre class=" language-js"><code class="language-js"><span class="token keyword">const</span> greeting <span class="token operator">=</span> name <span class="token operator">=</span><span class="token operator">></span> <span class="token template-string"><span class="token string">`hello </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> x <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
@@ -663,7 +708,7 @@ exports <span class="token operator">=</span> <span class="token punctuation">{<
 <hr>
 <h4 id="1-系统模块-–-fs-文件操作API（模块）"><a href="#1-系统模块-–-fs-文件操作API（模块）" class="headerlink" title="1. 系统模块 – fs 文件操作API（模块）"></a>1. 系统模块 – fs 文件操作API（模块）</h4><p>f: file s: system  fs:文件操作系统</p>
 <p>官方文档说明：</p>
-<h4 id="fs-readFile-path-options-callback"><a href="#fs-readFile-path-options-callback" class="headerlink" title="fs.readFile(path[, options],callback)"></a>fs.readFile(path[, options],callback)</h4><p><img src="images/image-20200104112822930.png" alt="image-20200104112822930"></p>
+<h4 id="fs-readFile-path-options-callback"><a href="#fs-readFile-path-options-callback" class="headerlink" title="fs.readFile(path[, options],callback)"></a>fs.readFile(path[, options],callback)</h4><p><img src="/images/image-20200104112822930.png" alt="image-20200104112822930"></p>
 <p>异步地读取文件的全部内容。</p>
 <pre class=" language-js"><code class="language-js">fs<span class="token punctuation">.</span><span class="token function">readFile</span><span class="token punctuation">(</span><span class="token string">'/etc/passwd'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>err<span class="token punctuation">,</span> data<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
   <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">throw</span> err<span class="token punctuation">;</span>
@@ -689,7 +734,7 @@ fs<span class="token punctuation">.</span><span class="token function">readFile<
 <li>如果将文件描述符指定为 <code>path</code>，则不会自动关闭它。</li>
 <li>读数将从当前位置开始。例如，如果文件已经有内容 <code>&#39;Hello World</code>‘ 并且使用文件描述符读取了六个字节，则使用相同文件描述符调用 <code>fs.readFile()</code> 将返回 <code>&#39;World&#39;</code> 而不是 <code>&#39;Hello World&#39;</code>。</li>
 </ol>
-<h4 id="fs-createReadStream-path-options"><a href="#fs-createReadStream-path-options" class="headerlink" title="fs.createReadStream(path[, options])"></a>fs.createReadStream(path[, options])</h4><p><img src="images/image-20200104113401446.png" alt="image-20200104113401446"></p>
+<h4 id="fs-createReadStream-path-options"><a href="#fs-createReadStream-path-options" class="headerlink" title="fs.createReadStream(path[, options])"></a>fs.createReadStream(path[, options])</h4><p><img src="/images/image-20200104113401446.png" alt="image-20200104113401446"></p>
 <p>与用于可读流的 16 kb 的默认的 <code>highWaterMark</code> 不同，此方法返回的流具有 64 kb 的默认的 <code>highWaterMark</code>。</p>
 <p><code>options</code> 可以包括 <code>start</code> 和 <code>end</code> 值，以从文件中读取一定范围的字节而不是整个文件。 <code>start</code> 和 <code>end</code> 都包含在内并从 0 开始计数，允许的值在 [0, <a href="http://nodejs.cn/s/e9ereu" target="_blank" rel="noopener"><code>Number.MAX_SAFE_INTEGER</code></a>] 的范围内。 如果指定了 <code>fd</code> 并且省略 <code>start</code> 或为 <code>undefined</code>，则 <code>fs.createReadStream()</code> 从当前的文件位置开始顺序地读取。 <code>encoding</code> 可以是 <a href="http://nodejs.cn/s/FApxjh" target="_blank" rel="noopener"><code>Buffer</code></a> 接受的任何一种字符编码。</p>
 <p>如果指定了 <code>fd</code>，则 <code>ReadStream</code> 将会忽略 <code>path</code> 参数并将会使用指定的文件描述符。 这意味着将不会触发 <code>&#39;open&#39;</code> 事件。 <code>fd</code> 必须是阻塞的，非阻塞的 <code>fd</code> 应该传给 <a href="http://nodejs.cn/s/wsJ1o1" target="_blank" rel="noopener"><code>net.Socket</code></a>。</p>
@@ -710,7 +755,7 @@ fs<span class="token punctuation">.</span><span class="token function">readFile<
 <p>示例，从一个大小为 100 个字节的文件中读取最后 10 个字节：</p>
 <pre class=" language-js"><code class="language-js">fs<span class="token punctuation">.</span><span class="token function">createReadStream</span><span class="token punctuation">(</span><span class="token string">'sample.txt'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> start<span class="token punctuation">:</span> <span class="token number">90</span><span class="token punctuation">,</span> end<span class="token punctuation">:</span> <span class="token number">99</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>如果 <code>options</code> 是字符串，则它指定字符编码。</p>
-<h4 id="fs-createWriteStream-path-options"><a href="#fs-createWriteStream-path-options" class="headerlink" title="fs.createWriteStream(path[, options])"></a>fs.createWriteStream(path[, options])</h4><p><img src="images/image-20200104113436642.png" alt="image-20200104113436642"></p>
+<h4 id="fs-createWriteStream-path-options"><a href="#fs-createWriteStream-path-options" class="headerlink" title="fs.createWriteStream(path[, options])"></a>fs.createWriteStream(path[, options])</h4><p><img src="/images/image-20200104113436642.png" alt="image-20200104113436642"></p>
 <p><code>options</code> 可以包括 <code>start</code> 选项，允许在文件的开头之后的某个位置写入数据，允许的值在 [0, <a href="http://nodejs.cn/s/e9ereu" target="_blank" rel="noopener"><code>Number.MAX_SAFE_INTEGER</code></a>] 的范围内。 若要修改文件而不是覆盖它，则 <code>flags</code> 模式需要为 <code>r+</code> 而不是默认的 <code>w</code> 模式。 <code>encoding</code> 可以是 <a href="http://nodejs.cn/s/FApxjh" target="_blank" rel="noopener"><code>Buffer</code></a> 接受的任何一种字符编码。</p>
 <p>如果 <code>autoClose</code> 设置为 <code>true</code>（默认的行为），则在 <code>&#39;error&#39;</code> 或 <code>&#39;finish&#39;</code> 事件时文件描述符将会被自动地关闭。 如果 <code>autoClose</code> 为 <code>false</code>，则即使出现错误，文件描述符也不会被关闭。 应用程序负责关闭它并确保没有文件描述符泄漏。</p>
 <p>默认情况下，流在销毁后将不会触发 <code>&#39;close&#39;</code> 事件。 这与其他 <code>Writable</code> 流的默认行为相反。 将 <code>emitClose</code> 选项设置为 <code>true</code> 可更改此行为。</p>
@@ -758,7 +803,7 @@ fs<span class="token punctuation">.</span><span class="token function">readFile<
         <span class="token punctuation">}</span><span class="token punctuation">)</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
-<p><img src="images/image-20200104150312813.png" alt="image-20200104150312813"></p>
+<p><img src="/images/image-20200104150312813.png" alt="image-20200104150312813"></p>
 <p>NodeJs系统模块中的回调函数，第一个参数都是error错误信息，所以我们又称NodeJS中的回调函数为错误优先的回调函数。</p>
 <hr>
 <h4 id="2-系统模块-–-path-路径操作"><a href="#2-系统模块-–-path-路径操作" class="headerlink" title="2. 系统模块 – path 路径操作"></a>2. 系统模块 – path 路径操作</h4><p>为什么要进行路径拼接</p>
@@ -781,7 +826,7 @@ fs<span class="token punctuation">.</span><span class="token function">readFile<
     <span class="token keyword">if</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">throw</span> err<span class="token punctuation">;</span>
     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
-<p><img src="images/image-20200104153750671.png" alt="image-20200104153750671"></p>
+<p><img src="/images/image-20200104153750671.png" alt="image-20200104153750671"></p>
 <h5 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h5><p>实际开发中，相对路径和绝对路径的选择</p>
 <ul>
 <li>大多数的情况下使用绝对路径，因为相对路径有时候相对的是命令行工具的当前目录</li>
@@ -831,7 +876,7 @@ npm install nrm -g
 // 查看npm链接源
 nrm ls
 // 切换npm下载源为 taobao
-nrm use taobao</code></pre><p><img src="images/image-20200104164330865.png" alt="image-20200104164330865"></p>
+nrm use taobao</code></pre><p><img src="/images/image-20200104164330865.png" alt="image-20200104164330865"></p>
 <hr>
 <h4 id="第三方模块-Gulp"><a href="#第三方模块-Gulp" class="headerlink" title="第三方模块 Gulp"></a>第三方模块 Gulp</h4><p>基于node开发的前端构建工具</p>
 <p>什么是前端构件化工具呢？</p>
@@ -994,7 +1039,7 @@ app<span class="token punctuation">.</span><span class="token function">on</span
 <li></li>
 </ol>
 <p>mime模块，可以根据路由自动判断返回的数据应该是什么类型的文件 mime.getType(req.url);</p>
-<p><img src="images/image-20191229092708334.png" alt="image-20191229092708334"></p>
+<p><img src="/images/image-20191229092708334.png" alt="image-20191229092708334"></p>
 <p>Express是一个人基于Node平台的web应用开发框架，他提供了一系列强大的特性，帮助你创建各种web应用。</p>
 <p>Express 框架的特性</p>
 <ul>
