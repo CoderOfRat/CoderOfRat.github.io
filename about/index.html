@@ -342,14 +342,14 @@
 
 
 <div class="statis">
-    <span class="count"><a href="/categories">5</a></span>
+    <span class="count"><a href="/categories">6</a></span>
     <span class="name">分类</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/tags">16</a></span>
+    <span class="count"><a href="/tags">24</a></span>
     <span class="name">标签</span>
 </div>
 
@@ -372,14 +372,14 @@
 
 
 <div class="statis">
-    <span class="count"><a href="/categories">5</a></span>
+    <span class="count"><a href="/categories">6</a></span>
     <span class="name">分类</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/tags">16</a></span>
+    <span class="count"><a href="/tags">24</a></span>
     <span class="name">标签</span>
 </div>
 
@@ -515,7 +515,7 @@
                 name: '文章篇数',
                 type: 'line',
                 color: ['#6772e5'],
-                data: [0,0,0,0,0,0,0,0,0,2,12,2,3],
+                data: [0,0,0,0,0,0,0,0,0,2,11,2,3],
                 markPoint: {
                     symbolSize: 45,
                     color: ['#fa755a','#3ecf8e','#82d3f4'],
@@ -557,7 +557,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"库","value":1},{"name":"前端","value":3},{"name":"后端","value":1},{"name":"VUE","value":1},{"name":"读书笔记","value":1}],
+                data: [{"name":"前端","value":12},{"name":"库","value":3},{"name":"后端","value":1},{"name":"VUE","value":1},{"name":"Git","value":1},{"name":"读书笔记","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -581,7 +581,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["JavaScript","数据可视化库","jQuery","面向对象","javascript","初识JS","数组","JavaScript逻辑运算","JavaScript流程控制","NodeJS"]
+                data: ["JavaScript","JQuery","ajax","数据可视化库","jQuery","面向对象","操作数组的方法","JavaScript基础","JavaScript逻辑运算","JavaScript流程控制"]
             }
         ],
         yAxis: [
@@ -594,7 +594,7 @@
                 type: 'bar',
                 color: ['#82d3f4'],
                 barWidth : 18,
-                data: [2,1,1,1,1,1,1,1,1,1],
+                data: [9,2,1,1,1,1,1,1,1,1],
                 markPoint: {
                     symbolSize: 45,
                     data: [{
@@ -762,9 +762,17 @@
         <div class="tag-chips center-align">
             
             
+            <a href="/tags/ajax/">
+                <span class="chip center-align waves-effect waves-light chip-default">ajax</span>
+            </a>
+            
+            
+            
             <a href="/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93/">
                 <span class="chip center-align waves-effect waves-light chip-default">数据可视化库</span>
             </a>
+            
+            
             
             
             
@@ -774,6 +782,10 @@
             
             
             
+            <a href="/tags/JQuery/">
+                <span class="chip center-align waves-effect waves-light chip-default">JQuery</span>
+            </a>
+            
             
             
             <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">
@@ -782,20 +794,14 @@
             
             
             
-            <a href="/tags/javascript/">
-                <span class="chip center-align waves-effect waves-light chip-default">javascript</span>
+            <a href="/tags/%E6%93%8D%E4%BD%9C%E6%95%B0%E7%BB%84%E7%9A%84%E6%96%B9%E6%B3%95/">
+                <span class="chip center-align waves-effect waves-light chip-default">操作数组的方法</span>
             </a>
             
             
             
-            <a href="/tags/%E5%88%9D%E8%AF%86JS/">
-                <span class="chip center-align waves-effect waves-light chip-default">初识JS</span>
-            </a>
-            
-            
-            
-            <a href="/tags/%E6%95%B0%E7%BB%84/">
-                <span class="chip center-align waves-effect waves-light chip-default">数组</span>
+            <a href="/tags/JavaScript%E5%9F%BA%E7%A1%80/">
+                <span class="chip center-align waves-effect waves-light chip-default">JavaScript基础</span>
             </a>
             
             
@@ -812,8 +818,26 @@
             
             
             
+            <a href="/tags/JavaScript%E9%AB%98%E7%BA%A7%EF%BC%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%EF%BC%89/">
+                <span class="chip center-align waves-effect waves-light chip-default">JavaScript高级（面向对象）</span>
+            </a>
+            
+            
+            
+            <a href="/tags/JavaScript%E9%AB%98%E7%BA%A7%EF%BC%88ES6%E8%AF%AD%E6%B3%95%EF%BC%89/">
+                <span class="chip center-align waves-effect waves-light chip-default">JavaScript高级（ES6语法）</span>
+            </a>
+            
+            
+            
             <a href="/tags/NodeJS/">
                 <span class="chip center-align waves-effect waves-light chip-default">NodeJS</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E5%89%8D%E5%90%8E%E7%AB%AF%E4%BA%A4%E4%BA%92/">
+                <span class="chip center-align waves-effect waves-light chip-default">前后端交互</span>
             </a>
             
             
@@ -836,8 +860,32 @@
             
             
             
+            <a href="/tags/ART-Template-%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/">
+                <span class="chip center-align waves-effect waves-light chip-default">ART-Template 模板引擎</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E9%A1%B5%E9%9D%A2%E6%B8%B2%E6%9F%93%E5%BA%93/">
+                <span class="chip center-align waves-effect waves-light chip-default">页面渲染库</span>
+            </a>
+            
+            
+            
+            <a href="/tags/GitHub%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">
+                <span class="chip center-align waves-effect waves-light chip-default">GitHub基本使用</span>
+            </a>
+            
+            
+            
             <a href="/tags/%E6%89%8B%E5%86%99JS%E6%95%88%E6%9E%9C/">
                 <span class="chip center-align waves-effect waves-light chip-default">手写JS效果</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E6%89%8B%E5%86%99%E8%BD%AE%E6%92%AD%E5%9B%BE/">
+                <span class="chip center-align waves-effect waves-light chip-default">手写轮播图</span>
             </a>
             
             
