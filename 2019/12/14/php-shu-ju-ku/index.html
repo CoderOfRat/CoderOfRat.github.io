@@ -1,0 +1,1281 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="PHP-数据库, 代码,coder,code,it,communication,交流,web,vue,echart">
+    <meta name="description" content="PHP基础PHP( Hypertext Preprocessor) 超文本预处理器 PHP 是一种创建动态交互性站点的强有力的服务器端脚本语言。 PHP安装 1.本机地址:127.0.0.1   也可以用localhost代替,  也可以通">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="baidu-site-verification" content="xYZSrsYxIK" />
+    <title>PHP-数据库 | Coder Rat</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    
+    <script src="/libs/jquery/jquery.min.js"></script>
+    
+<link rel="alternate" href="/atom.xml" title="Coder Rat" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper head-container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Coder Rat</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Coder Rat</div>
+        <div class="logo-desc">
+            
+            撸码，是一种态度
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/CoderOfRat" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/CoderOfRat" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        PHP-数据库
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93/">
+                                <span class="chip bg-color">数据可视化库</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%BA%93/" class="post-category">
+                                库
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2019-12-14
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    2.4k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    10 分
+                </div>
+                
+				
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+            
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h3 id="PHP基础"><a href="#PHP基础" class="headerlink" title="PHP基础"></a>PHP基础</h3><p>PHP( Hypertext Preprocessor) 超文本预处理器<br> PHP 是一种创建动态交互性站点的强有力的服务器端脚本语言。<br> PHP安装<br> 1.本机地址:127.0.0.1   也可以用localhost代替,  也可以通过局域网IP代替<br> 2.输入到网址栏<br> 3.ok,找到安装的xampp地址，打开文件夹下的htdocs创建php文件夹。我们以后所有写的php文件都放在这里<br> 4.php目录里一定要用英文名，不能出现汉字<br> 5.php文件的后缀是.php<br> 6.php文件需要服务器环境。所以我们要用http协议才可以使php文件运行<br> 7.php文件中可以写html，写php要把php语言放到<?php?>标签中<br> 8.php中调试语言之一： echo XXX（注意空格）</p>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+      <span class="token keyword">echo</span> <span class="token string">"内容"</span>
+<span class="token delimiter">?></span></code></pre>
+<p>PHP基础语法<br> 1.注释<br> 单行注释：//(常用)或者 #(不常用)<br> 多行注释：/**/<br> 2.声明变量：<br> $变量名=变量<br> 规则与js声明变量一致</p>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+     <span class="token variable">$sum</span><span class="token operator">=</span><span class="token number">15</span><span class="token operator">+</span><span class="token string">'12'</span>  
+    <span class="token variable">$sum</span><span class="token operator">=</span><span class="token string">'12'</span><span class="token operator">+</span><span class="token string">'13'</span>
+<span class="token delimiter">?></span></code></pre>
+<p>php中的+只有加法的作用，想要连接数据，要用点’.’</p>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+    <span class="token comment" spellcheck="true">//for循环</span>
+    <span class="token comment" spellcheck="true">//for循环中的循环变量，每用一次就要加个$</span>
+       <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token variable">$i</span><span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span><span class="token variable">$i</span><span class="token operator">&lt;</span><span class="token number">10</span><span class="token punctuation">;</span><span class="token variable">$i</span><span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+         <span class="token keyword">echo</span> “<span class="token number">2</span>丫 <span class="token variable">$i</span> 号<span class="token markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>br</span><span class="token punctuation">></span></span></span>”
+              <span class="token comment" spellcheck="true">//'2丫 $i 号&lt;/br>'</span>
+    <span class="token punctuation">}</span>
+
+<span class="token delimiter">?></span></code></pre>
+<p>php中双引号自带解析变量功能,注意变量两边的空格,只能解析变量,<br> //不能解析运算.单引号是纯字符串.如果不想用空格也可以用大括号{}</p>
+<p>&amp;取址运算符<br> 取出&amp;后面变量的内存地址,赋值给前面的变量,修改该值会影响前面的赋值结果</p>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+      <span class="token variable">$age</span><span class="token operator">=</span><span class="token number">18</span><span class="token punctuation">;</span>
+      <span class="token variable">$yourAge</span><span class="token operator">=</span><span class="token variable">$age</span><span class="token punctuation">;</span>
+      <span class="token variable">$age</span><span class="token operator">=</span><span class="token number">19</span><span class="token punctuation">;</span>
+      <span class="token keyword">echo</span> <span class="token variable">$yourAge</span>  <span class="token comment" spellcheck="true">//不加取址是18      加&amp;是19</span>
+<span class="token delimiter">?></span></code></pre>
+<p>变量的变量</p>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+    <span class="token variable">$a</span><span class="token operator">=</span><span class="token string">"one"</span><span class="token punctuation">;</span>
+    $<span class="token variable">$a</span><span class="token operator">=</span><span class="token string">"two"</span><span class="token punctuation">;</span>  
+    $$<span class="token variable">$a</span><span class="token operator">=</span><span class="token string">"three"</span><span class="token punctuation">;</span>
+    $$$<span class="token variable">$a</span><span class="token operator">=</span><span class="token string">"four"</span><span class="token punctuation">;</span>
+    <span class="token keyword">echo</span> <span class="token variable">$two</span><span class="token punctuation">;</span>
+    <span class="token keyword">echo</span> <span class="token string">"&lt;hr/>"</span><span class="token punctuation">;</span>
+<span class="token delimiter">?></span></code></pre>
+<p>php中的函数与js中的函数一样,但是函数的参数要加$</p>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+    <span class="token keyword">function</span> <span class="token function">fn</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token variable">$a</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token variable">$a</span><span class="token operator">*</span><span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token variable">$i</span><span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">;</span>
+    <span class="token function">fn</span><span class="token punctuation">(</span><span class="token variable">$i</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">echo</span>  <span class="token variable">$i</span><span class="token punctuation">;</span>           <span class="token comment" spellcheck="true">//不加取址是3    加&amp;了是30</span>
+    <span class="token keyword">echo</span> <span class="token string">"&lt;hr/>"</span><span class="token punctuation">;</span>
+ <span class="token delimiter">?></span></code></pre>
+<p>php中的数组分为3种,分别是索引数组,关联数组和多维数组<br> 索引数组        下标是0,1,2,3</p>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+    <span class="token variable">$arr</span><span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token function">print_r</span><span class="token punctuation">(</span><span class="token variable">$arr</span><span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment" spellcheck="true">//打印数组用print_r</span>
+    <span class="token keyword">echo</span> <span class="token string">"&lt;br/>"</span><span class="token punctuation">;</span>
+    <span class="token keyword">echo</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token variable">$arr</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">//获取数组的长度   </span>
+    <span class="token keyword">echo</span> <span class="token string">"&lt;br/>"</span><span class="token punctuation">;</span>   
+    <span class="token keyword">echo</span> <span class="token variable">$arr</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>       <span class="token comment" spellcheck="true">//获取数组中某个值的方法与js一致</span>
+    <span class="token keyword">echo</span> <span class="token string">"&lt;hr/>"</span><span class="token punctuation">;</span>
+<span class="token delimiter">?></span></code></pre>
+<p>关联数组<br> 关联数组的下标不再是默认的0.1.2而是我们自定义的</p>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+  <span class="token variable">$arr2</span><span class="token operator">=</span><span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string">"1号"</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">"小明"</span><span class="token punctuation">,</span><span class="token string">"2号"</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">"小红"</span><span class="token punctuation">,</span><span class="token string">"3号"</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">"小刚"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">print_r</span><span class="token punctuation">(</span><span class="token variable">$arr2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     
+    <span class="token keyword">echo</span> <span class="token string">"&lt;br/>"</span><span class="token punctuation">;</span>
+    <span class="token keyword">echo</span> <span class="token variable">$arr2</span><span class="token punctuation">[</span><span class="token string">"2号"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">echo</span> <span class="token string">"&lt;hr/>"</span><span class="token punctuation">;</span>
+<span class="token delimiter">?></span></code></pre>
+<p>常量<br> 类似于变量,但是定义过常量就无法再更改值.用define()方法来定义常量.常量的命名通常大写</p>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+    <span class="token function">define</span><span class="token punctuation">(</span><span class="token string">"NAME"</span><span class="token punctuation">,</span><span class="token string">"duan"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">echo</span> <span class="token constant">NAME</span><span class="token punctuation">;</span>          <span class="token comment" spellcheck="true">//常量在php中任何位置都可以使用,一旦声明不可以更改</span>
+    <span class="token keyword">echo</span> <span class="token string">"&lt;hr/>"</span><span class="token punctuation">;</span>
+<span class="token delimiter">?></span></code></pre>
+<p>魔术常量(调试用的,了解即可)</p>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+    <span class="token keyword">echo</span> <span class="token string">'这是第 " '</span>  <span class="token punctuation">.</span> <span class="token constant">__LINE__</span> <span class="token punctuation">.</span> <span class="token string">' " 行'</span><span class="token punctuation">;</span>     <span class="token comment" spellcheck="true">//返回当前的行        20</span>
+    <span class="token keyword">echo</span> <span class="token string">"&lt;br/>"</span><span class="token punctuation">;</span>
+    <span class="token keyword">function</span> <span class="token function">a</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">echo</span> <span class="token constant">__FUNCTION__</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">a</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token delimiter">?></span></code></pre>
+<p>布尔值</p>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+   <span class="token variable">$bol</span><span class="token operator">=</span><span class="token constant">FALSE</span><span class="token punctuation">;</span>
+    <span class="token variable">$bol2</span><span class="token operator">=</span><span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token keyword">echo</span> <span class="token variable">$bol</span><span class="token punctuation">.</span><span class="token string">"&lt;br/>"</span><span class="token punctuation">.</span><span class="token variable">$bol2</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//php中false不打印,true转化为1,大小写不敏感.</span>
+<span class="token delimiter">?></span></code></pre>
+<p>gettype()用来检测数据类型</p>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+    <span class="token keyword">echo</span> <span class="token function">gettype</span><span class="token punctuation">(</span><span class="token variable">$bol</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment" spellcheck="true">//Boolean   布尔值     </span>
+    <span class="token keyword">echo</span> <span class="token string">"&lt;br/>"</span><span class="token punctuation">;</span>
+    <span class="token keyword">echo</span> <span class="token function">gettype</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">//integer   整数          </span>
+    <span class="token keyword">echo</span> <span class="token string">"&lt;br/>"</span><span class="token punctuation">;</span>
+    <span class="token keyword">echo</span> <span class="token function">gettype</span><span class="token punctuation">(</span><span class="token number">1.2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment" spellcheck="true">//double    浮点数     </span>
+    <span class="token keyword">echo</span> <span class="token string">"&lt;br/>"</span><span class="token punctuation">;</span>
+    <span class="token keyword">echo</span> <span class="token function">gettype</span><span class="token punctuation">(</span><span class="token string">"abc"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">//string    字符串</span>
+<span class="token delimiter">?></span></code></pre>
+<p>打印数组</p>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+    <span class="token variable">$arr</span><span class="token operator">=</span><span class="token keyword">Array</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token string">"b"</span><span class="token punctuation">,</span><span class="token number">345</span><span class="token punctuation">,</span><span class="token string">"abc"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">print_r</span><span class="token punctuation">(</span><span class="token variable">$arr</span><span class="token punctuation">)</span><span class="token punctuation">;</span>              <span class="token comment" spellcheck="true">//Array ( [0] => 1 [1] => b [2] => 345 [3] => abc )                 </span>
+    <span class="token comment" spellcheck="true">//打印数组      //索引数组</span>
+    <span class="token keyword">echo</span> <span class="token string">"&lt;br/>"</span><span class="token punctuation">;</span>
+    <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$arr</span><span class="token punctuation">)</span><span class="token punctuation">;</span>             <span class="token comment" spellcheck="true">//array(4) { [0]=> int(1) [1]=> string(1) "b" [2]=> int(345) [3]=> string(3) "abc" }            </span>
+    <span class="token comment" spellcheck="true">//打印数组      var_dump会把数组中的每一个值的类型也打印出来</span>
+<span class="token delimiter">?></span></code></pre>
+<p>函数作用域</p>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+    <span class="token variable">$a</span><span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">function</span> <span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token variable">$a</span><span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">;</span>
+        <span class="token keyword">global</span> <span class="token variable">$a</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">//引用全局变量要加global</span>
+        <span class="token keyword">echo</span> <span class="token variable">$a</span><span class="token punctuation">;</span>          <span class="token comment" spellcheck="true">//函数内部如果要用外部变量不能直接使用，要加global。</span>
+
+    <span class="token punctuation">}</span>
+    <span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token delimiter">?></span></code></pre>
+<p>函数默认值</p>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+    <span class="token keyword">function</span> <span class="token function">fn</span><span class="token punctuation">(</span><span class="token variable">$a</span><span class="token punctuation">,</span><span class="token variable">$b</span><span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token variable">$a</span><span class="token punctuation">.</span><span class="token string">"and"</span><span class="token punctuation">.</span><span class="token variable">$b</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">echo</span> <span class="token function">fn</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">echo</span> <span class="token string">"&lt;br/>"</span><span class="token punctuation">;</span>
+<span class="token delimiter">?></span></code></pre>
+<p>php文件引入<br> include遇到错误只会提示错误,不会阻止后面代码的运行<br> require遇到错误则会中断执行代码,阻止后面代码的运行<br> include(“test.php”);<br> include_once(“test.php”);       //只引入一遍<br> require(“test.php”);<br> 超全局变量</p>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+      <span class="token function">print_r</span><span class="token punctuation">(</span><span class="token variable">$_SERVER</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                        
+      <span class="token keyword">echo</span> <span class="token variable">$_SERVER</span><span class="token punctuation">[</span><span class="token constant">SERVER_NAME</span><span class="token punctuation">]</span><span class="token punctuation">;</span>               <span class="token comment" spellcheck="true">//返回localhost</span>
+      <span class="token keyword">echo</span> <span class="token variable">$_SERVER</span><span class="token punctuation">[</span><span class="token constant">REQUEST_METHOD</span><span class="token punctuation">]</span><span class="token punctuation">;</span>            <span class="token comment" spellcheck="true">//返回GET</span>
+      <span class="token comment" spellcheck="true">//SERVER  保存了当前运行环境的相关信息</span>
+      <span class="token function">print_r</span><span class="token punctuation">(</span><span class="token variable">$GLOBALS</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                            <span class="token comment" spellcheck="true">//$GLOBALS返回所有超全局变量</span>
+<span class="token delimiter">?></span></code></pre>
+<p>get和post的区别<br> 1.get方式传值的大小最多2兆,post无限制<br> 2.get用来读取数据,post可以写入数据<br> 3.get传入的数据会拼接在地址栏上,所以安全性不高.post更安全.</p>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+    <span class="token comment" spellcheck="true">//$_GET $_POST用来获取get方法或者post方法传入的数据。</span>
+    <span class="token comment" spellcheck="true">//$_REQUEST可以获取通过get或者post传入的数据，不推荐使用，传值速度慢。</span>
+    <span class="token function">print_r</span><span class="token punctuation">(</span><span class="token variable">$_GET</span><span class="token punctuation">)</span><span class="token punctuation">;</span>             <span class="token comment" spellcheck="true">//$_GET用来获取get方法传入的数据       get会拼接到地址栏上,</span>
+    <span class="token keyword">echo</span> <span class="token string">"&lt;br/>"</span><span class="token punctuation">;</span>               <span class="token comment" spellcheck="true">//最大传2兆 (URL最大2兆)</span>
+    <span class="token keyword">echo</span> <span class="token string">"用户名:"</span><span class="token punctuation">.</span><span class="token variable">$_GET</span><span class="token punctuation">[</span><span class="token string">'username'</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token string">"密码:"</span><span class="token punctuation">.</span><span class="token variable">$_GET</span><span class="token punctuation">[</span><span class="token string">'pwd'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+
+    <span class="token function">print_r</span><span class="token punctuation">(</span><span class="token variable">$_POST</span><span class="token punctuation">)</span><span class="token punctuation">;</span>            <span class="token comment" spellcheck="true">//$_POST用来获取post方法传入的数据</span>
+    <span class="token keyword">echo</span> <span class="token string">"&lt;br/>"</span><span class="token punctuation">;</span>               <span class="token comment" spellcheck="true">//post安全性更高     </span>
+    <span class="token keyword">echo</span> <span class="token string">"用户名:"</span><span class="token punctuation">.</span><span class="token variable">$_POST</span><span class="token punctuation">[</span><span class="token string">'username'</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token string">"密码:"</span><span class="token punctuation">.</span><span class="token variable">$_POST</span><span class="token punctuation">[</span><span class="token string">'pwd'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+
+    <span class="token function">print_r</span><span class="token punctuation">(</span><span class="token variable">$_REQUEST</span><span class="token punctuation">)</span><span class="token punctuation">;</span>         <span class="token comment" spellcheck="true">//get和post都可以获取到</span>
+    <span class="token keyword">echo</span> <span class="token string">"&lt;br/>"</span><span class="token punctuation">;</span>               <span class="token comment" spellcheck="true">//传值速度慢(不推荐使用)</span>
+    <span class="token keyword">echo</span> <span class="token string">"用户名:"</span><span class="token punctuation">.</span><span class="token variable">$_REQUEST</span><span class="token punctuation">[</span><span class="token string">'username'</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token string">"密码:"</span><span class="token punctuation">.</span><span class="token variable">$_REQUEST</span><span class="token punctuation">[</span><span class="token string">'pwd'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token delimiter">?></span></code></pre>
+<p>数组数组(array)<br> 向数组后面添加值</p>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+     <span class="token comment" spellcheck="true">//索引数组</span>
+    <span class="token variable">$arr</span><span class="token operator">=</span><span class="token keyword">Array</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token variable">$arr</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">7</span><span class="token punctuation">;</span>           
+    <span class="token function">print_r</span><span class="token punctuation">(</span><span class="token variable">$arr</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//关联数组</span>
+    <span class="token variable">$arr2</span><span class="token operator">=</span><span class="token keyword">Array</span><span class="token punctuation">(</span>
+        <span class="token string">"xiaoming"</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">"a"</span><span class="token punctuation">,</span>
+        <span class="token string">"xiaohong"</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">"b"</span><span class="token punctuation">,</span>
+        <span class="token string">"xiaogang"</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">"c"</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token variable">$arr2</span><span class="token punctuation">[</span><span class="token string">"xiaolv"</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"d"</span><span class="token punctuation">;</span>
+    <span class="token function">print_r</span><span class="token punctuation">(</span><span class="token variable">$arr2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token delimiter">?></span></code></pre>
+<p>创建指定范围的数组</p>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+    <span class="token comment" spellcheck="true">//$arr3=range("a","z");         //a到z</span>
+    <span class="token comment" spellcheck="true">//$arr3=range(1,9);             //1到9</span>
+    <span class="token variable">$arr3</span><span class="token operator">=</span><span class="token function">range</span><span class="token punctuation">(</span><span class="token string">"A"</span><span class="token punctuation">,</span><span class="token string">"z"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">print_r</span><span class="token punctuation">(</span><span class="token variable">$arr3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">echo</span> <span class="token string">"&lt;br/>"</span><span class="token punctuation">;</span> 
+    <span class="token keyword">echo</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token variable">$arr3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>              <span class="token comment" spellcheck="true">//count方法用来获取数组的长度</span>
+    <span class="token keyword">echo</span> <span class="token string">"&lt;br/>"</span><span class="token punctuation">;</span>
+    <span class="token function">unset</span><span class="token punctuation">(</span><span class="token variable">$arr3</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                <span class="token comment" spellcheck="true">//删除数组中的元素,连同下标一起删除</span>
+    <span class="token function">print_r</span><span class="token punctuation">(</span><span class="token variable">$arr3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token delimiter">?></span></code></pre>
+<p>数组的遍历</p>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+  <span class="token variable">$arr4</span><span class="token operator">=</span><span class="token keyword">Array</span><span class="token punctuation">(</span>
+        <span class="token string">"a"</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">"zxs"</span><span class="token punctuation">,</span>
+        <span class="token string">"b"</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">"mjh"</span><span class="token punctuation">,</span>
+        <span class="token string">"c"</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">"lal"</span><span class="token punctuation">,</span>
+        <span class="token string">"d"</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">"wbd"</span><span class="token punctuation">,</span>
+        <span class="token string">"e"</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">"dsb"</span><span class="token punctuation">,</span>
+        <span class="token string">"f"</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">"dhq"</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">foreach</span><span class="token punctuation">(</span><span class="token variable">$arr4</span> <span class="token keyword">as</span> <span class="token variable">$key</span><span class="token operator">=</span><span class="token operator">></span><span class="token variable">$value</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">echo</span> <span class="token string">"第"</span><span class="token punctuation">.</span><span class="token variable">$key</span><span class="token punctuation">.</span><span class="token string">"个"</span><span class="token punctuation">.</span><span class="token variable">$value</span><span class="token punctuation">.</span><span class="token string">"&lt;br/>"</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token delimiter">?></span></code></pre>
+<p>数组的排序</p>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+    <span class="token function">sort</span><span class="token punctuation">(</span><span class="token variable">$arr4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>            <span class="token comment" spellcheck="true">//升序        </span>
+    <span class="token function">print_r</span><span class="token punctuation">(</span><span class="token variable">$arr4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">echo</span> <span class="token string">"&lt;br/>"</span><span class="token punctuation">;</span>
+    <span class="token function">rsort</span><span class="token punctuation">(</span><span class="token variable">$arr4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>           <span class="token comment" spellcheck="true">//降序</span>
+    <span class="token function">print_r</span><span class="token punctuation">(</span><span class="token variable">$arr4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token delimiter">?></span></code></pre>
+<p>字符串与数组的转换</p>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+    <span class="token keyword">echo</span> <span class="token function">implode</span><span class="token punctuation">(</span><span class="token string">","</span><span class="token punctuation">,</span><span class="token variable">$arr4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>            <span class="token comment" spellcheck="true">//数组转字符串    </span>
+    <span class="token keyword">echo</span> <span class="token string">"&lt;br/>"</span><span class="token punctuation">;</span>
+    <span class="token variable">$str</span><span class="token operator">=</span><span class="token string">"abcdef"</span><span class="token punctuation">;</span>
+    <span class="token function">print_r</span><span class="token punctuation">(</span><span class="token function">explode</span><span class="token punctuation">(</span><span class="token string">","</span><span class="token punctuation">,</span><span class="token variable">$str</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token delimiter">?></span></code></pre>
+<p>字符串(string)<br> strpos 获取指定字符在字符串中的位置</p>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+   <span class="token variable">$str</span><span class="token operator">=</span><span class="token string">"Stay foolish stay hungry"</span><span class="token punctuation">;</span>
+    <span class="token keyword">echo</span> <span class="token function">strpos</span><span class="token punctuation">(</span><span class="token variable">$str</span><span class="token punctuation">,</span><span class="token string">"stay"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>           <span class="token comment" spellcheck="true">//13</span>
+    <span class="token keyword">echo</span> <span class="token string">"&lt;br/>"</span><span class="token punctuation">;</span>
+    <span class="token keyword">echo</span> <span class="token function">stripos</span><span class="token punctuation">(</span><span class="token variable">$str</span><span class="token punctuation">,</span><span class="token string">"stay"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>          <span class="token comment" spellcheck="true">//0     不区分大小写</span>
+<span class="token delimiter">?></span></code></pre>
+<p>替换字符串</p>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+    <span class="token keyword">echo</span> <span class="token function">str_replace</span><span class="token punctuation">(</span><span class="token string">"stay"</span><span class="token punctuation">,</span><span class="token string">"abc"</span><span class="token punctuation">,</span><span class="token variable">$str</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">//Stay foolish abc hungry</span>
+    <span class="token keyword">echo</span> <span class="token string">"&lt;br/>"</span><span class="token punctuation">;</span>
+    <span class="token keyword">echo</span> <span class="token function">str_ireplace</span><span class="token punctuation">(</span><span class="token string">"stay"</span><span class="token punctuation">,</span><span class="token string">"abc"</span><span class="token punctuation">,</span><span class="token variable">$str</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">//abc foolish abc hungry  不区分大小写</span>
+<span class="token delimiter">?></span></code></pre>
+<p>截取字符串</p>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+    <span class="token keyword">echo</span> <span class="token function">substr</span><span class="token punctuation">(</span><span class="token variable">$str</span><span class="token punctuation">,</span><span class="token string">"3"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment" spellcheck="true">//y foolish stay hungry</span>
+    <span class="token keyword">echo</span> <span class="token string">"&lt;br/>"</span><span class="token punctuation">;</span>           
+    <span class="token keyword">echo</span> <span class="token function">substr</span><span class="token punctuation">(</span><span class="token variable">$str</span><span class="token punctuation">,</span><span class="token string">"3"</span><span class="token punctuation">,</span><span class="token string">"5"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">//y foo</span>
+<span class="token delimiter">?></span></code></pre>
+<p>查找字符串,连同后面的所有字符一起返回</p>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+    <span class="token keyword">echo</span> <span class="token function">strstr</span><span class="token punctuation">(</span><span class="token variable">$str</span><span class="token punctuation">,</span><span class="token string">"stay"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">//stay hungry</span>
+    <span class="token keyword">echo</span> <span class="token string">"&lt;br/>"</span><span class="token punctuation">;</span>
+    <span class="token keyword">echo</span> <span class="token function">stristr</span><span class="token punctuation">(</span><span class="token variable">$str</span><span class="token punctuation">,</span><span class="token string">"stay"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">//Stay foolish stay hungry          //不区分大小写</span>
+<span class="token delimiter">?></span></code></pre>
+<p>字符串长度</p>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+ <span class="token keyword">echo</span> <span class="token function">strlen</span><span class="token punctuation">(</span><span class="token variable">$str</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment" spellcheck="true">//24</span>
+<span class="token delimiter">?></span></code></pre>
+<p>大小写转换</p>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+    <span class="token keyword">echo</span> <span class="token function">strtoupper</span><span class="token punctuation">(</span><span class="token variable">$str</span><span class="token punctuation">)</span><span class="token punctuation">;</span>          <span class="token comment" spellcheck="true">//STAY FOOLISH STAY HUNGRY  转换成大写</span>
+    <span class="token keyword">echo</span> <span class="token string">"&lt;br/>"</span><span class="token punctuation">;</span>
+    <span class="token keyword">echo</span> <span class="token function">strtolower</span><span class="token punctuation">(</span><span class="token variable">$str</span><span class="token punctuation">)</span><span class="token punctuation">;</span>          <span class="token comment" spellcheck="true">//stay foolish stay hungry  转换成小写</span>
+<span class="token delimiter">?></span></code></pre>
+<p>空格转为换行</p>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+    <span class="token variable">$str</span><span class="token operator">=</span>"stay 
+    foolish"<span class="token punctuation">;</span>
+    <span class="token keyword">echo</span> <span class="token function">nl2br</span><span class="token punctuation">(</span><span class="token string">"$str"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token delimiter">?></span></code></pre>
+<p>去除首尾空格</p>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+    <span class="token keyword">echo</span> <span class="token function">trim</span><span class="token punctuation">(</span><span class="token variable">$str2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token comment" spellcheck="true">//str       去除首尾空格</span>
+    <span class="token keyword">echo</span> <span class="token function">ltrim</span><span class="token punctuation">(</span><span class="token variable">$str2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment" spellcheck="true">//str       去除左边空格</span>
+    <span class="token keyword">echo</span> <span class="token function">rtrim</span><span class="token punctuation">(</span><span class="token variable">$str2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment" spellcheck="true">//str       去除右边空格</span>
+<span class="token delimiter">?></span></code></pre>
+<p>tmlspecialchars()把标签转换为字符串<br> strip_tags() 删除字符串中的标签</p>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+    <span class="token keyword">echo</span> <span class="token string">"&lt;h1>标题&lt;/h1>"</span><span class="token punctuation">;</span>
+    <span class="token keyword">echo</span> <span class="token function">htmlspecialchars</span><span class="token punctuation">(</span><span class="token string">"&lt;h1>标题&lt;/h1>"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token comment" spellcheck="true">//&lt;h1>标题&lt;/h1>       不解析标签           斯白受差死</span>
+    <span class="token keyword">echo</span> <span class="token string">"&lt;br/>"</span><span class="token punctuation">;</span>
+    <span class="token keyword">echo</span> <span class="token function">strip_tags</span><span class="token punctuation">(</span><span class="token string">"&lt;h1>标题&lt;/h1>"</span><span class="token punctuation">)</span>              <span class="token comment" spellcheck="true">//标题                忽略标签</span>
+<span class="token delimiter">?></span></code></pre>
+<hr>
+<h3 id="初识数据库"><a href="#初识数据库" class="headerlink" title="初识数据库"></a>初识数据库</h3><p> 1.创建新数据库，找到排序方式为utf8_general_ci<br> 2.数据库中还要有数据表，字段代表表头的个数<br> 3.给数据表的每个字段添加名字，类型以及长度<br> 4.点击结构，可以查看数据表结构<br> 5.钥匙所在的名字就是主键<br> 6.点击插入，可以插入数据<br> 7.点击执行可以完成插入</p>
+<h3 id="SQL语句"><a href="#SQL语句" class="headerlink" title="SQL语句"></a>SQL语句</h3><p> SELECT INSERT UPDATE DELETE<br> 增删改查<br> SELECT name,id FROM students<br> 获取指定的字段的数据<br> SELECT COUNT(id) FROM students<br> 确定表内有多少条数据<br> SELECT * FROM students WHERE sex=‘男’<br> 指定查询类型查询数据<br> sql语句中不光可以用=&gt; &lt; &gt;= &lt;= &lt;&gt;<br> SELECT * FROM students WHERE sex=‘男’ AND name=’王八蛋’<br> 多个并列查询条件用AND<br> SELECT * FROM students WHERE name=‘齐文蒸’ OR name=’王八蛋’’<br> OR表示或<br> SELECT * FROM students WHERE NOT name=王八蛋’<br> LIMIT限制语句，限制返回多少条语句<br> SELECT * FROM students LIMIT 1<br> 排序<br> SELECT * FROM user ORDER BY name ASC 升序<br> SELECT * FROM user ORDER BY name DESC 降序</p>
+<p>1.插入数据记录(INSERT)<br> 例：INSERT INTO student (name,tel) VALUES (‘崔东阳’,’123456’)<br> 一次插入多条记录<br> INSERT INTO student (name, tel)<br> VALUES (‘user1’, ‘123456’),(‘user2’,’123456’)</p>
+<p>2.修改数据记录（UPDATE）<br> 例：UPDATE student SET name = ‘周小帅’, tel=’12345678’  WHERE id = 2</p>
+<p>3.删除数据记录（DELETE） 删了就没了，慎用<br> 例：DELETE FROM student WHERE id = 4</p>
+<h3 id="小知识："><a href="#小知识：" class="headerlink" title="小知识："></a>小知识：</h3><p> 密码也会存在数据库，但是如果被破解了数据库，那么密码就会泄露。通常密码都会经过加密，再存储。（MD5加密，sha1加密）<br> 暴力破解：一个一个试。<br> 银行防止暴力破解，每天只能输入错误3次</p>
+<h3 id="通过PHP连接数据库"><a href="#通过PHP连接数据库" class="headerlink" title="通过PHP连接数据库"></a>通过PHP连接数据库</h3><pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+    <span class="token keyword">echo</span> <span class="token constant">PHP_VERSION</span><span class="token punctuation">;</span>       <span class="token comment" spellcheck="true">//php的版本        7.2.8</span>
+    <span class="token keyword">echo</span> <span class="token string">"&lt;/br>"</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//在php中想要获取数据</span>
+<span class="token comment" spellcheck="true">//1.连接数据库</span>
+    <span class="token comment" spellcheck="true">//5.0以前:mysql_connect()</span>
+    <span class="token variable">$mysqli</span><span class="token operator">=</span><span class="token function">mysqli_connect</span><span class="token punctuation">(</span><span class="token string">"localhost"</span><span class="token punctuation">,</span><span class="token string">"root"</span><span class="token punctuation">,</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>      网络连接
+<span class="token comment" spellcheck="true">//  print_r($mysql);        成功啦,会返回一个对象</span>
+    <span class="token comment" spellcheck="true">//mysqli_connect()  可选三个参数</span>
+    <span class="token comment" spellcheck="true">//第一个参数是服务器地址</span>
+    <span class="token comment" spellcheck="true">//第二个是用户名</span>
+    <span class="token comment" spellcheck="true">//第三个是密码(通常本地的没有密码)</span>
+
+<span class="token comment" spellcheck="true">//2.设置编码方式,防止中文乱码</span>
+    <span class="token variable">$mysqli</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">query</span><span class="token punctuation">(</span><span class="token string">"set names utf8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//3.打开数据库</span>
+    <span class="token variable">$mysqli</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">select_db</span><span class="token punctuation">(</span><span class="token string">'datebase'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//操作数据</span>
+    <span class="token variable">$res</span><span class="token operator">=</span><span class="token variable">$mysqli</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">query</span><span class="token punctuation">(</span><span class="token string">'SELECT * FROM `students`'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token variable">$row</span><span class="token operator">=</span><span class="token function">mysqli_fetch_assoc</span><span class="token punctuation">(</span><span class="token variable">$res</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>   
+        <span class="token function">var_dump</span><span class="token punctuation">(</span><span class="token variable">$row</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">echo</span> <span class="token string">"&lt;br/>"</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">//$row=mysqli_fetch_assoc($res)</span>
+    <span class="token comment" spellcheck="true">//$res获取的是资源,我们想要获取到数据的话需要对资源进行转化,mysqli_fetch_assoc()是转化资源的函数</span>
+<span class="token comment" spellcheck="true">//4.关闭数据库</span>
+    <span class="token variable">$mysqli</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>       
+<span class="token delimiter">?></span></code></pre>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://coderofrat.github.io" rel="external nofollow noreferrer">Mr Guo</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://coderofrat.github.io/2019/12/14/php-shu-ju-ku/">https://coderofrat.github.io/2019/12/14/php-shu-ju-ku/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="https://coderofrat.github.io" target="_blank">Mr Guo</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%BA%93/">
+                                    <span class="chip bg-color">数据可视化库</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2019/12/16/cookie-feng-zhuang/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="Cookie封装">
+                        
+                        <span class="card-title">Cookie封装</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Cookie封装取某个cookie种的数据    function getCookie (name) {
+        var str = document.cookie;
+        var arrStr=str.split("; 
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2019-12-16
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Cookie/">
+                        <span class="chip bg-color">Cookie</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/12/14/zheng-ze-biao-da-shi-regular-expression/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="正则表达式(Regular Expression)">
+                        
+                        <span class="card-title">正则表达式(Regular Expression)</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            正则表达式(Regular Expression)一、正则表达式是什么？ 匹配想要的东西 为什么使用正则表达式：可以 1.测试字符串内的模式 2.替换文本 3.基于模式匹配从字符串中提取字符串
+二、.正则表达式的创建 语法： var  re
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-12-14
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+                        <span class="chip bg-color">正则表达式</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+    
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('2'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+    <footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">年份</span>
+            <a href="https://coderofrat.github.io" target="_blank">Mr Guo</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    window.setTimeout("siteTime()", 1000);
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2018";
+                    var startMonth = "2";
+                    var startDate = "12";
+                    var startHour = "5";
+                    var startMinute = "3";
+                    var startSecond = "4";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/CoderOfRat" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1404616446@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1404616446" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1404616446" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+    
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

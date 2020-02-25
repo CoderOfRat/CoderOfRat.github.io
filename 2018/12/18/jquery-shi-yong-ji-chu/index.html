@@ -17,6 +17,7 @@ jQuery获取的 —– document.querySelectorAll(“">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="baidu-site-verification" content="xYZSrsYxIK" />
     <title>JQuery使用基础 | Coder Rat</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
@@ -444,14 +445,14 @@ jQuery获取的 —– document.querySelectorAll(“">
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    320
+                    1.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    6 分
                 </div>
                 
 				
@@ -499,6 +500,128 @@ jQuery获取的 —– document.querySelectorAll(“">
 <span class="token punctuation">}</span>
 obj<span class="token punctuation">.</span><span class="token function">fn1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">fn2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>动画里面的回调函数要合理利用</p>
+<blockquote>
+<p>JQuery是一个优秀的js库,简化了js的操作,考虑了浏览器兼容,提供了大量的实用方法</p>
+</blockquote>
+<blockquote>
+<p>链式操作原理:jq对象调用jq方法时  当方法执行结束后返回当前的这个jq对象本身,继续进行方法调用.</p>
+</blockquote>
+<h4 id="里面可以传哪几种类型的对象"><a href="#里面可以传哪几种类型的对象" class="headerlink" title="$()     里面可以传哪几种类型的对象"></a>$()     里面可以传哪几种类型的对象</h4><pre class=" language-jsx"><code class="language-jsx"><span class="token number">1</span><span class="token punctuation">.</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"选择器"</span><span class="token punctuation">)</span>
+<span class="token number">2</span><span class="token punctuation">.</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>                <span class="token operator">--</span><span class="token operator">></span>        <span class="token punctuation">(</span>window<span class="token punctuation">.</span>onload<span class="token operator">=</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token number">3</span><span class="token punctuation">.</span><span class="token function">$</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span>                    <span class="token punctuation">(</span>obj<span class="token punctuation">:</span>DOM对象  window<span class="token punctuation">,</span>document<span class="token punctuation">,</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span><span class="token operator">--</span><span class="token operator">></span>DOM对象转换为jq对象</code></pre>
+<h4 id="jq对象和dom对象之间的相互转换"><a href="#jq对象和dom对象之间的相互转换" class="headerlink" title="jq对象和dom对象之间的相互转换"></a>jq对象和dom对象之间的相互转换</h4><pre class=" language-jsx"><code class="language-jsx">js对象<span class="token operator">--</span><span class="token operator">-</span><span class="token operator">></span>转换为jq对象               <span class="token function">$</span><span class="token punctuation">(</span>DOM对象<span class="token punctuation">)</span>
+jq节点对象<span class="token operator">--</span><span class="token operator">-</span><span class="token operator">></span>转换为js对象       
+<span class="token number">1</span><span class="token punctuation">.</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">".box"</span><span class="token punctuation">)</span>转换为js                 <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">".box"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>   DOM节点
+<span class="token number">2</span><span class="token punctuation">.</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">".box"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span>下标<span class="token punctuation">)</span>转换为js        DOM节点</code></pre>
+<h1 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h1><h4 id="1-基础选择器"><a href="#1-基础选择器" class="headerlink" title="1.基础选择器"></a>1.基础选择器</h4><pre class=" language-kotlin"><code class="language-kotlin">id<span class="token punctuation">,</span><span class="token punctuation">.</span>class<span class="token punctuation">,</span>tag<span class="token punctuation">,</span>群组<span class="token punctuation">,</span><span class="token operator">*</span><span class="token punctuation">,</span>子选择器<span class="token punctuation">,</span>后代选择器<span class="token punctuation">.</span>      $<span class="token punctuation">(</span><span class="token string">"选择器"</span><span class="token punctuation">)</span></code></pre>
+<h4 id="2-筛选选择器"><a href="#2-筛选选择器" class="headerlink" title="2.筛选选择器"></a>2.筛选选择器</h4><pre class=" language-ruby"><code class="language-ruby"><span class="token symbol">:not</span><span class="token punctuation">(</span><span class="token punctuation">)</span>                  选择除去选择的元素
+<span class="token symbol">:eq</span><span class="token punctuation">(</span><span class="token punctuation">)</span>                   选择到某一个  从<span class="token number">0</span>开始
+<span class="token symbol">:nth</span><span class="token operator">-</span><span class="token function">child</span><span class="token punctuation">(</span><span class="token punctuation">)</span>            选择到某一个  从<span class="token number">1</span>开始
+<span class="token punctuation">:</span>$<span class="token punctuation">(</span><span class="token string">"tr:odd"</span><span class="token punctuation">)</span>            选取奇数位置的 <span class="token operator">&lt;</span>tr<span class="token operator">></span> 元素     
+<span class="token punctuation">:</span>$<span class="token punctuation">(</span><span class="token string">"tr:even"</span><span class="token punctuation">)</span>           选取偶数位置的 <span class="token operator">&lt;</span>tr<span class="token operator">></span> 元素         
+<span class="token symbol">:first</span>
+<span class="token symbol">:last</span></code></pre>
+<h4 id="3-属性选择器"><a href="#3-属性选择器" class="headerlink" title="3.属性选择器"></a>3.属性选择器</h4><pre class=" language-csharp"><code class="language-csharp"><span class="token punctuation">[</span>attr<span class="token operator">=</span><span class="token string">"val"</span><span class="token punctuation">]</span>
+<span class="token punctuation">[</span>attr<span class="token operator">|</span><span class="token operator">=</span><span class="token string">"val"</span><span class="token punctuation">]</span>               属性值以指定字符开头，识别带有<span class="token operator">-</span>的字符
+<span class="token punctuation">[</span>attr<span class="token operator">^</span><span class="token operator">=</span><span class="token string">"val"</span><span class="token punctuation">]</span>               属性值以指定字符开始的节点
+<span class="token punctuation">[</span>attr$<span class="token operator">=</span><span class="token string">"val"</span><span class="token punctuation">]</span>               属性值以指定字符结尾的节点
+<span class="token punctuation">[</span>attr<span class="token operator">*</span><span class="token operator">=</span><span class="token string">"val"</span><span class="token punctuation">]</span>   </code></pre>
+<h4 id="4-form表单选择器"><a href="#4-form表单选择器" class="headerlink" title="4.form表单选择器"></a>4.form表单选择器</h4><pre class=" language-css"><code class="language-css"><span class="token punctuation">:</span><span class="token property">checked</span>
+<span class="token punctuation">:</span><span class="token property">checkbox</span>
+<span class="token punctuation">:</span><span class="token property">button</span>
+<span class="token punctuation">:</span><span class="token property">text</span>
+<span class="token punctuation">:</span><span class="token property">selected</span>
+<span class="token punctuation">:</span>submit</code></pre>
+<h1 id="JQ的一些方法"><a href="#JQ的一些方法" class="headerlink" title="JQ的一些方法"></a>JQ的一些方法</h1><pre class=" language-jsx"><code class="language-jsx"><span class="token function">css</span><span class="token punctuation">(</span><span class="token punctuation">)</span>                   给jQ对象设置样式<span class="token operator">/</span>获取元素的样式           可支持对象<span class="token punctuation">{</span><span class="token punctuation">}</span>来设置多个样式
+<span class="token function">attr</span><span class="token punctuation">(</span><span class="token punctuation">)</span>                  给jQ对象设置标签属性<span class="token operator">/</span>获取元素某个属性        注意jq    attr设置的属性要用attr来获取
+<span class="token function">prop</span><span class="token punctuation">(</span><span class="token punctuation">)</span>                  jq对象的方法，用于设置js  <span class="token function">DOM对象指定的属性</span><span class="token punctuation">(</span>传一个参代表取址<span class="token punctuation">,</span>传两个参代表赋值<span class="token punctuation">)</span>
+
+<span class="token function">html</span><span class="token punctuation">(</span><span class="token punctuation">)</span>                  获取jq对象的所有内容<span class="token operator">/</span>设置对象的内容
+<span class="token function">text</span><span class="token punctuation">(</span><span class="token punctuation">)</span>                  获取jq对象的所有文本内容<span class="token operator">/</span>设置文本
+<span class="token function">val</span><span class="token punctuation">(</span><span class="token punctuation">)</span>                   <span class="token punctuation">(</span>不传参代表取址<span class="token punctuation">,</span>传参代表赋值<span class="token punctuation">)</span>
+
+<span class="token function">click</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>     给jQ对象设置点击事件
+<span class="token function">eq</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>                   遍历所有对象<span class="token punctuation">,</span>获取指定的某个i<span class="token punctuation">:</span>下标</code></pre>
+<h4 id="index-通过事件来获取某个对象的下标"><a href="#index-通过事件来获取某个对象的下标" class="headerlink" title="index()  通过事件来获取某个对象的下标"></a>index()  通过事件来获取某个对象的下标</h4><pre class=" language-undefined"><code class="language-undefined">1-不传参数  获取当前元素的下标
+2-传参数   获取指定元素的索引       参数:某个元素 DOM对象       jq对象
+3-传参数   如果找不到   返回-1        注意:类似于js中的indexOf()</code></pre>
+<h5 id="例"><a href="#例" class="headerlink" title="例:"></a>例:</h5><pre class=" language-jsx"><code class="language-jsx"><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">".box p"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//获取p标签的对应下标</span>
+    <span class="token function">alert</span><span class="token punctuation">(</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">index</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>              <span class="token comment" spellcheck="true">//获取当前点击的p标签  在所有兄弟节点中的下标</span>
+    <span class="token function">alert</span><span class="token punctuation">(</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">".box p"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">index</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">)</span>      <span class="token comment" spellcheck="true">//DOM对象</span>
+    <span class="token function">alert</span><span class="token punctuation">(</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">".box p"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">index</span><span class="token punctuation">(</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>   <span class="token comment" spellcheck="true">//jq对象</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
+<h4 id="筛选的一些方法"><a href="#筛选的一些方法" class="headerlink" title="筛选的一些方法"></a>筛选的一些方法</h4><pre class=" language-ruby"><code class="language-ruby"><span class="token function">parent</span><span class="token punctuation">(</span><span class="token punctuation">)</span>    $<span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">parent</span><span class="token punctuation">(</span><span class="token punctuation">)</span>           查找div的父元素
+parents     $<span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">parents</span><span class="token punctuation">(</span><span class="token punctuation">)</span>          查找长辈节点<span class="token punctuation">(</span>可以传参数<span class="token punctuation">)</span>
+<span class="token keyword">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span>      $<span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span>             下一个兄弟节点
+<span class="token function">prev</span><span class="token punctuation">(</span><span class="token punctuation">)</span>      $<span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">prev</span><span class="token punctuation">(</span><span class="token punctuation">)</span>             上一个兄弟节点
+<span class="token function">nextAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span>   $<span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">nextAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span>          查找div下面所有的兄弟节点
+<span class="token function">prevAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span>   $<span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">prevAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span>          查找div前面所有的兄弟元素
+<span class="token function">first</span><span class="token punctuation">(</span><span class="token punctuation">)</span>     $<span class="token punctuation">(</span><span class="token string">"p"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">first</span><span class="token punctuation">(</span><span class="token punctuation">)</span>              查找页面中第一个p元素
+<span class="token function">last</span><span class="token punctuation">(</span><span class="token punctuation">)</span>      $<span class="token punctuation">(</span><span class="token string">"p"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">last</span><span class="token punctuation">(</span><span class="token punctuation">)</span>               查找页面中最后一个p元素
+<span class="token function">find</span><span class="token punctuation">(</span><span class="token punctuation">)</span>      $<span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token string">"p"</span><span class="token punctuation">)</span>          查找父级中的所 有子元素p
+<span class="token function">eq</span><span class="token punctuation">(</span><span class="token punctuation">)</span>        $<span class="token punctuation">(</span><span class="token string">"p"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">eq</span><span class="token punctuation">(</span><span class="token punctuation">)</span>                 查找页面中第n个p元素      下标从<span class="token number">0</span>开始
+<span class="token keyword">not</span><span class="token punctuation">(</span><span class="token punctuation">)</span>       $<span class="token punctuation">(</span><span class="token string">"p"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">not</span><span class="token punctuation">(</span><span class="token string">':first'</span><span class="token punctuation">)</span>        筛选不包含的      查找页面中除了第一个p元素之外的所有的p
+<span class="token function">filter</span><span class="token punctuation">(</span><span class="token punctuation">)</span>    $<span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token string">"p"</span><span class="token punctuation">)</span>        筛选出         只要div下的p
+<span class="token function">add</span><span class="token punctuation">(</span><span class="token punctuation">)</span>       $<span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"p"</span><span class="token punctuation">)</span>           附带某个元素
+<span class="token function">has</span><span class="token punctuation">(</span><span class="token punctuation">)</span>       $<span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">has</span><span class="token punctuation">(</span><span class="token string">"p"</span><span class="token punctuation">)</span>           选取包含某个元素的父元素
+<span class="token function">children</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  $<span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">children</span><span class="token punctuation">(</span><span class="token string">"p"</span><span class="token punctuation">)</span>      查找父级中的子元素       参数<span class="token punctuation">:</span><span class="token string">"选择器"</span>
+<span class="token number">1</span><span class="token punctuation">.</span>不传参数                               指所有子元素
+<span class="token number">2</span><span class="token punctuation">.</span>传参数                                 指定的某类子元素
+<span class="token function">siblings</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  $<span class="token punctuation">(</span><span class="token string">"li:first"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">siblings</span><span class="token punctuation">(</span><span class="token punctuation">)</span>    查找第一个li的所有兄弟，注意不包括第一个li
+<span class="token number">1</span><span class="token punctuation">.</span>不传参数                              选择某个元素所有的兄弟节点
+<span class="token number">2</span><span class="token punctuation">.</span>传参数                               选择指定的兄弟节点       参数<span class="token punctuation">:</span><span class="token string">"选择器"</span></code></pre>
+<h1 id="JQuery动画"><a href="#JQuery动画" class="headerlink" title="JQuery动画"></a>JQuery动画</h1><pre class=" language-dart"><code class="language-dart"><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token string">"slow"</span><span class="token punctuation">)</span>            显示
+<span class="token punctuation">.</span><span class="token function">hide</span><span class="token punctuation">(</span><span class="token string">"slow"</span><span class="token punctuation">)</span>            隐藏
+<span class="token punctuation">.</span><span class="token function">toggle</span><span class="token punctuation">(</span><span class="token string">"slow"</span><span class="token punctuation">)</span>          往复显示或隐藏
+<span class="token punctuation">.</span><span class="token function">fadeIn</span><span class="token punctuation">(</span><span class="token string">"slow"</span><span class="token punctuation">)</span>          淡入
+<span class="token punctuation">.</span><span class="token function">fadeOut</span><span class="token punctuation">(</span><span class="token string">"slow"</span><span class="token punctuation">)</span>         淡出
+<span class="token punctuation">.</span><span class="token function">fadeTo</span><span class="token punctuation">(</span><span class="token number">0.2</span><span class="token punctuation">)</span>             淡入到指定的透明渡
+<span class="token punctuation">.</span><span class="token function">fadeToggle</span><span class="token punctuation">(</span><span class="token string">"slow"</span><span class="token punctuation">)</span>      淡入淡出
+<span class="token punctuation">.</span><span class="token function">slideDown</span><span class="token punctuation">(</span><span class="token punctuation">)</span>             下拉
+<span class="token punctuation">.</span><span class="token function">slideUp</span><span class="token punctuation">(</span><span class="token punctuation">)</span>               合上
+<span class="token comment" spellcheck="true">//这些方法都可以传入三个参数</span>
+<span class="token comment" spellcheck="true">//第一个参数:代表动画完成的时间,默认(normal),可选slow,fast或者毫秒数</span>
+<span class="token comment" spellcheck="true">//第二个参数:动画切换效果,可选linear</span>
+<span class="token comment" spellcheck="true">//第三个参数:回调函数,代表动画完成后执行的函数</span></code></pre>
+<h2 id="动画函数-animate"><a href="#动画函数-animate" class="headerlink" title="动画函数 animate()"></a>动画函数 animate()</h2><pre class=" language-undefined"><code class="language-undefined">可传四个参数
+1.作为动画的属性是一个对象
+2.动画完成的时间
+3.动画的效果,liner和swing(默认)
+4.动画完成之后执行的回调函数
+stop()       立即结束前面,执行后面的动画
+delay(time)设置一个延时来推迟执行队列中 之后的项目</code></pre>
+<h1 id="JQuery事件"><a href="#JQuery事件" class="headerlink" title="JQuery事件"></a>JQuery事件</h1><pre class=" language-js"><code class="language-js"><span class="token function">事件绑定bind</span><span class="token punctuation">(</span><span class="token punctuation">)</span>          <span class="token function">on</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token function">解除绑定unbind</span><span class="token punctuation">(</span><span class="token punctuation">)</span>      <span class="token function">off</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+区别<span class="token punctuation">:</span>事件委托
+<span class="token function">one</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  一次性事件</code></pre>
+<h1 id="DOM操作"><a href="#DOM操作" class="headerlink" title="DOM操作"></a>DOM操作</h1><pre class=" language-js"><code class="language-js"><span class="token function">append</span><span class="token punctuation">(</span>节点<span class="token punctuation">)</span>
+<span class="token function">appendTo</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token function">prepend</span><span class="token punctuation">(</span><span class="token punctuation">)</span>            
+<span class="token function">prependTo</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token function">after</span><span class="token punctuation">(</span>节点<span class="token punctuation">)</span>          
+before <span class="token punctuation">(</span>节点<span class="token punctuation">)</span>    
+<span class="token function">insertAfter</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  
+<span class="token function">afterBefore</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token function">remove</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token function">detach</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token function">clone</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token function">clone</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span>
+<span class="token function">replaceWith</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token function">replaceWith</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token function">replaceAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token function">wrap</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token function">wrapAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token function">wrapInner</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<h1 id="元素的尺寸"><a href="#元素的尺寸" class="headerlink" title="元素的尺寸"></a>元素的尺寸</h1><pre class=" language-css"><code class="language-css"><span class="token function">width</span><span class="token punctuation">(</span><span class="token punctuation">)</span>        width
+<span class="token function">height</span><span class="token punctuation">(</span><span class="token punctuation">)</span>       height
+<span class="token function">innerWidth</span><span class="token punctuation">(</span><span class="token punctuation">)</span>            width+padding
+<span class="token function">innerHeight</span><span class="token punctuation">(</span><span class="token punctuation">)</span>           height+padding
+<span class="token function">outerWidth</span><span class="token punctuation">(</span><span class="token punctuation">)</span>            width+padding+border
+<span class="token function">outerHeight</span><span class="token punctuation">(</span>true<span class="token punctuation">)</span>    height+padding+border+margin
+<span class="token function">offset</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token number">.</span>left              距离文档左侧的位移
+<span class="token function">offset</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token number">.</span>top              距离  </code></pre>
 
             </div>
             <hr/>
