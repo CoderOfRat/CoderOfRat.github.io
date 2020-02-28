@@ -448,14 +448,14 @@ VUE 基">
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    13.2k
+                    13.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    59 分
+                    61 分
                 </div>
                 
 				
@@ -2509,33 +2509,33 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <li>script        业务逻辑区域</li>
 <li>style          样式区域</li>
 </ul>
-<pre class=" language-vue"><code class="language-vue"><template>
-    <!--这里用于定义Vue单文件组件的模板内容-->
-</template>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">></span></span>
+    <span class="token comment" spellcheck="true">&lt;!--这里用于定义Vue单文件组件的模板内容--></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">></span></span>
 
-<script>
-    // 这里用于定义Vue组件的业务逻辑
-    export default {
-        data(){ // 私有数据
-            return {
-                data1: dataValue1,
-            }
-        },
-        methods:{
-            eventFunction1(){
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">
+    <span class="token comment" spellcheck="true">// 这里用于定义Vue组件的业务逻辑</span>
+    <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+        <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 私有数据</span>
+            <span class="token keyword">return</span> <span class="token punctuation">{</span>
+                data1<span class="token punctuation">:</span> dataValue1<span class="token punctuation">,</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        methods<span class="token punctuation">:</span><span class="token punctuation">{</span>
+            <span class="token function">eventFunction1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
 
-            },
-            eventFunction2:function(){
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            eventFunction2<span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
 
-            }
-        },
-        // ...其他业务逻辑
-    }
-</script>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token comment" spellcheck="true">// ...其他业务逻辑</span>
+    <span class="token punctuation">}</span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 
-<style scoped>
-    /*这里定义了组件的样式*/
-</style></code></pre>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">scoped</span><span class="token punctuation">></span></span><span class="token style language-css">
+    <span class="token comment" spellcheck="true">/*这里定义了组件的样式*/</span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span></code></pre>
 <h5 id="webpack-中配置-vue-组件的加载器"><a href="#webpack-中配置-vue-组件的加载器" class="headerlink" title="webpack 中配置 vue 组件的加载器"></a>webpack 中配置 vue 组件的加载器</h5><ol>
 <li><p>运行 <code>npm i vue-loader vue-template-compiler -D</code>命令 下载loader和相关插件</p>
 </li>
@@ -2643,16 +2643,16 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>ElementUI<span class="token punctuation">)</span></code></pre>
 <ol start="3">
 <li><p>Vue根组件 App.vue 中添加Element-UI官网提供的样例代码</p>
-<pre class=" language-vue"><code class="language-vue"><div id="app">
-    <el-row>
-      <el-button>默认按钮</el-button>
-      <el-button type="primary">主要按钮</el-button>
-      <el-button type="success">成功按钮</el-button>
-      <el-button type="info">信息按钮</el-button>
-      <el-button type="warning">警告按钮</el-button>
-      <el-button type="danger">危险按钮</el-button>
-    </el-row>
-</div></code></pre>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>app<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-row</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-button</span><span class="token punctuation">></span></span>默认按钮<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-button</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>primary<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>主要按钮<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-button</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>success<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>成功按钮<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-button</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>info<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>信息按钮<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-button</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>warning<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>警告按钮<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-button</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>danger<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>危险按钮<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-button</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-row</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
 <p>效果如下：</p>
 </li>
 </ol>
@@ -2676,10 +2676,51 @@ Vue<span class="token punctuation">.</span><span class="token function">use</spa
 Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>Button<span class="token punctuation">)</span>
 <span class="token comment" spellcheck="true">// 以上代码完成了按需导入了’element-ui‘的Button组件，并注册为Vue的插件</span>
 </code></pre>
+<blockquote>
+<p>图形化界面在配置 element-ui时，有时候会将样式丢失</p>
+<p>解决方案：</p>
+<p>1.在依赖中卸载 element-ui，重新配置一次</p>
+<p>2.手动导入样式：找到 plugins 文件夹中的element.js文件，添加 import ‘element-ui/lib/theme-chalk/index.css’</p>
+</blockquote>
 <hr>
 <p><strong><u>以上为Vue项目开发的基础铺垫，接下来，就可以happy地结合以上准备，大干一场啦！</u></strong></p>
 <hr>
-<h3 id="Vue-电商全系统项目实战-Day-1"><a href="#Vue-电商全系统项目实战-Day-1" class="headerlink" title="Vue 电商全系统项目实战 Day 1"></a>Vue 电商全系统项目实战 Day 1</h3>
+<h3 id="Vue-电商全系统项目实战-Day-1"><a href="#Vue-电商全系统项目实战-Day-1" class="headerlink" title="Vue 电商全系统项目实战 Day 1"></a>Vue 电商全系统项目实战 Day 1</h3><h4 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h4><h4 id="电商后台管理系统的开发模式（前后端分离）"><a href="#电商后台管理系统的开发模式（前后端分离）" class="headerlink" title="电商后台管理系统的开发模式（前后端分离）"></a>电商后台管理系统的开发模式（前后端分离）</h4><p>电商后台管理系统整体采用<strong>前后端分离的开发模式</strong>，其中前端项目是<strong>基于Vue技术栈的SPA项目。</strong></p>
+<p><img src="images/image-20200228100625364.png" alt="image-20200228100625364"></p>
+<h4 id="电商后台管理系统的技术选型"><a href="#电商后台管理系统的技术选型" class="headerlink" title="电商后台管理系统的技术选型"></a>电商后台管理系统的技术选型</h4><p>前端项目技术栈</p>
+<ul>
+<li>Vue</li>
+<li>Vue-router</li>
+<li>Element-UI</li>
+<li>Axios          发送网络数据请求</li>
+<li>Echarts</li>
+</ul>
+<p>后端项目技术栈</p>
+<ul>
+<li>Node.js</li>
+<li>Express</li>
+<li>Jwt              状态保持工具，类似于session的作用      </li>
+<li>Mysql</li>
+<li>Sequelize   操作数据库的框架</li>
+</ul>
+<h4 id="前端项目初始化步骤"><a href="#前端项目初始化步骤" class="headerlink" title="前端项目初始化步骤"></a>前端项目初始化步骤</h4><ol>
+<li>安装 vue 脚手架</li>
+<li>通过 Vue 脚手架创建项目</li>
+<li>配置 Vue 路由</li>
+<li>配置 Element-UI 组件库</li>
+<li>配置 axios 库</li>
+<li>初始化 git 远程仓库</li>
+<li>将本地项目托管到 GitHub 或 码云 中</li>
+</ol>
+<p>码云配置</p>
+<p>设置-&gt;安全设置-&gt;SSH公钥</p>
+<p>根据提示生成和设置公钥</p>
+<p>生成公钥</p>
+<p>在gitbash中输入</p>
+<pre class=" language-shell"><code class="language-shell">ssh-keygen -t rsa -C "码云注册邮箱"</code></pre>
+<p>按照提示完后三次回车，即可生成SSH公钥，并提示生成目录</p>
+<p>id_rsa.pub文件 使用vscode打开，复制全部的内容，配置到SSH公钥中，保存，并输入密码确认</p>
+
             </div>
             <hr/>
 
