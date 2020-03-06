@@ -17,15 +17,15 @@
     <title>Coder Rat</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
-    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
-    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
-    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/font-awesome/5.12.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/aos/3.0.0-beta.6/aos.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/lightgallery/1.6.12/css/lg-fb-comment-box.min.css">
     <link rel="stylesheet" type="text/css" href="/css/matery.css">
     <link rel="stylesheet" type="text/css" href="/css/my.css">
     
-    <script src="/libs/jquery/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
     
 <link rel="alternate" href="/atom.xml" title="Coder Rat" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
@@ -360,7 +360,7 @@
 
 <script>
     // 每天切换 banner 图.  Switch banner image every day.
-    $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay() + '.jpg)');
+    $('.bg-cover').css('background-image', 'url(https://api.xygeng.cn/bing/1920.php)');
 </script>
 
 
@@ -416,7 +416,7 @@
         coverSlider.carousel({
             duration: Number('120'),
             fullWidth: true,
-            indicators: 'false' === 'true'
+            indicators: 'true' === 'true'
         });
 
         let carouselIntervalId;
@@ -478,7 +478,7 @@
                     
                         
 
-<link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<link rel="stylesheet" href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css">
 <div class="music-player">
     
     <div class="title center-align">
@@ -492,7 +492,7 @@
     </div>
 </div>
 
-<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script>
 <script>
 $(function () {
     new APlayer({
@@ -507,7 +507,7 @@ $(function () {
         listFolded: 'false' === 'true',
         listMaxHeight: '',
         lrcType: 3,
-        audio: eval([{"name":"倒数","artist":"G.E.M. 邓紫棋","url":"/medias/music/G.E.M. 邓紫棋 - 倒数.mp3","lrc":"/medias/music/倒数.lrc","cover":"/medias/music/music4.png"},{"name":"多远都要在一起","artist":"G.E.M. 邓紫棋","url":"/medias/music/G.E.M. 邓紫棋 - 多远都要在一起.mp3","lrc":"/medias/music/多远都要在一起.lrc","cover":"/medias/music/music4.png"},{"name":"Love Me Harder","artist":"Ariana Grande _ The Weeknd","url":"/medias/music/Ariana Grande _ The Weeknd - Love Me Harder.mp3","lrc":"/medias/music/Love Me Harder.lrc","cover":"/medias/music/music2.png"},{"name":"Miracles","artist":"Coldplay","url":"/medias/music/Coldplay - Miracles.mp3","lrc":"/medias/music/Miracles.lrc","cover":"/medias/music/music2.png"}])
+        audio: eval([{"name":"倒数","artist":"G.E.M. 邓紫棋","url":"https://sharefs.yun.kugou.com/202003061508/fbc9595d5ce772dae7417ef3b99c8a2b/G142/M03/1F/19/bpQEAFt-eBeAciiUADgCIS3Z9l8667.mp3","lrc":"/medias/music/倒数.lrc","cover":"http://y.gtimg.cn/music/photo_new/T002R300x300M000003cKIKZ1J4Yyu.jpg"},{"name":"多远都要在一起","artist":"G.E.M. 邓紫棋","url":"https://sharefs.yun.kugou.com/202003061521/60a73098719eff3834e4b1fa3b06eb4f/G008/M00/1D/09/SA0DAFUMqbWAEecHADUtDvL1L5E130.mp3","lrc":"/medias/music/多远都要在一起.lrc","cover":"http://y.gtimg.cn/music/photo_new/T002R300x300M000003c616O2Zlswm.jpg"},{"name":"Love Me Harder","artist":"Ariana Grande _ The Weeknd","url":"https://sharefs.yun.kugou.com/202003061525/07efbbfcfcd04ca1fb0359800f0ef1e3/G011/M04/08/08/Sw0DAFUK1CeAf6NmADmnLxJCHXA675.mp3","lrc":"/medias/music/Love Me Harder.lrc","cover":"http://y.gtimg.cn/music/photo_new/T002R300x300M000004SDGTv1GJwte.jpg"}])
     });
 });
 </script>
@@ -962,7 +962,7 @@ ES2017
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             <span id="year">年份</span>
-            <a href="https://coderofrat.github.io" target="_blank">Wenhao Guo</a>
+            <a href="https://coderofrat.github.io" target="_blank">郭文浩 Rat Guo</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
@@ -1088,11 +1088,11 @@ $(function () {
 </div>
 
 
-    <script src="/libs/materialize/materialize.min.js"></script>
-    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
-    <script src="/libs/aos/aos.js"></script>
-    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
-    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="https://cdn.bootcss.com/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdn.bootcss.com/masonry/4.2.2/masonry.pkgd.min.js"></script>
+    <script src="https://cdn.bootcss.com/aos/3.0.0-beta.6/aos.js"></script>
+    <script src="https://cdn.bootcss.com/scrollprogress/3.0.2/scrollProgress.min.js"></script>
+    <script src="https://cdn.bootcss.com/lightgallery/1.6.12/js/lightgallery-all.min.js"></script>
     <script src="/js/matery.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
