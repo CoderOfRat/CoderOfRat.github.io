@@ -10,7 +10,7 @@
   <id>https://coderofrat.github.io/</id>
   
   <author>
-    <name>郭文浩 Rat Guo</name>
+    <name>郭文浩(Rat Guo)</name>
     
   </author>
   
@@ -269,7 +269,7 @@
     
       <category term="JavaScript" scheme="https://coderofrat.github.io/tags/JavaScript/"/>
     
-      <category term="操作数组的方法" scheme="https://coderofrat.github.io/tags/%E6%93%8D%E4%BD%9C%E6%95%B0%E7%BB%84%E7%9A%84%E6%96%B9%E6%B3%95/"/>
+      <category term="数组基础用法" scheme="https://coderofrat.github.io/tags/%E6%95%B0%E7%BB%84%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95/"/>
     
   </entry>
   

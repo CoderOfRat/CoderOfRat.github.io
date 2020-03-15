@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="VUE全家桶, 代码,coder,code,it,communication,交流,web,vue,echart">
+    <meta name="keywords" content="VUE全家桶, 代码,coder,code,it,communication,交流,web,vue,echart,Blog,博客">
     <meta name="description" content="作者： 尤雨溪
 Vue: 渐进式JavaScript框架目前框架和库的界限并不明显
 
@@ -448,7 +448,7 @@ VUE 基">
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    16.9k
+                    17.2k
                 </div>
                 
 
@@ -925,12 +925,12 @@ v-if: 通过恢复或者删除元素的方式，控制元素的显示或者隐�
                     <span class="token punctuation">}</span>
                 <span class="token punctuation">}</span>
             <span class="token punctuation">}</span><span class="token punctuation">,</span>
-            computed<span class="token punctuation">:</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 计算属性</span>
+            computed<span class="token punctuation">:</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 计算属性 可以监听多个值变化</span>
                 sum<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
                     <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>price <span class="token operator">*</span> <span class="token keyword">this</span><span class="token punctuation">.</span>total<span class="token punctuation">;</span>
                 <span class="token punctuation">}</span>
             <span class="token punctuation">}</span><span class="token punctuation">,</span>
-            watch<span class="token punctuation">:</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 侦听器</span>
+            watch<span class="token punctuation">:</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 侦听器 一次只能侦听一个属性</span>
                 firstName<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span><span class="token punctuation">{</span>
                     <span class="token keyword">this</span><span class="token punctuation">.</span>fullName <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>lastName <span class="token operator">+</span> <span class="token string">" "</span> <span class="token operator">+</span> val<span class="token punctuation">;</span>
                 <span class="token punctuation">}</span><span class="token punctuation">,</span>
@@ -1346,7 +1346,7 @@ v-if: 通过恢复或者删除元素的方式，控制元素的显示或者隐�
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
 <pre class=" language-面试"><code class="language-面试">面试：关于Vue生命周期 可能会问到
 1.会问，vue的生命周期有几个
-
+一共11个，实际开发用的比较多的有八个 高频使用的有created mounted
 2.分别是什么
 
 3.有什么作用
@@ -1354,8 +1354,15 @@ v-if: 通过恢复或者删除元素的方式，控制元素的显示或者隐�
 4.你用过哪几个？怎么用的？
 
 5.created和mounted有什么区别
-
-6.为什么在created和mounted中发送请求比较合适？</code></pre>
+created：初始化/注入 组件实例创建完毕 此时可以对data等属性进行操作
+6.为什么在created和mounted中发送请求比较合适？
+created 因为请求过来的数据可以在此时赋值给data上的 并且在页面渲染之前，赋值，可以在渲染之前把数据加载完毕
+7.能否在created中获取还没渲染的元素的高度 offsetHeight
+根据生命周期函数的执行时机，一般不推荐，但是可以通过this.$nextTick()回调
+8.1.钩子函数：在某个特定时机执
+8.2.回调函数：是把一个函数当成参数，传递到另外一个函数执行</code></pre>
+<p><img src="/images/image-20200314103225070.png" alt="image-20200314103225070"></p>
+<p><img src="/images/image-20200314103307286.png" alt="image-20200314103307286"></p>
 <h3 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h3><pre class=" language-html"><code class="language-html"><span class="token doctype">&lt;!DOCTYPE html></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
@@ -1582,7 +1589,7 @@ v-if: 通过恢复或者删除元素的方式，控制元素的显示或者隐�
 在子组件中 通过 props属性接收。可以设置为数组或者对象，推荐使用对象的方式，因为可以过滤数据的类型。</code></pre><h5 id="子组件控制父组件行为及传递参数"><a href="#子组件控制父组件行为及传递参数" class="headerlink" title="子组件控制父组件行为及传递参数"></a>子组件控制父组件行为及传递参数</h5><pre><code>子组件触发：因为是dom,bom元素才能触发事件 而子组件上的元素又在  template 上，template上的元素 又可以通过v-on 的方式绑定了事件触发函数   事件触发函数可以调用当前子组件的data  同时可以通过this.$emit(&#39;父组件的Vue模板中子组件的实现元素上的v-on的事件名&#39;,需要传递的参数) 触发父组件的相应的绑定事件，并且可以传递参数，同步参数到父组件的事件触发函数中，从而在父组件中的handle(val){}中处理子组件传递过来的参数，同步更新或修改到父组件的data中。</code></pre><h5 id="兄弟组件之间的传值"><a href="#兄弟组件之间的传值" class="headerlink" title="兄弟组件之间的传值"></a>兄弟组件之间的传值</h5><pre><code>创建数据中心： var eventHub = new Vue();
 数据中心负责监听、销毁、触发
 创建两个全局组件，设置为兄弟关系
-
+全局挂载：main.js上 原型挂载 Vue.prototype.bus = new Vue()
 为这两个兄弟组件的template上的元素绑定触发事件
 在绑定的事件函数中 调用数据处理中心的触发函数  enventHub.$emit(&#39;需要触发的已被数据处理中心监听的事件名称&#39;,传递的参数)
 同时在生命周期钩子函数mounted()中，指定当前组件需要被数据中心监听的事件名称和处理函数
@@ -3368,7 +3375,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             <span id="year">年份</span>
-            <a href="https://coderofrat.github.io" target="_blank">郭文浩 Rat Guo</a>
+            <a href="https://coderofrat.github.io" target="_blank">郭文浩(Rat Guo)</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
