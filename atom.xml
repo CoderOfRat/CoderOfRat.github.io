@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://coderofrat.github.io/"/>
-  <updated>2020-02-12T01:07:39.000Z</updated>
+  <updated>2020-03-18T12:11:14.000Z</updated>
   <id>https://coderofrat.github.io/</id>
   
   <author>
@@ -15,6 +15,79 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>手写ES6 Promise源码</title>
+    <link href="https://coderofrat.github.io/2020/03/18/shou-xie-es6-promise-yuan-ma/"/>
+    <id>https://coderofrat.github.io/2020/03/18/shou-xie-es6-promise-yuan-ma/</id>
+    <published>2020-03-18T12:11:14.000Z</published>
+    <updated>2020-03-18T12:11:14.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="https://coderofrat.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="Promise" scheme="https://coderofrat.github.io/tags/Promise/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>微信小程序开发</title>
+    <link href="https://coderofrat.github.io/2020/03/17/wei-xin-xiao-cheng-xu-kai-fa/"/>
+    <id>https://coderofrat.github.io/2020/03/17/wei-xin-xiao-cheng-xu-kai-fa/</id>
+    <published>2020-03-17T06:17:44.000Z</published>
+    <updated>2020-03-17T06:17:44.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;微信小程序开发&quot;&gt;&lt;a href=&quot;#微信小程序开发&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="https://coderofrat.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="小程序" scheme="https://coderofrat.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vue 官方文档初理解</title>
+    <link href="https://coderofrat.github.io/2020/03/16/vue-guan-fang-wen-dang-chu-li-jie/"/>
+    <id>https://coderofrat.github.io/2020/03/16/vue-guan-fang-wen-dang-chu-li-jie/</id>
+    <published>2020-03-16T07:34:25.000Z</published>
+    <updated>2020-03-16T07:34:25.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;导读&quot;&gt;&lt;a href=&quot;#导读&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="https://coderofrat.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="vue" scheme="https://coderofrat.github.io/tags/vue/"/>
+    
+  </entry>
   
   <entry>
     <title>VUE全家桶</title>
@@ -499,95 +572,6 @@
       <category term="HTML5" scheme="https://coderofrat.github.io/tags/HTML5/"/>
     
       <category term="CSS3" scheme="https://coderofrat.github.io/tags/CSS3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript面向对象</title>
-    <link href="https://coderofrat.github.io/2019/11/28/js-mian-xiang-dui-xiang/"/>
-    <id>https://coderofrat.github.io/2019/11/28/js-mian-xiang-dui-xiang/</id>
-    <published>2019-11-28T11:53:44.019Z</published>
-    <updated>2019-11-28T11:53:44.019Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;JavaScript-面向对象-精选&quot;&gt;&lt;a href=&quot;#JavaScript-面向对象-精选&quot; class=&quot;headerlink&quot; title=&quot;JavaScript 面向对象 精选&quot;&gt;&lt;/a&gt;JavaScript 面向对象
-        
-      
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="https://coderofrat.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="JavaScript" scheme="https://coderofrat.github.io/tags/JavaScript/"/>
-    
-      <category term="面向对象" scheme="https://coderofrat.github.io/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JQuery使用基础</title>
-    <link href="https://coderofrat.github.io/2018/12/18/jquery-shi-yong-ji-chu/"/>
-    <id>https://coderofrat.github.io/2018/12/18/jquery-shi-yong-ji-chu/</id>
-    <published>2018-12-18T01:23:30.000Z</published>
-    <updated>2018-12-18T01:23:30.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;JQuery封装了JavaScript常用的功能函数&lt;/p&gt;
-&lt;p&gt;轻量级，核心文件只有十几KB，不会影响页面的加载速度&lt;/p&gt;
-&lt;p&gt;跨浏览器兼容，基本兼容了现在主流的浏览器&lt;/p&gt;
-&lt;p&gt;链式编程&lt;/p&gt;
-&lt;p&gt;jQuery获取的 —–
-        
-      
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="https://coderofrat.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="jQuery" scheme="https://coderofrat.github.io/tags/jQuery/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript 基础初识</title>
-    <link href="https://coderofrat.github.io/2018/12/07/javascript-ji-chu-chu-shi/"/>
-    <id>https://coderofrat.github.io/2018/12/07/javascript-ji-chu-chu-shi/</id>
-    <published>2018-12-07T00:37:20.000Z</published>
-    <updated>2018-12-07T00:37:20.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;前序&quot;&gt;&lt;a href=&quot;#前序&quot; class=&quot;headerlink&quot; title=&quot;前序&quot;&gt;&lt;/a&gt;前序&lt;/h1&gt;&lt;h2 id=&quot;1-程序运行之内存条&quot;&gt;&lt;a href=&quot;#1-程序运行之内存条&quot; class=&quot;headerlink&quot; title=&quot;1.
-        
-      
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="https://coderofrat.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="JavaScript" scheme="https://coderofrat.github.io/tags/JavaScript/"/>
-    
-      <category term="JavaScript基础" scheme="https://coderofrat.github.io/tags/JavaScript%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
