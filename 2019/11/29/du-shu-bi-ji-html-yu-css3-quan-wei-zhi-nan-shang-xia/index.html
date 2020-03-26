@@ -609,6 +609,32 @@ HTML5：基于2014年10月28日，W3C的HTML工作组正式发布的HTML5的正�
     </div>
 
     
+        <link rel="stylesheet" href="https://cdn.bootcss.com/gitalk/1.6.2/gitalk.min.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="https://cdn.bootcss.com/gitalk/1.6.2/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: 'coderofrat.github.io',
+        owner: 'CoderOfRat',
+        admin: "CoderOfRat",
+        id: '2019-11-29T08-42-42',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+    
 
     
 
@@ -625,7 +651,7 @@ HTML5：基于2014年10月28日，W3C的HTML工作组正式发布的HTML5的正�
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fas fa-bookmark"></i>&nbsp;点击查看上一篇</div>
             <div class="card">
                 <a href="/2019/12/01/web-api/">
                     <div class="card-image">
@@ -679,7 +705,7 @@ DOM
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+                <i class="fas fa-bookmark"></i>&nbsp;点击查看下一篇
             </div>
             <div class="card">
                 <a href="/2019/11/28/js-mian-xiang-dui-xiang/">

@@ -926,8 +926,7 @@ article .article-tags .chip {
 }
 
 .prev-next .right-badge {
-    border-radius: 0 8px 0 8px;
-    right: 10px;
+    border-radius: 8px 0 8px 0;
 }
 
 .paging {

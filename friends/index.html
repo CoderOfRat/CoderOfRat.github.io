@@ -525,14 +525,14 @@
                             <div class="card frind-card1">
                                 <div class="frind-ship">
                                     <div class="title">
-                                        <img src="https://blog.skx520.com/images/me/avatar.jpg" alt="img">
+                                        <img src="https://study.skx520.com/images/avatar.jpg" alt="img">
                                         <div>
                                             <h1 class="friend-name">prayer</h1>
                                             <p style="position: relative;top: -35px;">基友飞飞，文艺青年，既许一人以偏爱，愿尽余生之慷慨</p>
                                         </div>
                                     </div>
                                     <div class="friend-button">
-                                        <a href="https://blog.skx520.com/" target="_blank"
+                                        <a href="https://study.skx520.com/" target="_blank"
                                             class="button button-glow button-rounded button-caution">
                                             前去一撩
                                         </a>
@@ -567,13 +567,35 @@
                 </article>
             </div>
         </div>
-        <div class="card">
-            <div class="card-content">
-                
-            </div>
-        </div>
+        
         <div class="card">
 
+            
+            <link rel="stylesheet" href="https://cdn.bootcss.com/gitalk/1.6.2/gitalk.min.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="https://cdn.bootcss.com/gitalk/1.6.2/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: 'coderofrat.github.io',
+        owner: 'CoderOfRat',
+        admin: "CoderOfRat",
+        id: '2019-11-27T21-28-55',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
             
 
             
