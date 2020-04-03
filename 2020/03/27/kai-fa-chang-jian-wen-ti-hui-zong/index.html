@@ -4,12 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="JavaScript面向对象, 代码,coder,code,it,communication,交流,web,vue,echart,Blog,博客">
-    <meta name="description" content="JavaScript 面向对象 精选模拟京东倒计时
-function countTime(time){
-    var nowTime = +new Date();
-    var inputTime = +new Date(time);
-">
+    <meta name="keywords" content="开发常见问题汇总, 代码,coder,code,it,communication,交流,web,vue,echart,Blog,博客">
+    <meta name="description" content="模块化、组件化、ES6代码简化（ES6数组处理、对象处理、promise、箭头函数、class、import、export default、复杂数据类型解构及初始化默认值），setTimeout(()=&amp;gt;{},0)用法的优点、||短路">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -18,7 +14,7 @@ function countTime(time){
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="baidu-site-verification" content="xYZSrsYxIK" />
-    <title>JavaScript面向对象 | Coder Rat</title>
+    <title>开发常见问题汇总 | Coder Rat</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/font-awesome/5.12.1/css/all.min.css">
@@ -287,13 +283,13 @@ function countTime(time){
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/images/JavascriptOOP.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        JavaScript面向对象
+                        开发常见问题汇总
                     </div>
                 </div>
             </div>
@@ -409,29 +405,12 @@ function countTime(time){
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/JavaScript/">
-                                <span class="chip bg-color">JavaScript</span>
-                            </a>
-                        
-                            <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">
-                                <span class="chip bg-color">面向对象</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                前端
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -440,7 +419,7 @@ function countTime(time){
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-11-28
+                    2020-03-27
                 </div>
                 
 
@@ -449,14 +428,14 @@ function countTime(time){
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    678
+                    144
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    1 分
                 </div>
                 
 				
@@ -472,99 +451,7 @@ function countTime(time){
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="JavaScript-面向对象-精选"><a href="#JavaScript-面向对象-精选" class="headerlink" title="JavaScript 面向对象 精选"></a>JavaScript 面向对象 精选</h3><p>模拟京东倒计时</p>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">countTime</span><span class="token punctuation">(</span>time<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">var</span> nowTime <span class="token operator">=</span> <span class="token operator">+</span><span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">var</span> inputTime <span class="token operator">=</span> <span class="token operator">+</span><span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span>time<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">var</span> countSum <span class="token operator">=</span> <span class="token punctuation">(</span>inputTime <span class="token operator">-</span> nowTime<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">1000</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//求出秒数</span>
-    <span class="token keyword">var</span> d <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>countSum <span class="token operator">/</span> <span class="token number">60</span> <span class="token operator">/</span> <span class="token number">60</span> <span class="token operator">/</span> <span class="token number">24</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//求出剩余天数</span>
-    d <span class="token operator">=</span> d <span class="token operator">&lt;</span> <span class="token number">10</span> <span class="token operator">?</span> <span class="token string">"0"</span> <span class="token operator">+</span> d <span class="token punctuation">:</span> d<span class="token punctuation">;</span>
-    <span class="token keyword">var</span> h <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>countSum <span class="token operator">/</span> <span class="token number">60</span> <span class="token operator">/</span> <span class="token number">60</span> <span class="token operator">%</span> <span class="token number">24</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//求出剩余小时数</span>
-    h <span class="token operator">=</span> h <span class="token operator">&lt;</span> <span class="token number">10</span> <span class="token operator">?</span> <span class="token string">"0"</span> <span class="token operator">+</span> h <span class="token punctuation">:</span> h<span class="token punctuation">;</span>
-    <span class="token keyword">var</span> m <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>countSum <span class="token operator">/</span> <span class="token number">60</span> <span class="token operator">%</span> <span class="token number">60</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//求出剩余分钟数</span>
-    m <span class="token operator">=</span> m <span class="token operator">&lt;</span> <span class="token number">10</span> <span class="token operator">?</span> <span class="token string">"0"</span> <span class="token operator">+</span> m <span class="token punctuation">:</span> m<span class="token punctuation">;</span>
-    <span class="token keyword">var</span> s <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>countSum <span class="token operator">%</span> <span class="token number">60</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//求出剩余秒数</span>
-    s <span class="token operator">=</span> s <span class="token operator">&lt;</span> <span class="token number">10</span> <span class="token operator">?</span> <span class="token string">"0"</span> <span class="token operator">+</span> s <span class="token punctuation">:</span> s<span class="token punctuation">;</span>
-    document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">"剩余时间为："</span> <span class="token operator">+</span> d <span class="token operator">+</span> <span class="token string">"天 "</span> <span class="token operator">+</span> h <span class="token operator">+</span> <span class="token string">"小时 "</span> <span class="token operator">+</span> m <span class="token operator">+</span> <span class="token string">"分钟 "</span> <span class="token operator">+</span> s <span class="token operator">+</span> <span class="token string">"秒"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">"现在时间为："</span> <span class="token operator">+</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-<span class="token punctuation">}</span>
-<span class="token function">countTime</span><span class="token punctuation">(</span><span class="token string">"2019-11-29 19:00:00"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<p>添加 删除数组元素的方法</p>
-<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">/*
-1.尾部追加数组元素  push
-2.头部追加数组元素  unshift
-*/</span>
-<span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-vaar arr1 <span class="token operator">=</span> arr<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token string">"Coder Rat"</span><span class="token punctuation">,</span><span class="token string">"是个帅哥"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">;</span>
-document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>arr1<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<p>数组排序 翻转数组&amp;升序、降序</p>
-<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">//reverse() 翻转数组</span>
-<span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"pink"</span><span class="token punctuation">,</span> <span class="token string">"red"</span><span class="token punctuation">,</span> <span class="token string">"blue"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-arr<span class="token punctuation">.</span><span class="token function">reverse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token comment" spellcheck="true">//sort() 升降序</span>
-<span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token number">99</span><span class="token punctuation">,</span><span class="token number">77</span><span class="token punctuation">,</span><span class="token number">56</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-arr<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">return</span> a <span class="token operator">-</span> b<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//升序</span>
-    <span class="token keyword">return</span> b <span class="token operator">-</span> a<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//降序</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token comment" spellcheck="true">//面试的话使用冒泡排序</span></code></pre>
-<p>数组索引读取  <strong>有面试点</strong></p>
-<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">/*
-数组去重
-面试重点
-目标：把旧数组里面不重复的元素取出来放到新数组中，重复的元素只保留一个，放到新数组中去重；
-核心算法：我们遍历旧数组元素，在新数组查看是否存在此元素，存在舍弃，不存在就在新数组追加此元素
-*/</span>
-<span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token string">"Coder Rat"</span><span class="token punctuation">,</span><span class="token string">"Coder"</span><span class="token punctuation">,</span><span class="token string">"Rat"</span><span class="token punctuation">,</span><span class="token string">"coder"</span><span class="token punctuation">,</span><span class="token string">"rat"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token keyword">var</span> arrNew <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i <span class="token operator">&lt;</span> arr<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>arrNew<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        arrNew<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>arrNew<span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
-<p>基本包装类型 和 复杂数据类型的区别</p>
-<p>基本包装类型 也属于对象，只不过，后来销毁了他的对象内存指向，（即有生命周期）</p>
-<p>调用方法的时候 相当于对象 不调用方法和属性，仅是简单的赋值操作，则不会执行包装成对象再销毁的过程。</p>
-<p>var  str = “angy”; //简单过程</p>
-<p>var l = str.length;=&gt;</p>
-<p>字符串的不可变性：</p>
-<p>当重新赋值字符串，会开辟新的内存空间 原来的地址保留</p>
-<p>因为<strong>数组</strong>的重新赋值 会把之前的干掉 不会重新开辟内存地址</p>
-<pre class=" language-javascript"><code class="language-javascript"></code></pre>
-<p>自调用函数</p>
-<pre class=" language-js"><code class="language-js"></code></pre>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">var</span> str <span class="token operator">=</span> <span class="token string">"aoccdrrojkokdopp"</span><span class="token punctuation">;</span>
-<span class="token keyword">var</span> index <span class="token operator">=</span> str<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token string">'o'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">var</span> num <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token keyword">while</span><span class="token punctuation">(</span>index <span class="token operator">!==</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    num<span class="token operator">++</span><span class="token punctuation">;</span>
-    index <span class="token operator">=</span> str<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token string">"0"</span><span class="token punctuation">,</span> index <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
-<pre class=" language-js"><code class="language-js"> <span class="token comment" spellcheck="true">//将get-element-by-id 字符串 转化为驼峰命名法</span>
-    <span class="token keyword">var</span> foo <span class="token operator">=</span> <span class="token string">"get-element-by-id"</span><span class="token punctuation">;</span>
-    <span class="token keyword">var</span> b <span class="token operator">=</span> foo<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">"-"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">var</span> after <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i <span class="token operator">&lt;</span> b<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-            after <span class="token operator">+</span><span class="token operator">=</span> b<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-            <span class="token keyword">var</span> c <span class="token operator">=</span> b<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toUpperCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            after <span class="token operator">+</span><span class="token operator">=</span> c<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>after<span class="token punctuation">)</span><span class="token punctuation">;</span>
-未完成</code></pre>
+                <p>模块化、组件化、ES6代码简化（ES6数组处理、对象处理、promise、箭头函数、class、import、export default、复杂数据类型解构及初始化默认值），setTimeout(()=&gt;{},0)用法的优点、||短路运算符的使用来简化代码、mixins、接口文档规范及接口数据处理、iphone不支持webp图片格式<code>.replace(/.webp\g/,/.jpg/)</code>,数据绑定原理，插槽原理，计算属性的应用，小程序解决滚动，vue的修饰符，ajax原生，jsonp解决跨域问题，三步一封装！抽离优化，自定义组件</p>
 
             </div>
             <hr/>
@@ -580,7 +467,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://coderofrat.github.io" rel="external nofollow noreferrer">author</a>
+                    <a href="https://coderofrat.github.io" rel="external nofollow noreferrer">Mr Guo</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -590,7 +477,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://coderofrat.github.io/2019/11/28/js-mian-xiang-dui-xiang/">https://coderofrat.github.io/2019/11/28/js-mian-xiang-dui-xiang/</a>
+                    <a href="https://coderofrat.github.io/2020/03/27/kai-fa-chang-jian-wen-ti-hui-zong/">https://coderofrat.github.io/2020/03/27/kai-fa-chang-jian-wen-ti-hui-zong/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -603,7 +490,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="https://coderofrat.github.io" target="_blank">author</a>
+                    <a href="https://coderofrat.github.io" target="_blank">Mr Guo</a>
                     !
                 </span>
             </div>
@@ -627,15 +514,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/JavaScript/">
-                                    <span class="chip bg-color">JavaScript</span>
-                                </a>
-                            
-                                <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">
-                                    <span class="chip bg-color">面向对象</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -679,7 +558,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
         repo: 'CoderOfRat.github.io',
         owner: 'CoderOfRat',
         admin: "CoderOfRat",
-        id: '2019-11-28T19-53-44',
+        id: '2020-03-27T15-40-00',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -700,52 +579,39 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-bookmark"></i>&nbsp;点击查看上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/11/29/du-shu-bi-ji-html-yu-css3-quan-wei-zhi-nan-shang-xia/">
+                <a href="/2020/03/27/kai-fa-chang-jian-wen-ti-hui-zong/">
                     <div class="card-image">
                         
-                        <img src="/images/HTML5与CSS3权威指南.jpg" class="responsive-img" alt="HTML5与CSS3权威指南">
                         
-                        <span class="card-title">HTML5与CSS3权威指南</span>
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="开发常见问题汇总">
+                        
+                        <span class="card-title">开发常见问题汇总</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            增加了支持web应用开发者的许多新特性，以及更符合开发者使用习惯的新元素，并重点关注定义<srtong>清晰的、一致的<strong/>准则，以确保web应用和内容在不同用户代理（浏览器）中的互操作性。
+                            模块化、组件化、ES6代码简化（ES6数组处理、对象处理、promise、箭头函数、class、import、export default、复杂数据类型解构及初始化默认值），setTimeout(()=&gt;{},0)用法的优点、||短路
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-11-29
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-27
+                            </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    读书笔记
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Mr Guo
                             
                         </span>
                     </div>
                 </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/HTML5/">
-                        <span class="chip bg-color">HTML5</span>
-                    </a>
-                    
-                    <a href="/tags/CSS3/">
-                        <span class="chip bg-color">CSS3</span>
-                    </a>
-                    
-                </div>
+
                 
             </div>
         </div>
@@ -756,28 +622,24 @@ console<span class="token punctuation">.</span><span class="token function">log<
                 <i class="fas fa-bookmark"></i>&nbsp;点击查看下一篇
             </div>
             <div class="card">
-                <a href="/2018/12/18/jquery-shi-yong-ji-chu/">
+                <a href="/2020/03/18/shou-xie-es6-promise-yuan-ma/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="JQuery使用基础">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="手写ES6 Promise源码">
                         
-                        <span class="card-title">JQuery使用基础</span>
+                        <span class="card-title">手写ES6 Promise源码</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            JQuery封装了JavaScript常用的功能函数
-轻量级，核心文件只有十几KB，不会影响页面的加载速度
-跨浏览器兼容，基本兼容了现在主流的浏览器
-链式编程
-jQuery获取的 —– document.querySelectorAll(“
+                            
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2018-12-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-18
                             </span>
                         <span class="publish-author">
                             
@@ -794,8 +656,8 @@ jQuery获取的 —– document.querySelectorAll(“
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/jQuery/">
-                        <span class="chip bg-color">jQuery</span>
+                    <a href="/tags/Promise/">
+                        <span class="chip bg-color">Promise</span>
                     </a>
                     
                 </div>

@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>开发常见问题汇总</title>
+      <link href="/2020/03/27/kai-fa-chang-jian-wen-ti-hui-zong/"/>
+      <url>/2020/03/27/kai-fa-chang-jian-wen-ti-hui-zong/</url>
+      
+        <content type="html"><![CDATA[<p>模块化、组件化、ES6代码简化（ES6数组处理、对象处理、promise、箭头函数、class、import、export default、复杂数据类型解构及初始化默认值），setTimeout(()=&gt;{},0)用法的优点、||短路运算符的使用来简化代码、mixins、接口文档规范及接口数据处理、iphone不支持webp图片格式<code>.replace(/.webp\g/,/.jpg/)</code>,数据绑定原理，插槽原理，计算属性的应用，小程序解决滚动，vue的修饰符，ajax原生，jsonp解决跨域问题，三步一封装！抽离优化，自定义组件</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>手写ES6 Promise源码</title>
       <link href="/2020/03/18/shou-xie-es6-promise-yuan-ma/"/>
       <url>/2020/03/18/shou-xie-es6-promise-yuan-ma/</url>

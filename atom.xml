@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://coderofrat.github.io/"/>
-  <updated>2020-03-18T12:11:14.000Z</updated>
+  <updated>2020-03-27T07:40:00.000Z</updated>
   <id>https://coderofrat.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>开发常见问题汇总</title>
+    <link href="https://coderofrat.github.io/2020/03/27/kai-fa-chang-jian-wen-ti-hui-zong/"/>
+    <id>https://coderofrat.github.io/2020/03/27/kai-fa-chang-jian-wen-ti-hui-zong/</id>
+    <published>2020-03-27T07:40:00.000Z</published>
+    <updated>2020-03-27T07:40:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;模块化、组件化、ES6代码简化（ES6数组处理、对象处理、promise、箭头函数、class、import、export
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>手写ES6 Promise源码</title>
@@ -542,36 +565,6 @@
       <category term="Web API" scheme="https://coderofrat.github.io/tags/Web-API/"/>
     
       <category term="DOM&amp;BOM" scheme="https://coderofrat.github.io/tags/DOM-BOM/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HTML5与CSS3权威指南</title>
-    <link href="https://coderofrat.github.io/2019/11/29/du-shu-bi-ji-html-yu-css3-quan-wei-zhi-nan-shang-xia/"/>
-    <id>https://coderofrat.github.io/2019/11/29/du-shu-bi-ji-html-yu-css3-quan-wei-zhi-nan-shang-xia/</id>
-    <published>2019-11-29T00:42:42.536Z</published>
-    <updated>2019-11-29T00:42:42.536Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;img src=&quot;/images/HTML5%E4%B8%8ECSS3.jpg&quot; alt=&quot;HTML5与CSS3权威指南.jpg&quot;&gt;&lt;/p&gt;
-&lt;h1 id=&quot;前言-此版本为第三版&quot;&gt;&lt;a href=&quot;#前言-此版本为第三版&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="读书笔记" scheme="https://coderofrat.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="HTML5" scheme="https://coderofrat.github.io/tags/HTML5/"/>
-    
-      <category term="CSS3" scheme="https://coderofrat.github.io/tags/CSS3/"/>
     
   </entry>
   

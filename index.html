@@ -416,37 +416,16 @@
         coverSlider.carousel({
             duration: Number('120'),
             fullWidth: true,
-            indicators: 'true' === 'true'
+            indicators: 'false' === 'true'
         });
 
         let carouselIntervalId;
         
-        // Loop to call the next cover article picture.
-        let autoCarousel = function() {
-            carouselIntervalId = setInterval(function () {
-                coverSlider.carousel('next');
-            }, 5000);
-        };
-        autoCarousel();
-        
 
         let restartPlay = function () {
             
-            clearInterval(carouselIntervalId);
-            autoCarousel();
-            
         };
 
-        
-        // prev and next cover post.
-        $('#prev-cover').click(function () {
-            coverSlider.carousel('prev');
-            restartPlay();
-        });
-        $('#next-cover').click(function () {
-            coverSlider.carousel('next');
-            restartPlay();
-        });
         
     });
 </script>
@@ -464,7 +443,7 @@
                         <div class="dream">
     
     <div class="title center-align">
-        <i class="far fa-lightbulb"></i>&nbsp;&nbsp;To Do More And Talk Less
+        <i class="far fa-lightbulb"></i>&nbsp;&nbsp;少说废话多做实事
     </div>
     
     <div class="row">
@@ -619,6 +598,41 @@ $(function () {
     <!-- 所有文章卡片 -->
     <article id="articles" class="container articles">
         <div class="row article-row">
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2020/03/27/kai-fa-chang-jian-wen-ti-hui-zong/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="开发常见问题汇总">
+                            
+                            <span class="card-title">开发常见问题汇总</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                模块化、组件化、ES6代码简化（ES6数组处理、对象处理、promise、箭头函数、class、import、export default、复杂数据类型解构及初始化默认值），setTimeout(()=&gt;{},0)用法的优点、||短路
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-27
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-user fa-fw"></i>
+                                Mr Guo
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
@@ -861,60 +875,6 @@ $(function () {
                 </div>
             </div>
             
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2020/02/06/art-template-mo-ban-yin-qing/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="art-template模板引擎">
-                            
-                            <span class="card-title">art-template模板引擎</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                ART-Template 模板引擎为了解决哪些问题？
-渲染模板
-&lt;script src="./js/template-web.js">&lt;/script>
-&lt;script type="text/html" id="tpl">
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-06
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E5%BA%93/" class="post-category">
-                                    库
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/ART-Template-%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/">
-                            <span class="chip bg-color">ART-Template 模板引擎</span>
-                        </a>
-                        
-                        <a href="/tags/%E9%A1%B5%E9%9D%A2%E6%B8%B2%E6%9F%93%E5%BA%93/">
-                            <span class="chip bg-color">页面渲染库</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
         </div>
     </article>
 
@@ -980,8 +940,8 @@ $(function () {
                     var days = hours * 24;
                     var years = days * 365;
                     var today = new Date();
-                    var startYear = "2018";
-                    var startMonth = "2";
+                    var startYear = "2017";
+                    var startMonth = "6";
                     var startDate = "12";
                     var startHour = "5";
                     var startMinute = "3";
