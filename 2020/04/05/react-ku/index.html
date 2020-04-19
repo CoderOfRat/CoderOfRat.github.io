@@ -4,8 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="开发常见问题汇总, 代码,coder,code,it,communication,交流,web,vue,echart,Blog,博客">
-    <meta name="description" content="模块化、组件化、ES6代码简化（ES6数组处理、对象处理、promise、箭头函数、class、import、export default、复杂数据类型解构及初始化默认值），setTimeout(()=&amp;gt;{},0)用法的优点、||短路">
+    <meta name="keywords" content="React库, 代码,coder,code,it,communication,交流,web,vue,echart,Blog,博客">
+    <meta name="description" content="JSX(Javascript XML)
+JSX是React的核心内容
+JSX表示在JS代码中写HTML结构，是React声明式的体现。
+使用JSX配合嵌入的JS表达式、条件渲染、列表渲染，可以描述任意UI结构。
+推荐使用className的">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +18,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="baidu-site-verification" content="xYZSrsYxIK" />
-    <title>开发常见问题汇总 | Coder Rat</title>
+    <title>React库 | Coder Rat</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/font-awesome/5.12.1/css/all.min.css">
@@ -283,13 +287,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        开发常见问题汇总
+                        React库
                     </div>
                 </div>
             </div>
@@ -419,7 +423,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-03-27
+                    2020-04-05
                 </div>
                 
 
@@ -428,14 +432,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    144
+                    596
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 				
@@ -451,7 +455,68 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>模块化、组件化、ES6代码简化（ES6数组处理、对象处理、promise、箭头函数、class、import、export default、复杂数据类型解构及初始化默认值），setTimeout(()=&gt;{},0)用法的优点、||短路运算符的使用来简化代码、mixins、接口文档规范及接口数据处理、iphone不支持webp图片格式<code>.replace(/.webp\g/,/.jpg/)</code>,数据绑定原理，插槽原理，计算属性的应用，小程序解决滚动，vue的修饰符，ajax原生，jsonp解决跨域问题，三步一封装！抽离优化，自定义组件</p>
+                <h3 id="JSX-Javascript-XML"><a href="#JSX-Javascript-XML" class="headerlink" title="JSX(Javascript XML)"></a>JSX(Javascript XML)</h3><ol>
+<li>JSX是React的核心内容</li>
+<li>JSX表示在JS代码中写HTML结构，是React声明式的体现。</li>
+<li>使用JSX配合嵌入的JS表达式、条件渲染、列表渲染，可以描述任意UI结构。</li>
+<li>推荐使用className的方式给JSX添加样式。</li>
+<li>React完全利用JS语言自身的能力来编写UI，而不是造轮子增强HTML的功能。</li>
+</ol>
+<h3 id="React组件"><a href="#React组件" class="headerlink" title="React组件"></a>React组件</h3><ol>
+<li>函数型组件</li>
+<li>使用类创建组件</li>
+</ol>
+<p>组件是React的一等公民，使用React就是在用组件</p>
+<p>组件表示页面中的部分功能</p>
+<p>组合多个组件实现完整的页面功能</p>
+<p>特点：可复用、独立、可组合</p>
+<p>优势： 方便维护、易于扩展、减少DOM操作</p>
+<h4 id="函数组件"><a href="#函数组件" class="headerlink" title="函数组件"></a>函数组件</h4><ul>
+<li>使用JS的函数（或箭头函数）创建的组件</li>
+<li>约定1： 函数的命名必须以大写开头(以此区分普通React元素和组件)</li>
+<li>约定2： 函数必须有返回值 或 返回值为null</li>
+</ul>
+<p>渲染组件</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">Hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> Hello <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token operator">...</span>
+    <span class="token punctuation">}</span>
+ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token operator">&lt;</span>Hello <span class="token operator">/</span><span class="token operator">></span><span class="token punctuation">,</span>document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'root'</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
+<h4 id="类组件：使用ES6的class创建的组件"><a href="#类组件：使用ES6的class创建的组件" class="headerlink" title="类组件：使用ES6的class创建的组件"></a>类组件：使用ES6的class创建的组件</h4><ul>
+<li>约定1：类名称必须以大写字母开头</li>
+<li>约定2： 必须继承自React.Componet父类，从而可以使用父类中提供的属性和方法。</li>
+<li>约定3： 类组件需提供render()方法</li>
+<li>约定4： render方法必须要有返回值</li>
+<li>构造函数里面。必须使用super() 来继承父类的属性和方法，为了解决报警，初始化了状态 state</li>
+</ul>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+    constructor <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token comment" spellcheck="true">// 构造函数里面通常创建组的私有状态 -> 数据 （vue的data里面声明的数据）</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token punctuation">(</span>
+            <span class="token operator">&lt;</span>div<span class="token operator">></span>
+                <span class="token operator">&lt;</span>p<span class="token operator">></span>类组件<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+        <span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<h4 id="有状态组件和无状态组件"><a href="#有状态组件和无状态组件" class="headerlink" title="有状态组件和无状态组件"></a>有状态组件和无状态组件</h4><ul>
+<li>函数组件又叫做无状态组件，类组件又叫做有状态组件</li>
+<li>状态（state）即数据</li>
+<li>函数组件没有自己的状态，只负责数据展示（静}</li>
+<li>类组件有自己的的状态，负责更新UI，让页面“动”起来</li>
+</ul>
+<p>比如计数器案例中国，点击按钮让数值加1。0和1就是不同的状态</p>
+<p>组件中的state和setState</p>
+<p>状态（state）即数据，式组件内部的私有数据，只能在组件内使用</p>
+<p>state的值是对象，表示一个组件可以有多个状态</p>
+<h4 id="事件绑定的-this-指向"><a href="#事件绑定的-this-指向" class="headerlink" title="事件绑定的 this 指向"></a>事件绑定的 this 指向</h4><p>render内部指向component</p>
 
             </div>
             <hr/>
@@ -477,7 +542,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://coderofrat.github.io/2020/03/27/kai-fa-chang-jian-wen-ti-hui-zong/">https://coderofrat.github.io/2020/03/27/kai-fa-chang-jian-wen-ti-hui-zong/</a>
+                    <a href="https://coderofrat.github.io/2020/04/05/react-ku/">https://coderofrat.github.io/2020/04/05/react-ku/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -558,7 +623,7 @@
         repo: 'CoderOfRat.github.io',
         owner: 'CoderOfRat',
         admin: "CoderOfRat",
-        id: '2020-03-27T15-40-00',
+        id: '2020-04-05T09-11-09',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -583,28 +648,25 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-bookmark"></i>&nbsp;点击查看上一篇</div>
             <div class="card">
-                <a href="/2020/04/05/react-ku/">
+                <a href="/2020/04/19/qian-duan-gong-cheng-hua/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="React库">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="前端工程化">
                         
-                        <span class="card-title">React库</span>
+                        <span class="card-title">前端工程化</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            JSX(Javascript XML)
-JSX是React的核心内容
-JSX表示在JS代码中写HTML结构，是React声明式的体现。
-使用JSX配合嵌入的JS表达式、条件渲染、列表渲染，可以描述任意UI结构。
-推荐使用className的
+                            webpack是一个流行的前端项目构建工具（打包工具），可以解决当前web开发过程中所面临的困境。
+webpack提供了有好的模块化支持，以及代码的压缩混淆、处理js兼容问题、性能优化等强大的功能，从而让程序员把工作的重心放到具体的功能实现
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-05
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-19
                         </span>
                         <span class="publish-author">
                             
@@ -624,44 +686,32 @@ JSX表示在JS代码中写HTML结构，是React声明式的体现。
                 <i class="fas fa-bookmark"></i>&nbsp;点击查看下一篇
             </div>
             <div class="card">
-                <a href="/2020/03/18/shou-xie-es6-promise-yuan-ma/">
+                <a href="/2020/03/27/kai-fa-chang-jian-wen-ti-hui-zong/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="手写ES6 Promise源码">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="开发常见问题汇总">
                         
-                        <span class="card-title">手写ES6 Promise源码</span>
+                        <span class="card-title">开发常见问题汇总</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            模块化、组件化、ES6代码简化（ES6数组处理、对象处理、promise、箭头函数、class、import、export default、复杂数据类型解构及初始化默认值），setTimeout(()=&gt;{},0)用法的优点、||短路
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-27
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    前端
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Mr Guo
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Promise/">
-                        <span class="chip bg-color">Promise</span>
-                    </a>
-                    
                 </div>
                 
             </div>
