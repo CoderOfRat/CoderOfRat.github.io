@@ -317,12 +317,11 @@
     xhr.open('get','https://api.no0a.cn/api/bing/0');
     xhr.send()
     xhr.onload = function() {
-      const { bing } = JSON.parse(xhr.responseText);
-      picurl = bing.url
-    }
-    
-    // 每天切换 banner 图.  Switch banner image every day.
-    $('.bg-cover').css('background-image', 'url(' + picurl + ')');
+      const res = JSON.parse(xhr.responseText);
+      picurl = res.bing['url']
+      // 每天切换 banner 图.  Switch banner image every day.
+      $('.bg-cover').css('background-image', 'url('+picurl+')');
+    }  
 </script>
 
 

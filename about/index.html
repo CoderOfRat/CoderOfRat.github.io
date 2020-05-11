@@ -324,12 +324,11 @@
     xhr.open('get','https://api.no0a.cn/api/bing/0');
     xhr.send()
     xhr.onload = function() {
-      const { bing } = JSON.parse(xhr.responseText);
-      picurl = bing.url
-    }
-    
-    // 每天切换 banner 图.  Switch banner image every day.
-    $('.bg-cover').css('background-image', 'url(' + picurl + ')');
+      const res = JSON.parse(xhr.responseText);
+      picurl = res.bing['url']
+      // 每天切换 banner 图.  Switch banner image every day.
+      $('.bg-cover').css('background-image', 'url('+picurl+')');
+    }  
 </script>
 
 
@@ -591,7 +590,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["JavaScript","vue","ajax","Cookie","面向对象","jQuery","JavaScript基础","数组基础用法","JavaScript逻辑运算","JavaScript流程控制"]
+                data: ["JavaScript","vue","Cookie","ajax","jQuery","面向对象","JavaScript基础","数组基础用法","JavaScript逻辑运算","JavaScript流程控制"]
             }
         ],
         yAxis: [
@@ -807,14 +806,14 @@
         <div class="tag-chips center-align">
             
             
-            <a href="/tags/ajax/">
-                <span class="chip center-align waves-effect waves-light chip-default">ajax</span>
+            <a href="/tags/Cookie/">
+                <span class="chip center-align waves-effect waves-light chip-default">Cookie</span>
             </a>
             
             
             
-            <a href="/tags/Cookie/">
-                <span class="chip center-align waves-effect waves-light chip-default">Cookie</span>
+            <a href="/tags/ajax/">
+                <span class="chip center-align waves-effect waves-light chip-default">ajax</span>
             </a>
             
             
@@ -825,14 +824,14 @@
             
             
             
-            <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">
-                <span class="chip center-align waves-effect waves-light chip-default">面向对象</span>
+            <a href="/tags/jQuery/">
+                <span class="chip center-align waves-effect waves-light chip-default">jQuery</span>
             </a>
             
             
             
-            <a href="/tags/jQuery/">
-                <span class="chip center-align waves-effect waves-light chip-default">jQuery</span>
+            <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">
+                <span class="chip center-align waves-effect waves-light chip-default">面向对象</span>
             </a>
             
             
@@ -941,12 +940,6 @@
             
             
             
-            <a href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
-                <span class="chip center-align waves-effect waves-light chip-default">正则表达式</span>
-            </a>
-            
-            
-            
             <a href="/tags/Promise/">
                 <span class="chip center-align waves-effect waves-light chip-default">Promise</span>
             </a>
@@ -961,6 +954,12 @@
             
             <a href="/tags/CSS3/">
                 <span class="chip center-align waves-effect waves-light chip-default">CSS3</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+                <span class="chip center-align waves-effect waves-light chip-default">正则表达式</span>
             </a>
             
             
