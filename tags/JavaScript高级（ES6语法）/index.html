@@ -316,11 +316,12 @@
     xhr.open('get','https://api.no0a.cn/api/0');
     xhr.send()
     xhr.onload = function() {
-      var url = JSON.stringify(xhr.responseText).bing[url];
+      let picurl = JSON.parse(xhr.responseText).bing.url;
+      console.log(picurl)
     }
     
     // 每天切换 banner 图.  Switch banner image every day.
-    $('.bg-cover').css('background-image', `url(${url})`);
+    $('.bg-cover').css('background-image', `url(${picurl})`);
 </script>
 
 
@@ -340,19 +341,19 @@
             <div class="tag-chips">
                 
                 
-                <a href="/tags/ajax/" title="ajax: 1">
+                <a href="/tags/Cookie/" title="Cookie: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="ajax" style="background-color: #F9EBEA;">ajax
+                            data-tagname="Cookie" style="background-color: #F9EBEA;">Cookie
                         <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/Cookie/" title="Cookie: 1">
+                <a href="/tags/ajax/" title="ajax: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="Cookie" style="background-color: #F5EEF8;">Cookie
+                            data-tagname="ajax" style="background-color: #F5EEF8;">ajax
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -430,19 +431,10 @@
                 </a>
                 
                 
-                <a href="/tags/JavaScript%E9%AB%98%E7%BA%A7%EF%BC%88ES6%E8%AF%AD%E6%B3%95%EF%BC%89/" title="JavaScript高级（ES6语法）: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-active "
-                            data-tagname="JavaScript高级（ES6语法）" style="background-color: #F8C471;">JavaScript高级（ES6语法）
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
                 <a href="/tags/NodeJS/" title="NodeJS: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="NodeJS" style="background-color: #F9E79F;">NodeJS
+                            data-tagname="NodeJS" style="background-color: #F8C471;">NodeJS
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -451,7 +443,16 @@
                 <a href="/tags/%E5%89%8D%E5%90%8E%E7%AB%AF%E4%BA%A4%E4%BA%92/" title="前后端交互: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="前后端交互" style="background-color: #82E0AA;">前后端交互
+                            data-tagname="前后端交互" style="background-color: #F9E79F;">前后端交互
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/JavaScript%E9%AB%98%E7%BA%A7%EF%BC%88ES6%E8%AF%AD%E6%B3%95%EF%BC%89/" title="JavaScript高级（ES6语法）: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-active "
+                            data-tagname="JavaScript高级（ES6语法）" style="background-color: #E8F8F5;">JavaScript高级（ES6语法）
                         <span class="tag-length">1</span>
                     </span>
                 </a>

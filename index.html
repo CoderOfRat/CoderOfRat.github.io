@@ -363,11 +363,12 @@
     xhr.open('get','https://api.no0a.cn/api/0');
     xhr.send()
     xhr.onload = function() {
-      var url = JSON.stringify(xhr.responseText).bing[url];
+      let picurl = JSON.parse(xhr.responseText).bing.url;
+      console.log(picurl)
     }
     
     // 每天切换 banner 图.  Switch banner image every day.
-    $('.bg-cover').css('background-image', `url(${url})`);
+    $('.bg-cover').css('background-image', `url(${picurl})`);
 </script>
 
 
