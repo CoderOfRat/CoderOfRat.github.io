@@ -312,8 +312,15 @@
 
 
 <script>
+    let xhr = new XMLHttpRequest();
+    xhr.open('get','https://api.no0a.cn/api/0');
+    xhr.send()
+    xhr.onload = function() {
+      var url = JSON.stringify(xhr.responseText).bing[url];
+    }
+    
     // 每天切换 banner 图.  Switch banner image every day.
-    $('.bg-cover').css('background-image', 'url(https://api.no0a.cn/api/bing/url)');
+    $('.bg-cover').css('background-image', `url(${url})`);
 </script>
 
 
@@ -352,20 +359,20 @@
                 </a>
                 
                 
-                <a href="/categories/Git/" title="Git: 1">
+                <a href="/categories/%E5%BA%93/" title="库: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #D5F5E3;">Git
-                        <span class="tag-length">1</span>
+                            style="background-color: #D5F5E3;">库
+                        <span class="tag-length">2</span>
                     </span>
                 </a>
                 
                 
-                <a href="/categories/%E5%BA%93/" title="库: 2">
+                <a href="/categories/Git/" title="Git: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #E8F8F5;">库
-                        <span class="tag-length">2</span>
+                            style="background-color: #E8F8F5;">Git
+                        <span class="tag-length">1</span>
                     </span>
                 </a>
                 
