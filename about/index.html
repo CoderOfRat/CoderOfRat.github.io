@@ -324,7 +324,7 @@
     xhr.open('get','https://api.no0a.cn/api/bing/0');
     xhr.send()
     xhr.onload = function() {
-      const { bing } = xhr.responseText;
+      const { bing } = JSON.parse(xhr.responseText);
       picurl = bing.url
     }
     
@@ -591,7 +591,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["JavaScript","vue","ajax","Cookie","jQuery","面向对象","JavaScript基础","数组基础用法","JavaScript逻辑运算","JavaScript流程控制"]
+                data: ["JavaScript","vue","ajax","Cookie","面向对象","jQuery","JavaScript基础","数组基础用法","JavaScript逻辑运算","JavaScript流程控制"]
             }
         ],
         yAxis: [
@@ -825,14 +825,14 @@
             
             
             
-            <a href="/tags/jQuery/">
-                <span class="chip center-align waves-effect waves-light chip-default">jQuery</span>
+            <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">
+                <span class="chip center-align waves-effect waves-light chip-default">面向对象</span>
             </a>
             
             
             
-            <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">
-                <span class="chip center-align waves-effect waves-light chip-default">面向对象</span>
+            <a href="/tags/jQuery/">
+                <span class="chip center-align waves-effect waves-light chip-default">jQuery</span>
             </a>
             
             
@@ -941,14 +941,14 @@
             
             
             
-            <a href="/tags/Promise/">
-                <span class="chip center-align waves-effect waves-light chip-default">Promise</span>
+            <a href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+                <span class="chip center-align waves-effect waves-light chip-default">正则表达式</span>
             </a>
             
             
             
-            <a href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
-                <span class="chip center-align waves-effect waves-light chip-default">正则表达式</span>
+            <a href="/tags/Promise/">
+                <span class="chip center-align waves-effect waves-light chip-default">Promise</span>
             </a>
             
             

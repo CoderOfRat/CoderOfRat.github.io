@@ -317,7 +317,7 @@
     xhr.open('get','https://api.no0a.cn/api/bing/0');
     xhr.send()
     xhr.onload = function() {
-      const { bing } = xhr.responseText;
+      const { bing } = JSON.parse(xhr.responseText);
       picurl = bing.url
     }
     
