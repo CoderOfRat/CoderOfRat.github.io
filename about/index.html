@@ -324,7 +324,6 @@
     xhr.onload = function() {
       const res = JSON.parse(xhr.responseText);
       picurl = res.bing['url'].replace('http','https')
-      console.log(picurl)
       // 每天切换 banner 图.  Switch banner image every day.
       $('.bg-cover').css('background-image', 'url('+picurl+')');
     }
@@ -587,7 +586,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["JavaScript","vue","ajax","Cookie","jQuery","面向对象","JavaScript基础","数组基础用法","JavaScript高级（面向对象）","JavaScript高级（ES6语法）"]
+                data: ["JavaScript","vue","ajax","Cookie","jQuery","面向对象","JavaScript基础","数组基础用法","JavaScript逻辑运算","JavaScript流程控制"]
             }
         ],
         yAxis: [
@@ -845,18 +844,6 @@
             
             
             
-            <a href="/tags/JavaScript%E9%AB%98%E7%BA%A7%EF%BC%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%EF%BC%89/">
-                <span class="chip center-align waves-effect waves-light chip-default">JavaScript高级（面向对象）</span>
-            </a>
-            
-            
-            
-            <a href="/tags/JavaScript%E9%AB%98%E7%BA%A7%EF%BC%88ES6%E8%AF%AD%E6%B3%95%EF%BC%89/">
-                <span class="chip center-align waves-effect waves-light chip-default">JavaScript高级（ES6语法）</span>
-            </a>
-            
-            
-            
             <a href="/tags/JavaScript%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97/">
                 <span class="chip center-align waves-effect waves-light chip-default">JavaScript逻辑运算</span>
             </a>
@@ -865,6 +852,18 @@
             
             <a href="/tags/JavaScript%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/">
                 <span class="chip center-align waves-effect waves-light chip-default">JavaScript流程控制</span>
+            </a>
+            
+            
+            
+            <a href="/tags/JavaScript%E9%AB%98%E7%BA%A7%EF%BC%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%EF%BC%89/">
+                <span class="chip center-align waves-effect waves-light chip-default">JavaScript高级（面向对象）</span>
+            </a>
+            
+            
+            
+            <a href="/tags/JavaScript%E9%AB%98%E7%BA%A7%EF%BC%88ES6%E8%AF%AD%E6%B3%95%EF%BC%89/">
+                <span class="chip center-align waves-effect waves-light chip-default">JavaScript高级（ES6语法）</span>
             </a>
             
             

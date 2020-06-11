@@ -317,7 +317,6 @@
     xhr.onload = function() {
       const res = JSON.parse(xhr.responseText);
       picurl = res.bing['url'].replace('http','https')
-      console.log(picurl)
       // 每天切换 banner 图.  Switch banner image every day.
       $('.bg-cover').css('background-image', 'url('+picurl+')');
     }
