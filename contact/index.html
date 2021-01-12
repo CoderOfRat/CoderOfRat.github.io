@@ -308,15 +308,15 @@
         </div>
     </div>
 </div>
-<!-- 每日一图Bing -->
+
 <script>
     let xhr = new XMLHttpRequest();
     let picurl = ''
-    xhr.open('get','https://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1');
+    xhr.open('get','https://api.no0a.cn/api/bing/0');
     xhr.send()
     xhr.onload = function() {
       const res = JSON.parse(xhr.responseText);
-      picurl = 'https://cn.bing.com' + res.images['url']
+      picurl = res.bing['url'];
       // 每天切换 banner 图.  Switch banner image every day.
       $('.bg-cover').css('background-image', 'url('+picurl+')');
     }
